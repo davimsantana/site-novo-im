@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .container{
+    width: 100%;
+  }
+
+  .container-fluid > a > img{
+    margin-left: 50px;
+    width: 180px;
+    height: 30px;
+  }
+
+  .nav-bar{
+    justify-content: right;
+    align-items: center;
+    padding-right: 120px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+  }
+
+  .nav-item > a{
+    
+    margin: 20px;
+    transition: .3s;
+    color: #071c4d;
+  }
+
+  .nav-item > a:hover{
+
+    color: #175cff;
+  }
+
+  ul{
+
+    list-style: none;
+  }
+
+  .titulo-dropdown{
+    padding: 5px;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+  }
+
+.dropdown-menu {
+  display: none;
+  animation: dropdown-show 0.3s ease forwards;
+}
+
+.txt-icons{
+  margin-left: 10px;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+}
+
+.txt-icons:hover{
+  color: #175cff;
+}
+
+
+.fa-solid .fa-regular{
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+
+@keyframes dropdown-show {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+  .dropdown-item{
+    transition: .3s;
+  }
+
+  .dropdown-item > a:hover {
+    color: #175cff;
+  }
+
+  .dropdown-item > a{
+    font-family: Poppins;
+  }
+
+  .btn {
+    border-radius: 7px;
+    transition: .5s;
+    background-color: #175cff;
+    width: 225px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .btn:hover {
+    color: #175cff;
+    background-color: white;
+  }
+
+  .banner { 
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .banner-title {
+    color: #071c4d;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -2px;
+    margin-bottom: 36px;
+  }
+
+  .banner-description {
+    font-size: 20px;
+  }
+
+  .b-btn1 {
+    margin: 10px;
+    color: white;
+    border-radius: 7px;
+    transition: .5s;
+    background-color: #175cff;
+    border-color: #175cff;
+    width: 215px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .b-btn2 {
+    margin: 10px;
+    color: #175cff;
+    border-radius: 7px;
+    transition: .5s;
+    border-color: #175cff;
+    border-spacing: 5px;
+    background-color: white;
+    width: 220px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .b-btn2:hover {
+    background-color: #175cff;
+    color: white;
+  }
+
+  .img-b {
+    align-items: center;
+    position: relative;
+    margin-left: -150px;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 10px;
+    z-index: 0;
+  }
+
+  .img-b-1 {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .img-b-2 {
+    position: relative;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: -200px;
+  }
+
+  .bg-azul-2{
+    background-color: #0B163F;
+    margin-top: -350px;
+    height: 375px;
+  }
+
+  .bg-azul{
+    background-color: #0B163F;
+    width: 100%;
+  }
+
+  .titulo-demonstracao{
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: "Open Sans";
+  }
+
+  .txt-demonstracao{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: white;
+  }
+
+  .sm-demonstracao{
+    color: #FFB116;
+    text-decoration: none;
+  }
+
+  .demonstracao{
+    padding-bottom: 100px;
+  }
+
+  .titulo-txt-1{
+    color: #0B163F;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .d-flex{
+    display: flex;
+    align-items: center;
+  }
+
+  .w-50{
+    width: 50%;
+    margin-left: 65px;
+  }
+
+  .d-flex > div > p{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .p-10{
+    padding-left: 10px;
+  }
+
+  .txt-btn1{
+    margin-left: 0;
+  }
+
+  .txt-1{
+    font-family: Poppins, sans-serif;
+  }
+
+  h3{
+    color: #0B163F;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  
+  .icon-c{
+    margin-right: 120px;
+  }
+
+  .i-1{
+    background-color: #175CFF;
+    color: white;
+    font-size: 22px;
+    border-radius: 5px;
+    margin: 5px, 5px, 5px, 5px;
+    padding: 15px 15px 15px 15px;
+  }
+  .i-2{
+    background-color: #5CC9A7;
+    color: white;
+    font-size: 22px;
+    border-radius: 5px;
+    margin: 5px, 5px, 5px, 5px;
+    padding: 15px 15px 15px 15px;
+  }

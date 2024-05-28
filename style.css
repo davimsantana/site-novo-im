@@ -101,9 +101,10 @@
 
       .dropdown-item {
         transition: 0.3s;
+        background-color: white;
       }
 
-      .dropdown-item > a:hover {
+      .dropdown-item > span:hover {
         color: #175cff;
       }
 
@@ -405,6 +406,10 @@
 
       .pr-50{
         padding-right: 100px;
+      }
+
+      .pr-30{
+        padding-right: 30px;
       }
 
       .p-20{

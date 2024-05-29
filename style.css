@@ -928,14 +928,14 @@ ul {
   .img-b {
     align-items: center;
     position: relative;
-    margin-left: -0.1px;
+    margin-left: -20px;
     margin-top: 20px;
     width: 80%;
     border-radius: 10px;
     z-index: 0;
   }
   .img-b-1 {
-    width: 30%;
+    width: 25%;
     position: relative;
     margin-right: -80px;
     margin-bottom: -30px;
@@ -943,10 +943,10 @@ ul {
     z-index: 1;
   }
   .img-b-2 {
-    width: 30%;
+    width: 25%;
     position: relative;
     border-radius: 10px;
     margin-top: 140px;
-    margin-left: -90px;
+    margin-left: -140px;
   }
 }

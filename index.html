@@ -159,7 +159,7 @@
         </div>
       </div>
     </nav>
-    <main class="animate">
+    <main class="animate element">
       <section class="container">
         <div class="banner">
           <h1 class="banner-title">
@@ -181,7 +181,7 @@
               Falar com Especialista
             </button>
           </div>
-          <div>
+          <div class="nowrap">
             <img class="img-b-1" src="images/img2.jpg" alt="" />
             <img class="img-b" src="images/img1.png" alt="" />
             <img class="img-b-2" src="images/img3.jpg" alt="" />
@@ -796,6 +796,27 @@
       // Inicialização
       checkVisibility();
     });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+  var lastScrollTop = 0;
+
+  window.addEventListener("scroll", function() {
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down
+      document.documentElement.style.backgroundAttachment = "scroll";
+      document.documentElement.style.scrollBehavior = "auto";
+    } else {
+      // Scrolling up
+      document.documentElement.style.backgroundAttachment = "fixed";
+      document.documentElement.style.scrollBehavior = "smooth";
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }, false);
+});
+
 
     </script>
   </body>

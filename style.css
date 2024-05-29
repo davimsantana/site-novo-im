@@ -921,6 +921,9 @@ ul {
 }
 
 @media (max-width: 560px) {
+  .bg-azul-2{
+    display: none;
+  }
   .img-b{
     align-items: center;
     position: relative;

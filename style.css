@@ -8,7 +8,7 @@ html {
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #0b163f;
+  color: #54595F;
 }
 
 .container {
@@ -921,10 +921,28 @@ ul {
 }
 
 @media (max-width: 560px) {
+  .img-b{
+    align-items: center;
+    position: relative;
+    margin-left: -.1px;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 10px;
+    z-index: 0;
+  }
   .img-b-1 {
-    display: none;
+    width: 30%;
+    position: relative;
+    margin-right: -90px;
+    margin-bottom: -30px;
+    border-radius: 10px;
+    z-index: 1;
   }
   .img-b-2 {
-    display: none;
+    width: 30%;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 140px;
+    margin-left: -110px;
   }
 }

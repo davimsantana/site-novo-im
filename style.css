@@ -457,11 +457,14 @@ h3 {
   font-size: 16px;
 }
 
+.row{
+  flex-wrap: nowrap;
+}
+
 .b-box-1 {
   background-color: white;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  max-width: 500px;
 }
 
 .b-box-2 {
@@ -469,7 +472,6 @@ h3 {
   background-color: white;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  margin-left: 20px;
 }
 
 .b-i1 {
@@ -509,7 +511,7 @@ h3 {
   background-color: #c9c7f7;
   color: #4c45e4;
   font-size: 22px;
-  border-radius: 50px;
+  border-radius: 55px;
   margin: 5px, 5px, 5px, 5px;
   padding: 16px;
   margin-top: 30px;
@@ -697,12 +699,13 @@ h4 {
 .bg-branco {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(235, 235, 235);
+  padding: 10px;
+  box-sizing: border-box;
   border-radius: 10px;
   flex-direction: column;
   height: auto;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  width: 300px;
   height: 320px;
   margin-top: 30px;
 }
@@ -713,6 +716,7 @@ ul {
 }
 
 .desc-planos {
+  display: block;
   color: black;
   padding-left: 20px;
 }
@@ -734,6 +738,8 @@ ul {
   margin-bottom: 30px;
   font-size: 14px;
   font-family: Poppins;
+  flex: 1;
+  margin: 5px; 
   transition: 400ms;
 }
 
@@ -863,6 +869,16 @@ ul {
   }
   .img-logo {
     margin-right: 50px;
+  }
+}
+
+@media (max-width:768px) {
+  .row{
+    flex-wrap: wrap;
+  }
+  .btn-planos{
+    margin-top: ;
+    width: 700px;
   }
 }
 

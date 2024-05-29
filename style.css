@@ -920,11 +920,11 @@ ul {
   }
 }
 
-@media (max-width: 560px){
-  .img-b-1{
+@media (max-width: 560px) {
+  .img-b-1 {
     display: none;
   }
-  .img-b-2{
+  .img-b-2 {
     display: none;
   }
 }

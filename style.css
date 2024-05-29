@@ -9,7 +9,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
 }
 
 .container-txt {
@@ -699,7 +698,6 @@ h4 {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(235, 235, 235);
   border-radius: 10px;
-  display: flex;
   flex-direction: column;
   height: auto;
   -webkit-box-pack: justify;

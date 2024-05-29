@@ -8,7 +8,7 @@ html {
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  color: #54595F;
+  color: #54595f;
 }
 
 .container {
@@ -921,13 +921,13 @@ ul {
 }
 
 @media (max-width: 560px) {
-  .bg-azul-2{
+  .bg-azul-2 {
     display: none;
   }
-  .img-b{
+  .img-b {
     align-items: center;
     position: relative;
-    margin-left: -.1px;
+    margin-left: -0.1px;
     margin-top: 20px;
     width: 80%;
     border-radius: 10px;

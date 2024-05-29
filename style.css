@@ -482,14 +482,14 @@ h3 {
 
 .b-box-1 {
   border-radius: 10px;
-  width: 390px;
+  width: 350px;
   height: 600px;
 }
 
 .b-box-2 {
   display: inline-block;
   border-radius: 10px;
-  width: 500px;
+  width: 390px;
   height: 285px;
 }
 

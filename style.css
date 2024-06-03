@@ -481,7 +481,6 @@ h3 {
 
 .b-box-1 {
   background-color: white;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   padding: 40px 30px 30px 30px;
 }
@@ -489,7 +488,6 @@ h3 {
 .b-box-2 {
   display: inline-block;
   background-color: white;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   padding: 40px 30px 30px 30px;
   padding: 15px;
@@ -990,7 +988,7 @@ ul {
     margin-bottom: 20px;
   }
   .bg-image{
-    width: 400px;
+    width: 600px;
     height: 100px;
   }
   .titulo-banner-demonstracao{

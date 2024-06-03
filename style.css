@@ -792,6 +792,10 @@ ul {
   background-color: white;
 }
 
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+  border: none;
+}
+
 .bg-image {
   background-color: #071c4d;
   border-radius: 10px;

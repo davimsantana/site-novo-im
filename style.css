@@ -211,10 +211,9 @@ ul {
 }
 
 .img-b {
-  align-items: center;
   position: relative;
-  margin-left: -150px;
   margin-top: 20px;
+  margin-left: -10%;
   width: 80%;
   border-radius: 10px;
   z-index: 0;
@@ -231,7 +230,7 @@ ul {
   position: relative;
   border-radius: 10px;
   margin-top: 200px;
-  margin-left: -200px;
+  margin-left: -20%;
 }
 
 .bg-azul-2 {
@@ -790,12 +789,9 @@ ul {
 }
 
 .bg-image {
-  background-image: url(images/bg-gratis.png);
-  background-size: cover;
-  box-shadow: 0px 0px 20px #0000002e;
-  background-repeat: no-repeat;
-  width: 80%;
-  border-radius: 5px;
+  background-color: #071c4d;
+  border-radius: 10px;
+  width: 70%;
 }
 
 .titulo-banner-demonstracao {
@@ -804,22 +800,22 @@ ul {
   font-weight: 600;
   font-family: Poppins;
   padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 30px;
 }
 
-.desc-banner-demonstracao {
-  color: white;
-}
 
 .btn-banner-demonstracao {
-  background-color: #fb993e;
+  background-color: white;
+  margin-top: 25px;
+  color: black;
   border-radius: 2rem;
   font-family: Poppins;
-  font-size: 1.25rem;
+  font-size: .9rem;
   border: 0px;
-  color: white;
-  width: 350px;
+  width: 150px;
   height: 50px;
-  font-weight: 400;
+  font-weight: 600;
   white-space: normal;
   line-height: 1.5;
   transition: 400ms;
@@ -827,9 +823,8 @@ ul {
 }
 
 .btn-banner-demonstracao:hover {
-  background-color: #00c3ff;
-  border-color: #00c3ff;
-  box-shadow: 2px 2px 8px #00c3ff;
+  background-color: #cad0fc;
+  box-shadow: 2px 2px 8px black;
 }
 
 .img-1-rodape {
@@ -901,17 +896,19 @@ ul {
   }
 }
 
-@media (max-width: 1000px) {
-  .dropdown-menu.show {
-    display: block;
-    display: none; /* Esconde o dropdown por padrão */
-    position: static; /* Reseta a posição do dropdown */
-    float: none; /* Reseta o float do dropdown */
-    width: 100%; /* Faz com que o dropdown ocupe 100% da largura */
-    background-color: #fff;
-  }
+@media (max-width: 1024px) {
   .accordion-item {
     width: 700px;
+  }
+
+  .img-b-1{
+    width: 30%;
+  }
+  .img-b-2{
+    width: 30%;
+  }
+  .img-b{
+    margin-left: -15%;
   }
 }
 
@@ -937,7 +934,7 @@ ul {
   .img-b-1 {
     width: 25%;
     position: relative;
-    margin-right: -40px;
+    margin-right: -10px;
     margin-bottom: -30px;
     border-radius: 10px;
     z-index: 1;
@@ -948,5 +945,48 @@ ul {
     border-radius: 10px;
     margin-top: 140px;
     margin-left: -120px;
+  }
+  .banner-title{
+    font-size: 32px;
+  }
+  .banner-description{
+    font-size: 1.25rem;
+  }
+  .titulo-txt-1{
+    font-size: 40px;
+  }
+  .titulo-demonstracao-2{
+    font-size: 2em;
+  }
+  .demonstracao-2-p{
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .accordion-item{
+    padding: 0px 20px 0px 20px;
+  }
+  .img-2-rodape{
+    width: 25%;
+  }
+  .titulo-planos{
+    font-size: 30px;
+  }
+  .img-logo{
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .bg-image{
+    width: 400px;
+    height: 100px;
+  }
+  .titulo-banner-demonstracao{
+    font-size: 15px;
+    margin-top: 0;
+  }
+  .btn-banner-demonstracao{
+    margin-right: 20px;
+    margin-left: 25px;
   }
 }

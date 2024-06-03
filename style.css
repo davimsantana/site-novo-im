@@ -770,6 +770,7 @@ ul {
 
 .accordion-item {
   width: 900px;
+  border: none;
 }
 
 .accordion-button {
@@ -777,6 +778,7 @@ ul {
   font-family: Poppins;
   font-size: 1.1rem;
   line-height: 1.75rem;
+  border: 0;
 }
 
 .accordion-button:focus {
@@ -881,7 +883,7 @@ ul {
 }
 
 .container-fluid{
-  background-color: white;
+  
 }
 
 @media (max-width: 1200px) {

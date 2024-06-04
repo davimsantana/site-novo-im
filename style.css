@@ -59,8 +59,10 @@ body {
 
 .button-links{
   border: 0;
+  background-color: white;
   margin: 0;
   text-align: start;
+  width: 150px;
 }
 
 
@@ -1034,6 +1036,13 @@ ul {
     height: auto;
     border-radius: 20px;
     margin-top: 50px;
+  }
+  .button-links{
+    border: 0;
+    background-color: white;
+    margin: 0;
+    text-align: start;
+    width: 150px;
   }
 }
 

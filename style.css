@@ -36,17 +36,8 @@ body {
   transform: translateY(0);
 }
 
-
-.navbar{
-  background-color: white;
-}
-
-.nav{
-  background-color: white;
-}
-
 .bg-body-tertiary {
-  background-color: white;
+  background-color: white !important;
 }
 
 .nav-bar {

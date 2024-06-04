@@ -489,7 +489,7 @@
                   <img class="img-empresas" src="images/img12.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <button class="button-links" onclick="mudar1()">
+                  <button id="baguete" class="button-links" onclick="mudar1()">
                     <h3 id="nome">Baguete</h3>
                     <span id="link">baguete.com.br</span>
                   </button>
@@ -782,7 +782,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {
         $(".dropdown").on("mouseenter", function () {
@@ -839,6 +838,8 @@
 });
 
     function mudar1(){
+      botao = window.document.getElementById('baguete');
+      botao.style.marginTop = '-10px';
       desc = window.document.getElementById("desc")
       img = window.document.getElementById("img")
       nome = window.document.getElementById("nome")
@@ -851,6 +852,7 @@
       img.innerHTML = '<img class="img-imprensa bg-preto" src="images/img11.jpg" alt="">' 
     }
     function mudar2(){
+      botao = window.document.getElementById('Baguete');
       desc = window.document.getElementById("desc")
       img = window.document.getElementById("img")
       nome = window.document.getElementById("nome")

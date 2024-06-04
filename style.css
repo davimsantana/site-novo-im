@@ -939,7 +939,7 @@ ul {
   .img-b {
     align-items: center;
     position: relative;
-    margin-left: -19vh;
+    margin-left: -25vh;
     margin-top: 20px;
     width: 80%;
     border-radius: 10px;
@@ -949,7 +949,7 @@ ul {
     width: 25%;
     position: relative;
     margin-bottom: -30px;
-    margin-right: 55px;
+    margin-right: 85px;
     border-radius: 10px;
     z-index: 1;
   }

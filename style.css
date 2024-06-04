@@ -939,7 +939,7 @@ ul {
   .img-b {
     align-items: center;
     position: relative;
-    margin-left: -25vh;
+    margin-left: -40%;
     margin-top: 20px;
     width: 80%;
     border-radius: 10px;
@@ -948,7 +948,7 @@ ul {
   .img-b-1 {
     width: 25%;
     position: relative;
-    margin-bottom: -30px;
+    margin-bottom: -10%;
     margin-right: 85px;
     border-radius: 10px;
     z-index: 1;
@@ -1002,5 +1002,32 @@ ul {
   .btn-banner-demonstracao{
     margin-right: 20px;
     margin-left: 25px;
+  }
+}
+
+@media (max-width: 414px){
+  .img-b {
+    align-items: center;
+    position: relative;
+    margin-left: -55%;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 10px;
+    z-index: 0;
+  }
+  .img-b-1 {
+    width: 25%;
+    position: relative;
+    margin-bottom: -10%;
+    margin-right: 105px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  .img-b-2 {
+    width: 25%;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 140px;
+    margin-left: -90px;
   }
 }

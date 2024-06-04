@@ -458,7 +458,7 @@
               <div>
                 <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
               </div>
-              <h1 class="b-titulo-imprensa">Get Commerce dobra de tamanho em 2022</h1>
+              <h1 id="titulo" class="b-titulo-imprensa">Get Commerce dobra de tamanho em 2022</h1>
               <div>
                 <span><i class="fa-solid fa-star star"></i></span>
                 <span><i class="fa-solid fa-star star"></i></span>
@@ -466,31 +466,33 @@
                 <span><i class="fa-solid fa-star star"></i></span>
                 <span><i class="fa-solid fa-star star"></i></span>
               </div>
-              <p class="txt-l">
+              <p id="desc" class="txt-l">
                 Com isso, a Get Commerce com aprimoramento constante de sua tecnologia de IA, possibilitou um faturamento até 30% maior
                 para os seus clientes que são lojas físicas, marcas próprias e indústrias, migrando para o digital como um importante
                 canal de vendas.
               </p>
               <div class="mt-40">
                 <h3 id="nome">Baguete</h3>
-                <span>baguete.com.br</span>
+                <span id="link">baguete.com.br</span>
               </div>
             </div>
-            <div class="col-md-6 text-align-center">
+            <div id="img" class="col-md-6 text-align-center">
               <img class="img-imprensa bg-preto" src="images/img11.jpg" alt=""/>
             </div>
           </div>
         </div>
         <div>
           <div class="container mt-50 mb-200 animate">
-            <div class="row align-items-center align-items-center">
+            <div class="row align-items-center align-items-center static mt-70">
               <div class="col-md-3 display-flex">
                 <div>
                   <img class="img-empresas" src="images/img12.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <h3 id="nome">Baguete</h3>
-                  <span>baguete.com.br</span>
+                  <button class="button-links" onclick="mudar1()">
+                    <h3 id="nome">Baguete</h3>
+                    <span id="link">baguete.com.br</span>
+                  </button>
                 </div>
               </div>
               <div class="col-md-3 display-flex">
@@ -498,8 +500,10 @@
                   <img class="img-empresas" src="images/img13.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <h3 id="nome">Startups</h3>
-                  <span>startups.com.br</span>
+                  <button class="button-links" onclick="mudar2()">
+                    <h3 id="nome">Startups</h3>
+                    <span>startups.com.br</span>
+                  </button>
                 </div>
               </div>
               <div class="col-md-3 display-flex">
@@ -507,8 +511,10 @@
                   <img class="img-empresas" src="images/img14.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <h3 id="nome">ABCOMM</h3>
-                  <span>abcomm.org</span>
+                  <button class="button-links" onclick="mudar3()">
+                    <h3 id="nome">ABCOMM</h3>
+                    <span>abcomm.org</span>
+                  </button>
                 </div>
               </div>
               <div class="col-md-3 display-flex">
@@ -516,8 +522,10 @@
                   <img class="img-empresas" src="images/img15.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <h3 id="nome">Forbes</h3>
-                  <span>forbespt.com</span>
+                  <button class="button-links" onclick="mudar4()">
+                    <h3 id="nome">Forbes</h3>
+                    <span>forbespt.com</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -830,6 +838,57 @@
   }, false);
 });
 
+    function mudar1(){
+      desc = window.document.getElementById("desc")
+      img = window.document.getElementById("img")
+      nome = window.document.getElementById("nome")
+      link = window.document.getElementById("link")
+      titulo = window.document.getElementById("titulo")
+      titulo.innerHTML = "Get Commerce dobra de tamanho em 2022"
+      desc.innerHTML = "Com isso, a Get Commerce com aprimoramento constante de sua tecnologia de IA, possibilitou um faturamento até 30% maior para os seus clientes que são lojas físicas, marcas próprias e indústrias, migrando para o digital como um importante canal de vendas."
+      nome.innerHTML = "Baguete"
+      link.innerHTML = "baguete.com.br"
+      img.innerHTML = '<img class="img-imprensa bg-preto" src="images/img11.jpg" alt="">' 
+    }
+    function mudar2(){
+      desc = window.document.getElementById("desc")
+      img = window.document.getElementById("img")
+      nome = window.document.getElementById("nome")
+      link = window.document.getElementById("link")
+      titulo = window.document.getElementById("titulo")
+      titulo.innerHTML = "Get Commerce levanta R$ 1,2 milhão para ser a RD Station das lojas virtuais"
+      desc.innerHTML = "Criada em 2018, a ferramenta segue um modelo de loja pronta, com tudo o que é preciso para realizar vendas online, desde a configuração das formas de pagamento e envio, à incorporação com o Facebook e configuração do Google Analytics, a ferramenta de marketing digital do Google. Desde sua fundação, a startup atingiu mais de 650 mil pedidos, 27 milhões de pageviews mensais e R$ 160 milhões transacionados diretamente na plataforma."
+      nome.innerHTML = "Startups"
+      link.innerHTML = "startups.com.br"
+      img.innerHTML = '<img id="img" class="img-imprensa bg-preto" src="images/startups.jpg" alt="">'
+      setTimeout(function() {
+        document.getElementById("container").classList.add("show");
+      }, 500);  
+    }
+    function mudar3(){
+      desc = window.document.getElementById("desc")
+      img = window.document.getElementById("img")
+      nome = window.document.getElementById("nome")
+      link = window.document.getElementById("link")
+      titulo = window.document.getElementById("titulo")
+      titulo.innerHTML = "Get Commerce: eleita melhor plataforma de ecommerce do Brasil pela ABComm está conquistando o mundo"
+      desc.innerHTML = "Com o uso da tecnologia Get Commerce, nossos clientes têm um aumento de, até 30% nas vendas. Na nossa plataforma já foram gerados mais de 700.000 pedidos, e transacionados mais de R$ 165.000.000. São mais de 27 milhões de pageviews mensais.Tudo isso com alta satisfação de nossos clientes."
+      nome.innerHTML = "ABCOMM"
+      link.innerHTML = "abcomm.org"
+      img.innerHTML = '<img id="img" class="img-imprensa bg-preto" src="images/abcomm.jpg" alt="">'  
+    }
+    function mudar4(){
+      desc = window.document.getElementById("desc")
+      img = window.document.getElementById("img")
+      nome = window.document.getElementById("nome")
+      link = window.document.getElementById("link")
+      titulo = window.document.getElementById("titulo")
+      titulo.innerHTML = "60 Startups vão testar as suas inovações em parceria com empresas"
+      desc.innerHTML = "Neste momento, os projetos com maior potencial irão conectar-se com mentores, investidores e atores do ecossistema, que os ajudarão a impulsionar o seu desenvolvimento, tais como as empresas Banco Montepio, Brisa, KCS IT, Gaiurb e Águas de Gaia."
+      nome.innerHTML = "Forbes"
+      link.innerHTML = "forbespt.com"
+      img.innerHTML = '<img id="img" class="img-imprensa bg-preto" src="images/forbes.jpg" alt="">'  
+    }
 
     </script>
   </body>

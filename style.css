@@ -15,6 +15,15 @@ body {
   max-width: 85% !important;
 }
 
+.transition {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; /* Começa com opacidade 0 para que o elemento não seja visível */
+}
+
+.transition.show {
+  opacity: 1; /* Quando a classe show é adicionada, a opacidade é definida como 1, tornando o elemento visível */
+}
+
 .container-txt {
   margin: 100px;
 }
@@ -47,6 +56,21 @@ body {
   font-weight: 500;
   font-family: Poppins, sans-serif;
 }
+
+.button-links{
+  border: 0;
+  margin: 0;
+  text-align: start;
+}
+
+
+
+
+.static{
+  position: static;
+}
+
+/* % ou vh*/
 
 .nav-link {
   font-weight: 500;
@@ -664,7 +688,8 @@ h4 {
 }
 
 .img-imprensa {
-  width: 85%;
+  width: 543px;
+  height: 486px;
   height: auto;
   border-radius: 20px;
   margin-top: 50px;
@@ -1002,6 +1027,13 @@ ul {
   .btn-banner-demonstracao{
     margin-right: 20px;
     margin-left: 25px;
+  }
+  .img-imprensa {
+    width: 343px;
+    height: 286px;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 50px;
   }
 }
 

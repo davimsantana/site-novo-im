@@ -28,12 +28,6 @@ body {
   margin: 100px;
 }
 
-.container-fluid > a > img {
-  color: black;
-  width: 180px;
-  height: 30px;
-}
-
 .animate {
   opacity: 0;
   transform: translateY(20px);
@@ -102,7 +96,8 @@ ul {
 }
 
 .img-logo {
-  margin-top: 2.5vh;
+  color: black;
+  width: 60%;
 }
 
 .titulo-dropdown {
@@ -240,28 +235,43 @@ ul {
   color: white;
 }
 
-.img-b {
+
+.image-wrapper {
   position: relative;
-  margin-top: 20px;
-  margin-left: -10%;
-  width: 80%;
-  border-radius: 10px;
-  z-index: 0;
+  margin: 20px auto; /* Ajuste conforme necessário */
+  width: 80%; /* Ajuste conforme necessário */
+  max-width: 1200px;
+  text-align: center;
 }
 
-.img-b-1 {
-  position: relative;
-  margin-bottom: 10px;
-  border-radius: 10px;
+
+.img-b {
+  width: 80%;
   z-index: 1;
 }
 
-.img-b-2 {
-  position: relative;
+.img-b-1, .img-b-2 {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 10px;
-  margin-top: 200px;
-  margin-left: -20%;
 }
+
+.img-b-1 {
+  width: 25%;
+  top: 45%;
+  left: -5%;
+  z-index: 2;
+}
+
+.img-b-2 {
+  width: 25%;
+  top: 70%;
+  right: -5%;
+  z-index: 2;
+}
+
 
 .bg-azul-2 {
   background-color: #0b163f;
@@ -915,9 +925,8 @@ ul {
   white-space: nowrap;
 }
 
-.container-fluid956fdsadsa CX7Y6TR54E3=
-0956{
-  
+.container-fluid{
+  white-space: nowrap;
 }
 
 @media (max-width: 1200px) {
@@ -944,21 +953,17 @@ ul {
   }
 
   .img-b-1{
-    width: 30%;
+    
   }
   .img-b-2{
-    width: 30%;
+   
   }
   .img-b{
-    margin-left: -15%;
-  ´´
--[09O8P7U6IY5T4R3E2W1 3QYDSGFWHjuiklospç´~][
-  8
-]
+    
+  }
 }
 
- 
-@media (max-width: 90700px) {
+@media (max-width: 700px) {
   .accordion-item {
     width: 450px;
   }
@@ -969,27 +974,14 @@ ul {
     display: none;
   }
   .img-b {
-    align-items: center;
-    position: relative;
-    margin-left: -30%;
-    margin-top: 20px;
-    width: 80%;
-    border-radius: 10px;
-    z-index: 0;
+    width: 100%;
+    
   }
   .img-b-1 {
-    width: 25%;
-    position: relative;
-    bottom: -10%;
-    right: 10%;
-    border-radius: 10px;
-    z-index: 1;
+    width: 30%;
   }
   .img-b-2 {
-    width: 25%;
-    position: relative;
-    border-radius: 10px;
-    margin-left: -20%;
+    width: 30%;
   }
   .banner-title{
     font-size: 32px;
@@ -1018,7 +1010,7 @@ ul {
     font-size: 30px;
   }
   .img-logo{
-    width: 100%;
+    width: 40%;
     margin-left: 20px;
     margin-bottom: 20px;
   }
@@ -1049,31 +1041,53 @@ ul {
     text-align: start;
     width: 150px;
   }
+  .titulo-beneficios{
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 414px){
   .img-b {
-    align-items: center;
-    position: relative;
-    margin-left: -55%;
-    margin-top: 20px;
-    width: 80%;
-    border-radius: 10px;
-    z-index: 0;
+    
   }
   .img-b-1 {
-    width: 25%;
-    position: relative;
-    margin-bottom: -10%;
-    margin-right: 105px;
-    border-radius: 10px;
-    z-index: 1;
+    
   }
   .img-b-2 {
-    width: 25%;
-    position: relative;
-    border-radius: 10px;
-    margin-top: 60%;
-    margin-left: -90px;
+    
+  }
+}
+
+@media (max-width: 375px){
+  
+  .img-logo{
+    width: 60%;
+  }
+  .img-b {
+
+  }
+  .img-b-2 {
+    
+  }
+  .img-b-1 {
+    
+  }
+  h3{
+    white-space: wrap;
+  }
+  .accordion-item{
+    width: 330px;
+  }
+  .bg-image{
+    display: none;
+  }
+  .img-1-rodape{
+    max-width: 150%;
+  }
+  .img-2-rodape{
+    width: 50%;
+  }
+  .img-imprensa{
+    width: 220px;
   }
 }

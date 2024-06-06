@@ -1011,7 +1011,7 @@ ul {
     font-size: 30px;
   }
   .img-logo{
-    width: 40%;
+    width: 50%;
     margin-left: 20px;
     margin-bottom: 15px;
   }
@@ -1028,7 +1028,7 @@ ul {
     margin-left: 25px;
   }
   .img-imprensa {
-    width: 343px;
+    width: 313px;
     height: 286px;
     height: auto;
     margin: 0;
@@ -1051,7 +1051,7 @@ ul {
   }
 }
 
-@media (max-width: 414px){
+@media (max-width: 450px){
   .img-logo{
     width: 60%;
   }

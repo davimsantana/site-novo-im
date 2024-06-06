@@ -489,6 +489,10 @@ h3 {
   margin-bottom: 50px;
 }
 
+.pb-50{
+  padding-bottom: 50px;
+}
+
 .mb-200 {
   margin-bottom: 200px;
 }
@@ -1031,7 +1035,7 @@ ul {
     padding-left: 10px;
   }
   .accordion-item{
-    width: 350px;
+    width: 360px;
   }
   .img-2-rodape{
     width: 25%;

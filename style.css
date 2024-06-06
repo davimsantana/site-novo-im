@@ -838,6 +838,7 @@ ul {
 .bg-image {
   background-color: #071c4d;
   border-radius: 10px;
+  margin-top: 200px;
   width: 70%;
 }
 
@@ -1012,7 +1013,7 @@ ul {
   .img-logo{
     width: 40%;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .bg-image{
     width: 600px;
@@ -1044,17 +1045,21 @@ ul {
   .titulo-beneficios{
     font-size: 2rem;
   }
+  #inverter{
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 @media (max-width: 414px){
-  .img-b {
-    
+  .img-logo{
+    width: 60%;
   }
-  .img-b-1 {
-    
+  .img-imprensa{
+    width: 295px;
   }
-  .img-b-2 {
-    
+  .bg-image{
+    display: none;
   }
 }
 

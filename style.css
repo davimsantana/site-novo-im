@@ -11,6 +11,12 @@ body {
   color: #54595f;
 }
 
+p{
+  margin: 0;
+  padding: 0;
+}
+
+
 .container {
   max-width: 85% !important;
 }
@@ -193,7 +199,7 @@ ul {
 
 .banner-title {
   color: #071c4d;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 48px;
   letter-spacing: -2px;
   margin-bottom: 36px;
@@ -309,6 +315,7 @@ ul {
   color: white;
   text-align: center;
   margin-bottom: 1em;
+  color: #FFFFFFA1;
 }
 
 .txt-demonstracao {
@@ -322,6 +329,10 @@ ul {
   text-decoration: none;
 }
 
+.seta{
+  color: #ffb116 !important;
+}
+
 .demonstracao {
   padding-bottom: 100px;
 }
@@ -329,9 +340,10 @@ ul {
 .titulo-txt-1 {
   color: #0b163f;
   font-size: 45px;
+  line-height: 1.2;
   font-weight: 700;
-  margin-top: 50px;
-  letter-spacing: -1px;
+  margin-bottom: 17px;
+
 }
 
 .d-flex {
@@ -367,6 +379,7 @@ ul {
 
 .txt-1 {
   font-family: Poppins, sans-serif;
+  font-size: 16px;
   padding-top: 20px;
 }
 
@@ -399,7 +412,6 @@ h3 {
   border-radius: 5px;
   margin: 5px, 5px, 5px, 5px;
   padding: 15px 15px 15px 15px;
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -410,7 +422,6 @@ h3 {
   border-radius: 5px;
   margin: 5px, 5px, 5px, 5px;
   padding: 15px 20px 15px 20px;
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -442,6 +453,10 @@ h3 {
   display: flex;
 }
 
+.mt-30{
+  margin-top: 30px;
+}
+
 .mt-40 {
   margin-top: 40px;
 }
@@ -458,7 +473,15 @@ h3 {
   margin-top: 200px;
 }
 
+.mt-20{
+  margin-top: 30px;
+}
+
 .mb-20 {
+  margin-bottom: 30px;
+}
+
+.mb-30{
   margin-bottom: 30px;
 }
 
@@ -927,7 +950,7 @@ ul {
 }
 
 .container-fluid{
-  white-space: nowrap;
+  flex-wrap: nowrap !important;
 }
 
 @media (max-width: 1200px) {
@@ -971,6 +994,12 @@ ul {
 }
 
 @media (max-width: 560px) {
+  .container{
+   max-width: 95% !important;
+  }
+  #img-demontracao{
+    margin-top: 20px;
+  }
   .bg-azul-2 {
     display: none;
   }
@@ -991,7 +1020,7 @@ ul {
     font-size: 1.25rem;
   }
   .titulo-txt-1{
-    font-size: 40px;
+    font-size: 32px;
   }
   .titulo-demonstracao-2{
     font-size: 2em;
@@ -1002,18 +1031,18 @@ ul {
     padding-left: 10px;
   }
   .accordion-item{
-    padding: 0px 20px 0px 20px;
+    width: 350px;
   }
   .img-2-rodape{
     width: 25%;
   }
   .titulo-planos{
-    font-size: 30px;
+    font-size: 29px;
   }
   .img-logo{
-    width: 50%;
+    width: 45% !important;
     margin-left: 20px;
-    margin-bottom: 15px;
+    margin-right: 0px;
   }
   .bg-image{
     width: 600px;
@@ -1043,7 +1072,7 @@ ul {
     width: 150px;
   }
   .titulo-beneficios{
-    font-size: 2rem;
+    font-size: 32px;
   }
   #inverter{
     display: flex;

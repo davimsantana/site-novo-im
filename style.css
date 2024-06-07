@@ -1002,7 +1002,7 @@ ul {
 
 @media (max-width: 560px) {
   .container{
-   max-width: 100% !important;
+   max-width: 95% !important;
   }
   #img-demontracao{
     margin-top: 20px;

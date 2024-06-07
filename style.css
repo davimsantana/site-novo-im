@@ -1021,10 +1021,13 @@ ul {
     width: 30%;
   }
   .b-btn1{
-    width: 100%;
+    width: 80%;
   }
   .b-btn2{
-    width: 100%;
+    width: 80%;
+  }
+  .btn-planos{
+    height: 45px;
   }
   .banner-title{
     font-size: 32px;

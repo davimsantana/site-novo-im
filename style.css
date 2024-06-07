@@ -999,7 +999,7 @@ ul {
 
 @media (max-width: 560px) {
   .container{
-   max-width: 95% !important;
+   max-width: 100% !important;
   }
   #img-demontracao{
     margin-top: 20px;
@@ -1016,6 +1016,12 @@ ul {
   }
   .img-b-2 {
     width: 30%;
+  }
+  .b-btn1{
+    width: 100%;
+  }
+  .b-btn2{
+    width: 100%;
   }
   .banner-title{
     font-size: 32px;

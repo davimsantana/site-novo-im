@@ -564,6 +564,7 @@ h3 {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   border: 5px solid black;
   max-height: 378px;
+  max-width: 400px;
 }
 
 .b-i1 {

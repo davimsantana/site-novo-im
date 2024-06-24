@@ -546,6 +546,17 @@ h3 {
   flex-wrap: nowrap;
 }
 
+.fade-in-element {
+  opacity: 0; 
+  transition: opacity 2s ease-in; 
+}
+
+/* Classe para ativar a animação */
+.fade-in-element.fade-in {
+  opacity: 1; 
+}
+
+
 .b-box-1 {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   margin: 0px 0px 10px 0px;
@@ -553,6 +564,7 @@ h3 {
   --e-column-margin-left: 15px;
   padding: 40px 30px 30px 30px;
   border-radius: 15px;
+  max-height: fit-content;
   border: 5px solid black;
 }
 

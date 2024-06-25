@@ -1203,6 +1203,9 @@ ul {
   .container-cards{
     grid-template-columns: 1fr;
   }
+  .large-card{
+    padding: 40px 28px 40px 30px;
+  }
   .card{
     margin: 0px;
   }

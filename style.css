@@ -1204,7 +1204,7 @@ ul {
     grid-template-columns: 1fr;
   }
   .card{
-    padding: 0px;
+    margin: 0px;
   }
 }
 

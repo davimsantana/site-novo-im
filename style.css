@@ -549,10 +549,12 @@ h3 {
   display: grid;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr; /* Três colunas iguais */
   grid-template-rows: auto auto; /* Duas linhas automáticas */
   gap: 16px; /* Espaçamento entre os cartões */
   padding: 16px;
+  width: 1200px;
 }
 
 .large-card {
@@ -598,17 +600,21 @@ h3 {
 }
 
 .large-card ul li {
-  margin: 8px 0;
-  font-size: 18px;
+  color: #575757;
+  line-height: 1.9;
+  align-items: baseline;
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 6px;
 }
 
 .large-card ul li::before {
   content: '✔';
-  color: blue;
+  color: #175CFF;
 }
 
 .large-card a {
-  color: #007bff;
+  color: #175CFF;
   text-decoration: none;
   margin-top: auto;
   display: inline-block;

@@ -17,13 +17,18 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary container">
-      <div class="container-fluid">
-        <a href=""><img class="img-logo" src="images/logo.png" alt="Logo" /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-right" id="navbarNav">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary pt-20">
+      <div class="container container-fluid">
+        <div class="nav">
+        <div class="nowrap display-flex">
+          <a href=""><img class="img-logo" src="images/logo.png" alt="Logo" /></a>
+        </div>
+        <div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link home" href="#">Home</a>
@@ -158,12 +163,13 @@
           </button>
         </div>
       </div>
+      </div>
     </nav>
-    <main class="animate element">
+    <main class="animate element stiky">
       <section class="container">
-        <div class="banner">
+        <div class="banner justify-content-center">
           <h1 class="banner-title">
-            Aa única plataforma de e-commerce <br />
+            A única plataforma de e-commerce <br />
             inteligente de ponta a ponta
           </h1>
           <p class="banner-description">
@@ -181,7 +187,7 @@
               Falar com Especialista
             </button>
           </div>
-          <div class="nowrap mb-50 align-items-center justify-content-center text-align-center">
+          <div class="nowrap mb-50 mt-70 image-wrapper">
             <img class="img-b-1" src="images/img2.jpg" alt="" />
             <img class="img-b" src="images/img1.png" alt="" />
             <img class="img-b-2" src="images/img3.jpg" alt="" />
@@ -190,7 +196,7 @@
       </section>
       <section class="bg-azul-2"></section>
       <section class="bg-azul">
-        <div class="p-10">
+        <div class="container">
           <h1 class="titulo-demonstracao-1">
             Uma plataforma 5 estrelas, pronta para escalar o seu negócio
           </h1>
@@ -198,44 +204,44 @@
         <div class="demonstracao container overflow-hidden text-center animate">
           <div class="row gx-5">
             <div class="col-md-4">
-              <img src="images/img4.png" alt="" />
+              <img id="img-demontracao" src="images/img4.png" alt="" />
               <p class="txt-demonstracao">
                 Ganhadora do prêmio oficial da <br />
                 ABCOMM, como a melhor plataforma de <br />
                 e-commerce do Brasil
               </p>
               <a class="sm-demonstracao" href=""
-                >Saiba Mais <i aria-hidden="true" class="fas fa-arrow-right"></i
+                >Saiba Mais <i aria-hidden="true" class="fas fa-arrow-right seta"></i
               ></a>
             </div>
             <div class="col-md-4">
-              <img src="images/img5.png" alt="" />
+              <img id="img-demontracao" src="images/img5.png" alt="" />
               <p class="txt-demonstracao">
                 Somos uma empresa que recebeu aporte <br />
                 financeiro e pertencemos ao Venture <br />
                 Capital da Br Angels
               </p>
               <a class="sm-demonstracao" href=""
-                >Saiba Mais <i aria-hidden="true" class="fas fa-arrow-right"></i
+                >Saiba Mais <i aria-hidden="true" class="fas fa-arrow-right seta"></i
               ></a>
             </div>
             <div class="col-md-4">
-              <img src="images/img6.png" alt="" />
+              <img id="img-demontracao" src="images/img6.png" alt="" />
               <p class="txt-demonstracao">
                 Plataforma de e-commerce inteligente <br />
                 que vem conquistando espaço em <br />
                 Portugal e EUA
               </p>
               <a class="sm-demonstracao" href=""
-                >Saiba Mais <i aria-hidden="true" class="fas fa-arrow-right"></i
+                >Saiba Mais <i aria-hidden="true" class="fas fa-arrow-right seta"></i
               ></a>
             </div>
           </div>
         </div>
       </section>
-      <section class="container campo-textos">
+      <section class="container">
         <div class="animate">
-          <div class="row mt-50 align-items-center align-items">
+          <div id="inverter" class="row mt-50 align-items-center align-items">
             <div class="col-md-6">
               <h1 class="titulo-txt-1">Mostre aos clientes o produto certo</h1>
               <p class="txt-1">
@@ -257,7 +263,7 @@
         </div>
         <div class="animate">
           <div class="row mt-50 align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-6 mt-20 mb-30">
               <img class="w-100" src="images/img8.png" alt="" />
             </div>
             <div class="col-md-6">
@@ -272,16 +278,16 @@
                 <div class="col-md-6 mt-50">
                   <i aria-hidden="true" class="fas fa-robot i-1"></i>
                   <h3>Busca inteligente</h3>
-                  <p>
+                  <p class="txt-2">
                     O diferencial da nossa busca em relação a outras é a
                     utilização de inteligência artificial, que garante resultados
                     mais precisos.
                   </p>
                 </div>
-                <div class="col-md-6 mt-50">
+                <div class="col-md-6 mt-50 ">
                   <i aria-hidden="true" class="fas fa-comments-dollar i-2"></i>
                   <h3>Aumento da conversão</h3>
-                  <p>
+                  <p class="txt-2">
                     com a maior precisão e rapidez nas buscas, que faz com que o cliente encontre e finalize seus pedidos rapidamente.
                   </p>
                 </div>
@@ -303,20 +309,20 @@
                 <div class="col-md-6 mt-50">
                   <i aria-hidden="true" class="fas fa-fingerprint i-1"></i>
                   <h3>Análises em tempo real</h3>
-                  <p>
+                  <p class="txt-2">
                     que exibem as vitrines em pontos estratégicos da loja, mostrando os melhores produtos para cada consumidor.
                   </p>
                 </div>
                 <div class="col-md-6 mt-50">
                   <i aria-hidden="true" class="fas fa-dollar-sign i-2-2"></i>
                   <h3>Aumento do ticket médio</h3>
-                  <p>
+                  <p class="txt-2">
                     com as recomendações que sugerem produtos similares e até mesmo complementares ao que o cliente está buscando.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-30">
               <img class="w-100" src="images/img9.png" alt="" />
             </div>
           </div>
@@ -329,83 +335,58 @@
           <h1 class="titulo-beneficios">Nós te ajudamos a vender <br> muito mais 😀</h1>
           <p>Afinal de contas, o sonho de todo lojista é vender muito além dos limites da sua cidade.</p>
         </div>
+            
+        <div>
           <div class="row">
-            <div class="col-md-4">
-              <div class="mt-50 b-box-1 box-space">
-                <i class="fa-solid fa-chart-column b-i1"></i>
-                <h3>Sua loja virtual pronta</h3>
-                <p>para vender! Economize seu tempo, sem dor de cabeça.
-                  <br> <br>
-                Você precisa apenas focar em gerenciar seus produtos e nas estratégias de marketing e vendas.
-                </p>
-                <h4>Todos os planos incluem...</h4>
-                <ul class="plano-lista">
-                  <li>
-                    <i class="fa-solid fa-check"></i>Servidor cloud dedicado
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-check"></i>Hospedagem inclusa
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-check"></i>+60 temas otimizados para vender
-                  </li>
-                  <li>
-                  <i class="fa-solid fa-check"></i>+234 recursos
-                  </li>
-                  <li>  
-                    <i class="fa-solid fa-check"></i>Novidades e melhorias semanais
-                  </li>
-                </ul>
-                <a href="" class="b-a">Ver Mais</a><i aria-hidden="true" class="fas fa-arrow-right ml-10"></i>
+            <div class="container-cards">
+              <div class="large-card">
+                  <div class="b-i1">
+                    <i class="fa-solid fa-chart-column"></i>
+                  </div>  
+                    <h3>Sua loja virtual pronta</h3>
+                    <p class="lc-txt">Para vender! Economize seu tempo, sem dor de cabeça. <br><br> Você precisa apenas focar em gerenciar seus produtos e nas estratégias de marketing e vendas.</p>
+                    <h4>Todos os planos incluem...</h4>
+                    <ul>
+                        <li> Servidor cloud dedicado</li>
+                        <li> Hospedagem inclusa</li>
+                        <li> +60 temas otimizados para vender +</li>
+                        <li> +234 recursos</li>
+                        <li> Novidades e melhorias semanais</li>
+                    </ul>
+                    <a href="#">Ver Mais<i aria-hidden="true" class="fas fa-arrow-right"></i></a>
               </div>
-              </div>
-              <div class="col-md-8">
-                <div>
-                  <div class="row align-items-center align-items">
-                          <div class="col-md-6">
-                            <div class="mt-50 b-box-2 box-space">
-                              <i aria-hidden="true" class="fas fa-credit-card b-i2"></i>
-                              <h3>Meios de Pagamento</h3>
-                              <p>
-                                Uma loja virtual e todos meios de pagamento integrados. Dê adeus às páginas intermediárias e aumente as vendas online em até 30%.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mt-50 b-box-2 box-space">
-                              <i aria-hidden="true" class="fas fa-user-friends b-i3"></i>
-                              <h3>Gestão Integrada</h3>
-                              <p>
-                              Foco total nas vendas. Você não precisa mudar seu sistema de gestão para começar a vender online. Foque em aumentar suas vendas!
-                              </p>
-                            </div>
-                          </div>
-                        </div>
+              <div class="card">
+                <div class="b-i2">
+                  <i aria-hidden="true" class="fas fa-credit-card"></i>
                 </div>
-              <div>
-                  <div class="row align-items-center align-items">
-                        <div class="col-md-6">
-                          <div class="mt-50 b-box-2 box-space">
-                            <i aria-hidden="true" class="fas fa-spell-check b-i4"></i>
-                            <h3>Loja Virtual Linda</h3>
-                            <p>
-                              Use sua marca e crie uma presença marcante na internet. Você escolhe um tema profissional e decide a aparência ao criar sua loja virtual.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="mt-50 b-box-2 box-space">
-                            <i aria-hidden="true" class="fas fa-cog b-i5"></i>
-                            <h3>Loja Pronta para Vender</h3>
-                            <p>
-                              Sua loja pronta para vender em todos os lugares, sem precisar de programação. A loja já é entregue configurada e pronta para fazer as primeiras vendas!
-                            </p>
-                          </div>
-                        </div>
-                  </div>
+                  <h3>Meios de Pagamento</h3>
+                  <p>Uma loja virtual e todos meios de pagamento integrados. Dê adeus às páginas intermediárias e aumente as vendas online em até 30%.</p>
               </div>
-            </div>
-        </div>
+              <div class="card">
+                <div class="b-i3">
+                  <i aria-hidden="true" class="fas fa-spell-check"></i>
+                </div>  
+                  <h3>Gestão Integrada</h3>
+                  <p>Foco total nas vendas. Você não precisa mudar seu sistema de gestão para começar a vender online. Foque em aumentar suas vendas!</p>
+              </div>
+              <div class="card">
+                  <div class="b-i4">
+                    <i aria-hidden="true" class="fas fa-user-friends"></i>
+                  </div>
+                  <h3>Loja Virtual Linda</h3>
+                  <p>Use sua marca e crie uma presença marcante na internet. Você escolhe um tema profissional e decide a aparência ao criar sua loja virtual.</p>
+              </div>
+              <div class="card">
+                <div class="b-i5">
+                  <i aria-hidden="true" class="fas fa-cog"></i>
+                </div>
+                  <h3>Loja Pronta para Vender</h3>
+                  <p>Sua loja pronta para vender em todos os lugares, sem precisar de programação. A loja já é entregue configurada e pronta para fazer as primeiras vendas!</p>
+              </div>
+           </div>
+          </div>
+      </div>
+
         <div class="text-align-center mt-70">
           <button type="button" class="b-btn2 btn btn-primary btn-demo">
               Falar com Especialista
@@ -418,28 +399,28 @@
             Por que contratar a Get Commerce?
           </h1>
           <p class="demonstracao-2-p">
-            A Get Commerce é a única plataforma de e-commerce inteligente que te entrega uma solução de ponta a ponta. <br><br>
+            A Get Commerce é a única plataforma de e-commerce inteligente que te entrega uma solução de ponta a ponta. <br>
             É a combinação perfeita da melhor tecnologia de e-commerce e inteligência artificial, trabalhando junto para
            você vender muito mais.
           </p>
-          <div class="container text-center animate">
-            <div class="row align-items-center mt-50 pb-70">
-              <div class="col-md-3">
+          <div class="text-center animate mt-30">
+            <div class="row align-items-center pb-112">
+              <div class="col-md-3 mt-30">
                 <i class="fa-solid fa-dollar-sign i-d-2 i-bg"></i>
                 <h3 class="sub-d">Maior Conversão</h3>
                 <p class="desc">Faturamento médio 30% maior das lojas que usam nossa plataforma, muito acima da média nacional.</p>               
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 mt-30">
                 <i aria-hidden="true" class="fas fa-chart-line i-d-2 i-bg"></i>
                 <h3 class="sub-d">Aumento Ticket Médio</h3>
                 <p class="desc">Vendas com maior valor agregado, resultado das recomendações automáticas e recuperação de carrinhos.</p>               
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 mt-30">
                 <i aria-hidden="true" class="fas fa-robot i-d-2 i-bg"></i>
                 <h3 class="sub-d">Inteligência Artificial</h3>
-                <p class="desc">Economize seu tempo e venda mais, usando recursos inteligentes e automáticos na sua loja virtual.</p>
+                <p class="desc">Economize seu tempo e venda mais, usando recursos inteligentes e automáticos na sua <br> loja virtual.</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 mt-30">
                 <i aria-hidden="true" class="fas fa-chalkboard-teacher i-d-2 i-bg"></i>
                 <h3 class="sub-d">Treinamento e Suporte</h3>
                 <p class="desc">Não perca seu tempo, e conte com a melhor tecnologia e um suporte que lhe ensina a vender online.</p>               
@@ -452,9 +433,9 @@
            <span class="i-span">#IMPRENSA</span>
            <h1 class="titulo-beneficios">O que a imprensa está falando da <br> gente na mídia</h1>
         </div>
-        <div class="container animate">
-          <div class="row mt-50 align-items-center align-items">
-            <div class="col-md-6">
+        <div class="animate">
+          <div class="row mt-50 align-items-center align-items content" id="content">
+            <div class="col-md-6 mr-15">
               <div>
                 <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
               </div>
@@ -482,47 +463,47 @@
           </div>
         </div>
         <div>
-          <div class="container mt-50 mb-200 animate">
+          <div class="mt-50 mb-200 animate">
             <div class="row align-items-center align-items-center static mt-70">
-              <div class="col-md-3 display-flex">
+              <div class="bg-empresas col-md-3 display-flex">
                 <div>
                   <img class="img-empresas" src="images/img12.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <button id="baguete" class="button-links" onclick="mudar1()">
+                  <button id="baguete" class="button-links" onclick="changeContent('baguete')">
                     <h3 id="nome">Baguete</h3>
                     <span id="link">baguete.com.br</span>
                   </button>
                 </div>
               </div>
-              <div class="col-md-3 display-flex">
+              <div class="bg-empresas col-md-3 display-flex">
                 <div>
                   <img class="img-empresas" src="images/img13.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <button class="button-links" onclick="mudar2()">
+                  <button class="button-links" onclick="changeContent('startups')">
                     <h3 id="nome">Startups</h3>
                     <span>startups.com.br</span>
                   </button>
                 </div>
               </div>
-              <div class="col-md-3 display-flex">
+              <div class="bg-empresas col-md-3 display-flex">
                 <div>
                   <img class="img-empresas" src="images/img14.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <button class="button-links" onclick="mudar3()">
+                  <button class="button-links" onclick="changeContent('abcomm')">
                     <h3 id="nome">ABCOMM</h3>
                     <span>abcomm.org</span>
                   </button>
                 </div>
               </div>
-              <div class="col-md-3 display-flex">
+              <div class="bg-empresas col-md-3 display-flex">
                 <div>
                   <img class="img-empresas" src="images/img15.jpg" alt="">
                 </div>
                 <div class="mt-40 col-md-6">
-                  <button class="button-links" onclick="mudar4()">
+                  <button class="button-links" onclick="changeContent('forbes')">
                     <h3 id="nome">Forbes</h3>
                     <span>forbespt.com</span>
                   </button>
@@ -539,12 +520,12 @@
           <h2 class="titulo-planos">Escolha seu plano Tiny e <br> ganhe teste grátis por 30 dias</h1>
         </div>
         <div>
-        <div class="container">
+        <div>
           <div class="row align-items-center pb-70">
             <div class="col-md-3">
               <div class="bg-branco">
                 <h4 class="sub-planos">Começar</h4>
-                <span class="desc-planos">O início certo para seu negócio.</span>
+                <span class="desc-planos">O início correto para seu <br> negócio. <br></span>
                 <div>
                   <ul>
                     <li><i class="fa-solid fa-user i-planos"></i>1 usuário</li>
@@ -560,7 +541,7 @@
             <div class="col-md-3">
               <div class="bg-branco">
                 <h4 class="sub-planos">Crescer</h4>
-                <span class="desc-planos">O parceiro da sua jornada de crescimento</span>
+                <span class="desc-planos">O parceiro da sua jornada de <br> crescimento</span>
                 <div>
                   <ul>
                     <li><i class="fa-solid fa-user i-planos"></i>5 usuários</li>
@@ -576,7 +557,7 @@
             <div class="col-md-3">
               <div class="bg-branco">
                 <h4 class="sub-planos">Evoluir</h4>
-                <span class="desc-planos">O passo além para sua empresa.</span>
+                <span class="desc-planos">O passo além para sua <br> empresa.</span>
                 <div>
                   <ul>
                     <li><i class="fa-solid fa-user i-planos"></i>10 usuários</li>
@@ -592,12 +573,12 @@
             <div class="col-md-3">
               <div class="bg-branco">
                 <h4 class="sub-planos">Potencializar</h4>
-                <span class="desc-planos">O grande plano para seu negócio.</span>
+                <span class="desc-planos">O grande plano para seu <br> negócio.</span>
                 <div>
                   <ul>
                     <li><i class="fa-solid fa-user i-planos"></i>15 usuários</li>
                     <li><i class="fa-solid fa-database i-planos "></i>800 MB de dados</li>
-                    <li><i class="fa-solid fa-user-gear i-planos"></i>gerente de contas dedicado</li>
+                    <li><i class="fa-solid fa-user-gear i-planos"></i>gerente de contas</li>
                   </ul>
                 </div>
                 <div class="display-flex justify-content-center">
@@ -610,7 +591,7 @@
         </div>
       </div>
       </section>
-      <section class="container mt-70 mb-200">
+      <section class="container mt-70">
         <div class="text-align-center mb-50 col-sl-12 m-">
           <h3>Principais Duvidas</h3>
         </div>
@@ -726,7 +707,7 @@
             </div>
           </div>
       </section>
-      <section class="container p-20 display-flex justify-content-center mb-200 animate col-md-12">
+      <section class="container p-20 display-flex justify-content-center animate col-md-12">
         <div class="bg-image display-flex text-align-center">
           <div class="col-md-6">
             <h2 class="titulo-banner-demonstracao">A solução ideal para o seu negócio está no Tiny</h2>
@@ -737,7 +718,7 @@
         </div>
       </section>
     </main>
-    <footer class="container">
+    <footer class="container mt-200">
       <section class="mb">
       <div class="container">
         <div class="row align-items-start">
@@ -836,61 +817,134 @@
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   }, false);
 });
+function changeContent(source) {
+  const content = document.getElementById('content');
+  content.classList.remove('fade-in');
+  content.classList.add('fade-out');
 
-    function mudar1(){
-      botao = window.document.getElementById('baguete');
-      botao.style.marginTop = '-10px';
-      desc = window.document.getElementById("desc")
-      img = window.document.getElementById("img")
-      nome = window.document.getElementById("nome")
-      link = window.document.getElementById("link")
-      titulo = window.document.getElementById("titulo")
-      titulo.innerHTML = "Get Commerce dobra de tamanho em 2022"
-      desc.innerHTML = "Com isso, a Get Commerce com aprimoramento constante de sua tecnologia de IA, possibilitou um faturamento até 30% maior para os seus clientes que são lojas físicas, marcas próprias e indústrias, migrando para o digital como um importante canal de vendas."
-      nome.innerHTML = "Baguete"
-      link.innerHTML = "baguete.com.br"
-      img.innerHTML = '<img class="img-imprensa bg-preto" src="images/img11.jpg" alt="">' 
-    }
-    function mudar2(){
-      botao = window.document.getElementById('Baguete');
-      desc = window.document.getElementById("desc")
-      img = window.document.getElementById("img")
-      nome = window.document.getElementById("nome")
-      link = window.document.getElementById("link")
-      titulo = window.document.getElementById("titulo")
-      titulo.innerHTML = "Get Commerce levanta R$ 1,2 milhão para ser a RD Station das lojas virtuais"
-      desc.innerHTML = "Criada em 2018, a ferramenta segue um modelo de loja pronta, com tudo o que é preciso para realizar vendas online, desde a configuração das formas de pagamento e envio, à incorporação com o Facebook e configuração do Google Analytics, a ferramenta de marketing digital do Google. Desde sua fundação, a startup atingiu mais de 650 mil pedidos, 27 milhões de pageviews mensais e R$ 160 milhões transacionados diretamente na plataforma."
-      nome.innerHTML = "Startups"
-      link.innerHTML = "startups.com.br"
-      img.innerHTML = '<img id="img" class="img-imprensa bg-preto" src="images/startups.jpg" alt="">'
-      setTimeout(function() {
-        document.getElementById("container").classList.add("show");
-      }, 500);  
-    }
-    function mudar3(){
-      desc = window.document.getElementById("desc")
-      img = window.document.getElementById("img")
-      nome = window.document.getElementById("nome")
-      link = window.document.getElementById("link")
-      titulo = window.document.getElementById("titulo")
-      titulo.innerHTML = "Get Commerce: eleita melhor plataforma de ecommerce do Brasil pela ABComm está conquistando o mundo"
-      desc.innerHTML = "Com o uso da tecnologia Get Commerce, nossos clientes têm um aumento de, até 30% nas vendas. Na nossa plataforma já foram gerados mais de 700.000 pedidos, e transacionados mais de R$ 165.000.000. São mais de 27 milhões de pageviews mensais.Tudo isso com alta satisfação de nossos clientes."
-      nome.innerHTML = "ABCOMM"
-      link.innerHTML = "abcomm.org"
-      img.innerHTML = '<img id="img" class="img-imprensa bg-preto" src="images/abcomm.jpg" alt="">'  
-    }
-    function mudar4(){
-      desc = window.document.getElementById("desc")
-      img = window.document.getElementById("img")
-      nome = window.document.getElementById("nome")
-      link = window.document.getElementById("link")
-      titulo = window.document.getElementById("titulo")
-      titulo.innerHTML = "60 Startups vão testar as suas inovações em parceria com empresas"
-      desc.innerHTML = "Neste momento, os projetos com maior potencial irão conectar-se com mentores, investidores e atores do ecossistema, que os ajudarão a impulsionar o seu desenvolvimento, tais como as empresas Banco Montepio, Brisa, KCS IT, Gaiurb e Águas de Gaia."
-      nome.innerHTML = "Forbes"
-      link.innerHTML = "forbespt.com"
-      img.innerHTML = '<img id="img" class="img-imprensa bg-preto" src="images/forbes.jpg" alt="">'  
-    }
+    setTimeout(() => {
+        switch (source) {
+            case 'baguete':
+                content.innerHTML = `
+                <div class="col-md-6">
+              <div>
+                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
+              </div>
+              <h1 id="titulo" class="b-titulo-imprensa">Get Commerce dobra de tamanho em 2022</h1>
+              <div>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+              </div>
+              <p id="desc" class="txt-l">
+                Com isso, a Get Commerce com aprimoramento constante de sua tecnologia de IA, possibilitou um faturamento até 30% maior
+                para os seus clientes que são lojas físicas, marcas próprias e indústrias, migrando para o digital como um importante
+                canal de vendas.
+              </p>
+              <div class="mt-40">
+                <h3 id="nome">Baguete</h3>
+                <span id="link">baguete.com.br</span>
+              </div>
+            </div>
+            <div id="img" class="col-md-6 text-align-center">
+              <img class="img-imprensa bg-preto" src="images/img11.jpg" alt=""/>
+            </div>
+                `;
+                break;
+            case 'startups':
+                content.innerHTML = `
+                <div class="col-md-6">
+              <div>
+                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
+              </div>
+              <h1 id="titulo" class="b-titulo-imprensa">Get Commerce levanta R$ 1,2 milhão para ser a RD Station das lojas</h1>
+              <div>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+              </div>
+              <p id="desc" class="txt-l">
+                Criada em 2018, a ferramenta segue um modelo de loja pronta, com tudo o que é preciso para realizar vendas online, desde a configuração das formas de pagamento e envio, à incorporação com o Facebook e configuração do Google Analytics, a ferramenta de marketing digital do Google. Desde sua fundação, a startup atingiu mais de 650 mil pedidos, 27 milhões de pageviews mensais e R$ 160 milhões transacionados diretamente na plataforma.
+              </p>
+              <div class="mt-40">
+                <h3 id="nome">Startups</h3>
+                <span id="link">startups.com.br</span>
+              </div>
+            </div>
+            <div id="img" class="col-md-6 text-align-center">
+              <img class="img-imprensa bg-preto" src="images/startups.jpg" alt=""/>
+            </div>
+                `;
+                break;
+            case 'abcomm':
+                content.innerHTML = `
+                <div class="col-md-6">
+              <div>
+                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
+              </div>
+              <h1 id="titulo" class="b-titulo-imprensa">Get Commerce: eleita melhor plataforma de ecommerce do Brasil pela ABComm está conquistando o mundo</h1>
+              <div>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+              </div>
+              <p id="desc" class="txt-l">
+                Com o uso da tecnologia Get Commerce, nossos clientes têm um aumento de, até 30% nas vendas. Na nossa plataforma já foram gerados mais de 700.000 pedidos, e transacionados mais de R$ 165.000.000. São mais de 27 milhões de pageviews mensais. Tudo isso com alta satisfação de nossos clientes.
+              </p>
+              <div class="mt-40">
+                <h3 id="nome">ABCOMM</h3>
+                <span id="link">abcomm.org</span>
+              </div>
+            </div>
+            <div id="img" class="col-md-6 text-align-center">
+              <img class="img-imprensa bg-preto" src="images/abcomm.jpg" alt=""/>
+            </div>
+                `;
+                break;
+            case 'forbes':
+                content.innerHTML = `
+                <div class="col-md-6">
+              <div>
+                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
+              </div>
+              <h1 id="titulo" class="b-titulo-imprensa">60 Startups vão testar as suas inovações em parceria com empresas</h1>
+              <div>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+                <span><i class="fa-solid fa-star star"></i></span>
+              </div>
+              <p id="desc" class="txt-l">
+                Neste momento, os projetos com maior potencial irão conectar-se com mentores, investidores e atores do ecossistema, que os ajudarão a impulsionar o seu desenvolvimento, tais como as empresas Banco Montepio, Brisa, KCS IT, Gaiurb e Águas de Gaia.
+              </p>
+              <div class="mt-40">
+                <h3 id="nome">Forbes</h3>
+                <span id="link">forbespt.com</span>
+              </div>
+            </div>
+            <div id="img" class="col-md-6 text-align-center">
+              <img class="img-imprensa bg-preto" src="images/forbes.jpg" alt=""/>
+            </div>
+                `;
+                break;
+            default:
+                break;
+        }
+        content.classList.remove('fade-out');
+        setTimeout(() => {
+            content.classList.add('fade-in');
+        }, 20);
+    }, 500);
+}
+
+   
 
     </script>
   </body>

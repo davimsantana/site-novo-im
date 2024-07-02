@@ -1215,6 +1215,9 @@ ul {
   #img-demontracao{
     margin-top: 20px;
   }
+  .container-fluid{
+    padding: 10px 0px 10px 0px;
+  }
   .bg-azul-2 {
     display: none;
   }

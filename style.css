@@ -1215,6 +1215,9 @@ ul {
   #img-demontracao{
     margin-top: 20px;
   }
+  .nav{
+    flex-wrap: nowrap;
+  }
   .container-fluid{
     padding: 10px 0px 10px 0px;
   }

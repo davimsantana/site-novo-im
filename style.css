@@ -499,7 +499,7 @@ h3 {
   display: flex;
 }
 
-.d-n{
+.d-none{
   display: none;
 }
 
@@ -1078,17 +1078,19 @@ ul {
   background-color: #071c4d;
   border-radius: 10px;
   margin-top: 200px;
-  width: 70%;
+  width: 100%;
+  align-items: center;
 }
 
 .titulo-banner-demonstracao {
   color: white;
-  font-size: 25px;
+  font-size: 28px;
+  text-align: justify;
   font-weight: 600;
   font-family: Poppins;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 30px;
+  margin-left: 120px;
 }
 
 
@@ -1100,8 +1102,8 @@ ul {
   font-family: Poppins;
   font-size: .9rem;
   border: 0px;
-  width: 150px;
-  height: 50px;
+  width: 190px;
+  height: 60px;
   font-weight: 600;
   white-space: normal;
   line-height: 1.5;

@@ -125,7 +125,7 @@ nav > .container{
 
 .bg-cinza{
   background-color: #F8F9FA;
-  width: 100%;
+  width: 100% !important;
 }
 
 
@@ -510,13 +510,7 @@ h3 {
   display: flex;
 }
 
-.d-none{
-  display: none;
-}
 
-.d-b{
-  display: block;
-}
 
 .align-items-center {
   align-items: center;
@@ -940,9 +934,9 @@ h4 {
 .img-imprensa {
   width: 543px;
   height: 486px;
-  height: auto;
   border-radius: 20px;
   margin-top: 50px;
+  overflow: hidden;
 }
 
 .watermark {

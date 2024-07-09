@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6{
 nav > .container{
   max-width: 100% !important;
 }
+
 .container-fluid {
   background-color: white;
   align-items: center;
@@ -104,6 +105,13 @@ nav > .container{
   display: flex;
   align-items: center !important;
   justify-content: center !important;
+  flex-direction: row;
+  width: 85%;
+}
+
+.navbar-expand-lg .navbar-collapse{
+  display: flex;
+  justify-content: right;
 }
 
 
@@ -115,7 +123,10 @@ nav > .container{
   width: 150px;
 }
 
-
+.bg-cinza{
+  background-color: #F8F9FA;
+  width: 100%;
+}
 
 
 .static{
@@ -131,7 +142,7 @@ nav > .container{
 }
 
 .nav-item > a {
-  margin: 20px;
+  margin: 15px;
   transition: 0.3s;
   color: #071c4d;
 }
@@ -1306,6 +1317,10 @@ ul {
     margin: 0;
     text-align: start;
     width: 150px;
+  }
+
+  button.button-links:focus-visible, button.button-links:focus{
+    border: 0;
   }
   .titulo-beneficios{
     font-size: 32px;

@@ -991,6 +991,7 @@ h4 {
   background-color: white;
   transition: all .3s ease-in-out;
   padding: 15px;
+  margin: 0px 15px 0px 15px;
   border: 2px solid #eaeaeb;
   border-radius: 10px;
   border-style: solid;

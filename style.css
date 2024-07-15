@@ -261,8 +261,8 @@ ul {
   font-weight: 800;
   font-size: 45px;
   letter-spacing: -2px;
-  margin-bottom: 36px;
-  margin-top: 160px;
+  margin: 160px auto 36px auto;
+  width: 75%;
 }
 
 .banner-description {
@@ -459,7 +459,6 @@ ul {
 .txt-1 {
   font-family: Poppins, sans-serif;
   font-size: 16px;
-  padding-top: 20px;
 }
 
 h3 {
@@ -604,6 +603,10 @@ h3 {
 
 .mb-50 {
   margin-bottom: 50px;
+}
+
+.mb-120{
+  margin-bottom: 120px;
 }
 
 .pb-50{
@@ -1291,6 +1294,11 @@ ul {
   .container{
    max-width: 95% !important;
   }
+  .txt-btn1 {
+    margin-top: 20px;
+    margin-left: 0;
+    display: none;
+  }
   #img-demontracao{
     margin-top: 20px;
   }
@@ -1326,6 +1334,7 @@ ul {
   }
   .banner-title{
     font-size: 32px;
+    width: 100%;
   }
   .banner-description{
     font-size: 1.25rem;
@@ -1347,6 +1356,7 @@ ul {
   }
   .img-2-rodape{
     width: 20%;
+    margin-bottom: 20px;
   }
   .titulo-planos{
     font-size: 29px;
@@ -1461,5 +1471,10 @@ ul {
   }
   .img-imprensa{
     width: 220px;
+  }
+}
+@media (min-width: 2200px){
+  .banner-title{
+    width: 45%;
   }
 }

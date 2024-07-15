@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary pt-20">
-      <div class="container container-fluid">
+    <nav class="navbar bg-body-tertiary navbar-expand-lg pt-20">
+      <div class="container container-fluid justify-content-center">
         <div class="nav">
         <div class="nowrap display-flex">
           <a href=""><img class="img-logo" src="images/logo.png" alt="Logo" /></a>
         </div>
         <div>
-          <button class="navbar-toggler mr-15" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -331,8 +331,9 @@
         </div>
       </section>
       <section class="bg-cinza">
+        <div class="container">
           <div class="mt-200 mb-50 text-align-center">
-            <h1 class="titulo-beneficios pt-100">Nós te ajudamos a vender <br> muito mais 😀</h1>
+            <h1 class="titulo-beneficios pt-100">Nós te ajudamos a vender b muito mais 😀</h1>
             <p>Afinal de contas, o sonho de todo lojista é vender muito além dos limites da sua cidade.</p>
           </div>
               
@@ -392,6 +393,7 @@
                 Falar com Especialista
             </button>
           </div>
+        </div>
       </section>
       <section class="bg-azul">
         <div class="animate container">
@@ -467,7 +469,7 @@
                 </div>
             </div>
             <div class="mt-50 pb-200 animate">
-                <div class="row align-items-center static mt-70 w-100 justify-content-sb">
+                <div class="row align-items-center mt-70 w-100 alignment">
                     <button id="button-1" class="bg-empresas col-md-3 display-flex" data-source="baguete" onclick="changeContent(this)">
                         <div>
                             <img class="img-empresas" src="images/img12.jpg" alt="">
@@ -559,7 +561,7 @@
             <div class="col-md-3">
               <div class="bg-branco">
                 <h4 class="sub-planos">Evoluir</h4>
-                <span class="desc-planos">O passo além para sua empresa.</span>
+                <span class="desc-planos">O passo além para <br> sua empresa.</span>
                 <div>
                   <ul>
                     <li><i class="fa-solid fa-user i-planos"></i>10 usuários</li>
@@ -725,7 +727,7 @@
       <div>
         <div class="row align-items-start">
             <div class="col-md-3 pr-50">
-              <img class="img-1-rodape" src="images/logo-footer.png" alt="">
+              <img class="img-1-rodape" src="images/logo.png" alt="">
               <p>A Get Commerce é o jeito mais simples e seguro para você vender pela internet.</p>
               <img class="img-2-rodape" src="images/img16.png" alt="">
             </div>
@@ -759,13 +761,10 @@
         <div class="mb-20">Get Commerce ♥ E-commerce inteligente de ponta a ponta.</div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
       $(document).ready(function () {
         $(".dropdown").on("mouseenter", function () {
           $(this).addClass("show");

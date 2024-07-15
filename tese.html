@@ -3,108 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .bg-active{
-            background-color: #fff;
-            border-style: solid;
-            border-color: #FFFFFF;
-            box-shadow: 0 20px 20px 0 rgba(2, 19, 79, .1);
-            transform: translateY(-3px);
-        }
-
-        .img-empresas {
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        margin-right: 20px;
-        }
-
-        .bg-empresas{
-        background-color: #f8f9fa;
-        transition: all .3s ease-in-out;
-        padding: 15px;
-        margin: 0px 15px 0px 0px;
-        border: 2px solid #eaeaeb;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 1px 1px 1px 1px;
-        border-color: #6565651A;
-        min-width: 20%;
-        width: 24%;
-        align-items: center;
-            }
-    </style>
+    <title>Bootstrap Navbar Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="mt-50 pb-200 animate">
-        <div class="row align-items-center static mt-70 w-100 justify-content-sb">
-            <button id="button-1" class="bg-empresas col-md-3 display-flex" data-source="baguete" onclick="changeContent(this)">
-                <div>
-                    <img class="img-empresas" src="images/img12.jpg" alt="">
-                </div>
-                <div class="col-md-6">
-                    <div class="button-links">
-                        <h3 class="empresa-nome">Baguete</h3>
-                        <span class="link">baguete.com.br</span>
-                    </div>
-                </div>
-            </button>
-            <button id="button-2" class="bg-empresas col-md-3 display-flex" data-source="startups" onclick="changeContent(this)">
-                <div>
-                    <img class="img-empresas" src="images/img13.jpg" alt="">
-                </div>
-                <div class="col-md-6">
-                    <div class="button-links">
-                        <h3 class="empresa-nome">Startups</h3>
-                        <span class="link">startups.com.br</span>
-                    </div>
-                </div>
-            </button>
-            <button id="button-3" class="bg-empresas col-md-3 display-flex" data-source="abcomm" onclick="changeContent(this)">
-                <div>
-                    <img class="img-empresas" src="images/img14.jpg" alt="">
-                </div>
-                <div class="col-md-6">
-                    <div class="button-links">
-                        <h3 class="empresa-nome">ABCOMM</h3>
-                        <span class="link">abcomm.org</span>
-                    </div>
-                </div>
-            </button>
-            <button id="button-4" class="bg-empresas col-md-3 display-flex" data-source="forbes" onclick="changeContent(this)">
-                <div>
-                    <img class="img-empresas" src="images/img15.jpg" alt="">
-                </div>
-                <div class="col-md-6">
-                    <div class="button-links">
-                        <h3 class="empresa-nome">Forbes</h3>
-                        <span class="link">forbespt.com</span>
-                    </div>
-                </div>
-            </button>
-        </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Brand</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Plataforma</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Planos e Preços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+            </li>
+        </ul>
     </div>
-    <div id="content" class="content"></div>
-    
-    <script>
-        function changeContent(button) {
-            const source = button.getAttribute('data-source');
-            const content = document.getElementById('content');
-            const empresasBtns = document.querySelectorAll('.bg-empresas');
-        
-            // Remover classes de todos os botões
-            empresasBtns.forEach(btn => {
-                btn.classList.remove('bg-active');
-                btn.querySelector('.empresa-nome').classList.remove('titulo-azul');
-            });
-        
-            // Adicionar classes ao botão clicado
-            button.classList.add('bg-active');
-            button.querySelector('.empresa-nome').classList.add('titulo-azul');
-        
-            // Adicionar efeito de fade-out
-            content.classList.remove('fade-in');
-            content.classList.add('fade-out');
-        }   
-    </script>    
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

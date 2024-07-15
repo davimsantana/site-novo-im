@@ -98,9 +98,6 @@ nav > .container{
   z-index: 1000;
 }
 
-.navbar>.container, .navbar>.container-fluid{
-  justify-content: center;
-}
 
 .nav{
   display: flex;
@@ -111,7 +108,6 @@ nav > .container{
 }
 
 .navbar-expand-lg .navbar-collapse{
-  display: flex;
   justify-content: right;
 }
 
@@ -522,6 +518,10 @@ h3 {
   align-items: flex-end;
 }
 
+.alignment{
+  justify-content: space-between;
+}
+
 .justify-content-center {
   justify-content: center;
 }
@@ -544,6 +544,10 @@ h3 {
 
 .mr-15{
   margin-right: 15px;
+}
+
+.mr-50{
+  margin-right: 50px;
 }
 
 .mt-30{
@@ -1342,14 +1346,14 @@ ul {
     width: 360px;
   }
   .img-2-rodape{
-    width: 25%;
+    width: 20%;
   }
   .titulo-planos{
     font-size: 29px;
   }
   .img-logo{
-    width: 55% !important;
-    margin-left: 20px;
+    width: 60% !important;
+    margin-left: 0px;
     margin-right: 0px;
     padding-top: 0px;
   }
@@ -1373,13 +1377,6 @@ ul {
     border-radius: 20px;
     margin-top: 50px;
   }
-  .button-links{
-    border: 0;
-    background-color: white;
-    margin: 0;
-    text-align: start;
-    width: 150px;
-  }
 
   button.button-links:focus-visible, button.button-links:focus{
     border: 0;
@@ -1399,6 +1396,16 @@ ul {
   }
   .card{
     margin: 0px;
+  }
+  .img-1-rodape{
+    width: 60%;
+  }
+  .bg-empresas{
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .alignment{
+    margin: 0 auto;
   }
   @keyframes float {
     0% {
@@ -1447,7 +1454,7 @@ ul {
     display: none;
   }
   .img-1-rodape{
-    max-width: 150%;
+    width: 50%;
   }
   .img-2-rodape{
     width: 50%;

@@ -669,6 +669,8 @@ h3 {
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 17px;
+  width: 55%;
+  margin: 0px auto 17px auto;
   color: #0b163f;
   font-family: Poppins, sans-serif;
 }
@@ -1395,6 +1397,7 @@ ul {
   }
   .titulo-beneficios{
     font-size: 32px;
+    width: 100%;
   }
   #inverter{
     display: flex;

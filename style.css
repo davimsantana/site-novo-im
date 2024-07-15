@@ -111,6 +111,12 @@ nav > .container{
   justify-content: right;
 }
 
+button.navbar-toggler.collapsed:focus-visible{
+  border: 0;
+  outline: 0;
+}
+
+
 
 .button-links{
   border: 0;
@@ -1301,9 +1307,6 @@ ul {
   }
   #img-demontracao{
     margin-top: 20px;
-  }
-  .nav{
-    flex-wrap: nowrap;
   }
   .container-fluid{
     padding: 10px 0px 10px 0px;

@@ -664,12 +664,23 @@ h3 {
   padding-left: 25px;
 }
 
-.titulo-beneficios {
+.titulo-beneficios-1 {
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 17px;
   width: 55%;
+  margin: 0px auto 17px auto;
+  color: #0b163f;
+  font-family: Poppins, sans-serif;
+}
+
+.titulo-beneficios-2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 17px;
+  width: 58%;
   margin: 0px auto 17px auto;
   color: #0b163f;
   font-family: Poppins, sans-serif;
@@ -1395,7 +1406,7 @@ ul {
   button.button-links:focus-visible, button.button-links:focus{
     border: 0;
   }
-  .titulo-beneficios{
+  .titulo-beneficios-1, .titulo-beneficios-2{
     font-size: 32px;
     width: 100%;
   }

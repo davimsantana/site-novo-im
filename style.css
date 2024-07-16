@@ -938,7 +938,7 @@ h4 {
   word-break: break-word;
   hyphens: auto;
   margin: 0px 10px 0px 10px;
-  width: 93%;
+  width: 97%;
   justify-content: baseline;
   margin: auto;
 }
@@ -1218,7 +1218,7 @@ ul {
   height: auto;
   max-width: 100%;
   margin-bottom: 20px;
-  padding-top: 25px;
+  padding-top: 10px;
 }
 
 .img-2-rodape {
@@ -1502,18 +1502,40 @@ ul {
     width: 220px;
   }
 }
-@media (min-width: 2200px){
-  .banner-title{
-    width: 45%;
-  }
-}
 
 @media (min-width: 1500px){
   .container{
-    max-width: 70% !important;
+    max-width: 70%;
+  }
+  .banner-title{
+    width: 63%;
+  }
+  .banner-description{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  .img-1-rodape{
+    max-width: 80%;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 2000px){
+  .container{
+    max-width: 60% !important;
   }
   .banner-description{
     margin: 0px auto 15px auto;
-    width: 50%;
+    width: 60%;
+  }
+  .banner-title{
+    width: 52%;
+  }
+  .nav{
+    width: 60%;
+  }
+  .btn{
+    margin-top: 1.7vh;
   }
 }

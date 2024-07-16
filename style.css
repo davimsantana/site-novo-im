@@ -1275,6 +1275,7 @@ ul {
   margin-top: 0;
 }
 
+
 @media (max-width: 1200px) {
   .home {
     display: none;
@@ -1384,7 +1385,7 @@ ul {
     font-size: 29px;
   }
   .img-logo{
-    width: 60% !important;
+    width: 55% !important;
     margin-left: 0px;
     margin-right: 0px;
     padding-top: 0px;
@@ -1440,12 +1441,33 @@ ul {
   .alignment{
     margin: 0 auto;
   }
-  li.nav-item.dropdown.show{
-    color: red;
+  .dropdown-menu{
+    display: none !important;
+  }
+  .dropdown-toggle::after{
+    display: none;
   }
   button.navbar-toggler{
     color: white;
   }
+  .nav{
+    width: 90%;
+  }
+  .navbar .container, 
+  .navbar .container-fluid {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .img-logo{
+    vertical-align: middle;
+  }
+
+.navbar .navbar-toggler {
+  margin-left: auto;
+  margin-top: 5px;
+}
   @keyframes float {
     0% {
         transform: translateY(0);

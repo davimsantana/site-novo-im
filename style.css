@@ -154,7 +154,7 @@ ul {
 
 .img-logo {
   width: 200px;
-  padding-top: 10px;
+  margin-top: 18px;
   margin-right: 10px;
 }
 
@@ -236,7 +236,7 @@ ul {
   height: 48px;
   font-size: 16px;
   font-weight: 500;
-  margin-top: 2.8vh;
+  margin-top: 18px;
 }
 
 .btn:hover {

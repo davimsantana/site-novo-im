@@ -165,9 +165,7 @@ ul {
 }
 
 .img-logo {
-  color: black;
   width: 200px;
-  padding-top: 10px;
   margin-right: 10px;
 }
 
@@ -403,9 +401,10 @@ ul {
 .txt-demonstracao {
   padding-top: 20px;
   padding-bottom: 10px;
+  text-align: center;
   color: #d6d5e1;
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 
 .sm-demonstracao {
@@ -1266,6 +1265,13 @@ ul {
 
 .container-fluid{
   flex-wrap: nowrap !important;
+
+}
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+  width: auto;
+  margin-top: 0;
 }
 
 @media (max-width: 1200px) {
@@ -1432,6 +1438,12 @@ ul {
   }
   .alignment{
     margin: 0 auto;
+  }
+  li.nav-item.dropdown.show{
+    color: red;
+  }
+  button.navbar-toggler{
+    color: white;
   }
   @keyframes float {
     0% {

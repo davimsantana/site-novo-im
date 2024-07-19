@@ -399,7 +399,7 @@ ul {
   top: 1280px;
   width: 1200px;
   height: 1000px;
-  background: radial-gradient(circle, #1d4a7f 0%, transparent 50%);
+  background: radial-gradient(circle, #1d4a7f 0%, transparent 45%);
   border-radius: 50%;
   opacity: 1;
   z-index: 0;
@@ -413,7 +413,7 @@ ul {
   right: -470px;
   width: 610px;
   height: 1000px;
-  background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 50%);
+  background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 45%);
   border-radius: 50%;
   opacity: 1;
 }

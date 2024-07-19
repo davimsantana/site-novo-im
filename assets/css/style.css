@@ -401,7 +401,7 @@ ul {
   height: 1000px;
   background: radial-gradient(circle, #1d4a7f 0%, transparent 50%);
   border-radius: 50%;
-  opacity: .65;
+  opacity: 1;
   z-index: 0;
 }
 
@@ -410,12 +410,12 @@ ul {
   padding: 0px;
   position: fixed;
   top: 670px;
-  right: -450px;
+  right: -470px;
   width: 610px;
   height: 1000px;
   background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 50%);
   border-radius: 50%;
-  opacity: .65;
+  opacity: 1;
 }
 
 .nebulosa-laranja{

@@ -1655,41 +1655,23 @@ ul {
     opacity: 1;
   }
   .nebulosa-azul_2{
-    margin: 0px;
-    padding: 0px;
-    position: fixed;
     right: -780px;
     top: 1000px;
     width: 1200px;
     height: 510px;
-    background: radial-gradient(circle, #1d4a7f 0%, transparent 40%);
-    border-radius: 50%;
-    opacity: .95;
   }
 
   .nebulosa-laranja {
-    margin: 0px;
-    padding: 0px;
-    position: fixed;
     left: -730px;
     top: 130px;
     width: 1200px;
     height: 700px;
-    background: radial-gradient(circle, #fb9006 0%, transparent 40%);
-    border-radius: 50%;
-    opacity: .35;
-    z-index: 0;
 }
   .nebulosa-roxa{
-    margin: 0px;
-    padding: 0px;
-    position: fixed;
     top: 800px;
     right: -360px;
     width: 460px;
     height: 1000px;
-    background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 40%);
-    border-radius: 50%;
   }
   
   @keyframes float {

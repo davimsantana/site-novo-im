@@ -410,7 +410,7 @@ ul {
   padding: 0px;
   position: fixed;
   top: 670px;
-  right: -470px;
+  right: -420px;
   width: 610px;
   height: 1000px;
   background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 45%);
@@ -428,7 +428,7 @@ ul {
   height: 1000px;
   background: radial-gradient(circle, #fb90067a 0%, transparent 50%);
   border-radius: 50%;
-  opacity: .4;
+  opacity: .7;
   z-index: 0;
 }
 
@@ -440,9 +440,9 @@ ul {
   top: -50px;
   width: 1200px;
   height: 510px;
-  background: radial-gradient(circle, #1d4a7f 0%, transparent 40%);
+  background: radial-gradient(circle, #1d5b7f 0%, transparent 40%);
   border-radius: 50%;
-  opacity: .55;
+  opacity: 1;
 }
 
 

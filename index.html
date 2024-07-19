@@ -14,14 +14,14 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <nav class="navbar bg-body-tertiary navbar-expand-lg pt-20">
       <div class="container container-fluid justify-content-center">
         <div class="nav">
         <div class="nowrap display-flex align-items-center">
-          <a href=""><img class="img-logo" src="images/logo.png" alt="Logo" /></a>
+          <a href=""><img class="img-logo" src="assets/images/logo.png" alt="Logo" /></a>
           <div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,10 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="display-flex">
+            <a href=""><img class="img-logo-nav" src="assets/images/logo.png" alt="Logo" /></a>
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link home" href="#">Home</a>
@@ -45,6 +49,8 @@
                 Plataforma 
               </a>
               <ul class="dropdown-menu">
+                <a class="link-dropdown" href="https://www.internetmedia.com.br/">Portal de Notícias <br></a>
+                <a class="link-dropdown" href="https://www.internetmedia.com.br/">Guia Comercial</a>
                 <ul>
                   <li><h2 class="titulo-dropdown">Como te Ajudamos</h2></li>
                   <li class="icon-container">
@@ -159,14 +165,14 @@
               <a class="nav-link" href="#">Contato</a>
             </li>
           </ul>
-          <button type="button" class="btn btn-primary">
-            Fale com Especialista
+          <button type="button" class="btn btn-nav btn-primary">
+            <span>Fale com Especialista</span>
           </button>
         </div>
       </div>
       </div>
     </nav>
-    <main class="animate element stiky">
+    <main class="animate element stiky overflow-hidden">
       <section class="container section">
         <div class="banner justify-content-center">
           <h1 class="banner-title">
@@ -189,23 +195,25 @@
             </button>
           </div>
           <div class="nowrap mb-50 mt-70 image-wrapper">
-            <img class="img-b-1" src="images/img2.jpg" alt="" />
-            <img class="img-b" src="images/img1.png" alt="" />
-            <img class="img-b-2" src="images/img3.jpg" alt="" />
+            <img class="img-b-1" src="assets/images/img2.jpg" alt="" />
+            <img class="img-b" src="assets/images/img1.png" alt="" />
+            <img class="img-b-2" src="assets/images/img3.jpg" alt="" />
           </div>
         </div>
       </section>
       <section class="bg-azul-2"></section>
-      <section class="bg-azul">
+      <section class="bg-azul overflow-hidden">
         <div class="container">
           <h1 class="titulo-demonstracao-1">
             Uma plataforma 5 estrelas, pronta para escalar o seu negócio
           </h1>
         </div>
+        <div class="nebulosa-roxa"></div>
+        <div class="nebulosa-azul"></div>
         <div class="demonstracao container overflow-hidden text-center animate">
           <div class="row gx-5">
             <div class="col-md-4">
-              <img id="img-demontracao" src="images/img4.png" alt="" />
+              <img id="img-demontracao" src="assets/images/img4.png" alt="" />
               <p class="txt-demonstracao">
                 Ganhadora do prêmio oficial da
                 ABCOMM, como a melhor plataforma de
@@ -216,7 +224,7 @@
               ></a>
             </div>
             <div class="col-md-4">
-              <img id="img-demontracao" src="images/img5.png" alt="" />
+              <img id="img-demontracao" src="assets/images/img5.png" alt="" />
               <p class="txt-demonstracao">
                 Somos uma empresa que recebeu aporte 
                 financeiro e pertencemos ao Venture 
@@ -227,7 +235,7 @@
               ></a>
             </div>
             <div class="col-md-4">
-              <img id="img-demontracao" src="images/img6.png" alt="" />
+              <img id="img-demontracao" src="assets/images/img6.png" alt="" />
               <p class="txt-demonstracao">
                 Plataforma de e-commerce inteligente 
                 que vem conquistando espaço em 
@@ -240,96 +248,98 @@
           </div>
         </div>
       </section>
-      <section class="container">
-        <div class="animate">
-          <div id="inverter" class="row mt-111 align-items-center align-items mb-120">
-            <div class="col-md-6">
-              <h1 class="titulo-txt-1">Mostre aos clientes o produto certo</h1>
-              <p class="txt-1">
-              Com a Super Busca da Get Commerce, que possui uma inteligência
-              artificial, você garante resultados de pesquisa mais precisos na
-              sua loja, pois ela considera a intenção do usuário, o contexto, as
-              preferências e o comportamento dele no site. Tudo isso em
-              milésimos de segundos.
-              <button
-              type="button"
-              class="txt-btn1 b-btn1 btn btn-primary btn-lg" >
-              Assista uma Demo
-            </button>
-            </div>
-            <div class="col-md-6">
-              <img class="w-100" src="images/img7.png" alt="" />
+      <section class="position-relative">
+        <div class="container">
+          <div class="animate">
+            <div id="inverter" class="row pt-111 align-items-center align-items mb-120">
+              <div class="col-md-6">
+                <h1 class="titulo-txt-1">Mostre aos clientes o produto certo</h1>
+                <p class="txt-1">
+                Com a Super Busca da Get Commerce, que possui uma inteligência
+                artificial, você garante resultados de pesquisa mais precisos na
+                sua loja, pois ela considera a intenção do usuário, o contexto, as
+                preferências e o comportamento dele no site. Tudo isso em
+                milésimos de segundos.
+                <button
+                type="button"
+                class="txt-btn1 b-btn1 btn btn-primary btn-lg" >
+                Assista uma Demo
+              </button>
+              </div>
+              <div class="col-md-6">
+                <img class="w-100" src="assets/images/img7.png" alt="" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="animate">
-          <div class="row align-items-center">
-            <div class="col-md-6 mt-20 mb-30">
-              <img class="w-100" src="images/img8.png" alt="" />
-            </div>
-            <div class="col-md-6">
-              <h1 class="titulo-txt-1">Mostre aos clientes o produto certo</h1>
-              <p class="txt-1">
-              Com a Super Busca da Get Commerce, que possui uma inteligência
-              artificial, você garante resultados de pesquisa mais precisos na
-              sua loja, pois ela considera a intenção do usuário, o contexto, as
-              preferências e o comportamento dele no site. Tudo isso em
-              milésimos de segundos.
-              <div class="row align-items-center">
-                <div class="col-md-6 mt-50">
-                  <i aria-hidden="true" class="fas fa-robot i-1"></i>
-                  <h3>Busca inteligente</h3>
-                  <p class="txt-2">
-                    O diferencial da nossa busca em relação a outras é a
-                    utilização de inteligência artificial, que garante resultados
-                    mais precisos.
-                  </p>
-                </div>
-                <div class="col-md-6 mt-50 ">
-                  <i aria-hidden="true" class="fas fa-comments-dollar i-2"></i>
-                  <h3>Aumento da conversão</h3>
-                  <p class="txt-2">
-                    com a maior precisão e rapidez nas buscas, que faz com que o cliente encontre e finalize seus pedidos rapidamente.
-                  </p>
+          <div class="animate">
+            <div class="row align-items-center">
+              <div class="col-md-6 mt-20 mb-30">
+                <img class="w-100" src="assets/images/img8.png" alt="" />
+              </div>
+              <div class="col-md-6">
+                <h1 class="titulo-txt-1">Mostre aos clientes o produto certo</h1>
+                <p class="txt-1">
+                Com a Super Busca da Get Commerce, que possui uma inteligência
+                artificial, você garante resultados de pesquisa mais precisos na
+                sua loja, pois ela considera a intenção do usuário, o contexto, as
+                preferências e o comportamento dele no site. Tudo isso em
+                milésimos de segundos.
+                <div class="row align-items-center">
+                  <div class="col-md-6 mt-50">
+                    <i aria-hidden="true" class="fas fa-robot i-1"></i>
+                    <h3>Busca inteligente</h3>
+                    <p class="txt-2">
+                      O diferencial da nossa busca em relação a outras é a
+                      utilização de inteligência artificial, que garante resultados
+                      mais precisos.
+                    </p>
+                  </div>
+                  <div class="col-md-6 mt-50 ">
+                    <i aria-hidden="true" class="fas fa-comments-dollar i-2"></i>
+                    <h3>Aumento da conversão</h3>
+                    <p class="txt-2">
+                      com a maior precisão e rapidez nas buscas, que faz com que o cliente encontre e finalize seus pedidos rapidamente.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="animate">
-          <div class="row mt-120 align-items-center mb-120">
-            <div class="col-md-6">
-              <h1 class="titulo-txt-1">Sua loja virtual como um vendedor experiente</h1>
-              <p class="txt-1">
-                Nossas Vitrines Inteligentes funcionam como seus vendedores mais experientes, mostrando os melhores produtos ao visitante, na hora certa. <br> <br>
-
-                Elas ajudam o cliente a se decidir mais rápido, pois as recomendações personalizadas são geradas com base nos gostos, buscas e interesses que o visitante demonstrou desde que entrou na loja virtual. <br> <br>
-                
-                E o melhor de tudo é que elas funcionam de forma totalmente automática, sem precisar nenhuma configuração manual.
-              <div class="row align-items-center align-items">
-                <div class="col-md-6 mt-50">
-                  <i aria-hidden="true" class="fas fa-fingerprint i-1"></i>
-                  <h3>Análises em tempo real</h3>
-                  <p class="txt-2">
-                    que exibem as vitrines em pontos estratégicos da loja, mostrando os melhores produtos para cada consumidor.
-                  </p>
-                </div>
-                <div class="col-md-6 mt-50">
-                  <i aria-hidden="true" class="fas fa-dollar-sign i-2-2"></i>
-                  <h3>Aumento do ticket médio</h3>
-                  <p class="txt-2">
-                    com as recomendações que sugerem produtos similares e até mesmo complementares ao que o cliente está buscando.
-                  </p>
+          <div class="animate">
+            <div class="row mt-120 align-items-center mb-120">
+              <div class="col-md-6">
+                <h1 class="titulo-txt-1">Sua loja virtual como um vendedor experiente</h1>
+                <p class="txt-1">
+                  Nossas Vitrines Inteligentes funcionam como seus vendedores mais experientes, mostrando os melhores produtos ao visitante, na hora certa. <br> <br>
+  
+                  Elas ajudam o cliente a se decidir mais rápido, pois as recomendações personalizadas são geradas com base nos gostos, buscas e interesses que o visitante demonstrou desde que entrou na loja virtual. <br> <br>
+                  
+                  E o melhor de tudo é que elas funcionam de forma totalmente automática, sem precisar nenhuma configuração manual.
+                <div class="row align-items-center align-items">
+                  <div class="col-md-6 mt-50">
+                    <i aria-hidden="true" class="fas fa-fingerprint i-1"></i>
+                    <h3>Análises em tempo real</h3>
+                    <p class="txt-2">
+                      que exibem as vitrines em pontos estratégicos da loja, mostrando os melhores produtos para cada consumidor.
+                    </p>
+                  </div>
+                  <div class="col-md-6 mt-50">
+                    <i aria-hidden="true" class="fas fa-dollar-sign i-2-2"></i>
+                    <h3>Aumento do ticket médio</h3>
+                    <p class="txt-2">
+                      com as recomendações que sugerem produtos similares e até mesmo complementares ao que o cliente está buscando.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 mt-30">
-              <img class="w-100" src="images/img9.png" alt="" />
+              <div class="col-md-6 mt-30">
+                <img class="w-100" src="assets/images/img9.png" alt="" />
+              </div>
             </div>
           </div>
-        </div>
+            </div>
           </div>
-        </div>
+        </div>   
       </section>
       <section class="bg-cinza">
         <div class="container">
@@ -398,6 +408,8 @@
       </section>
       <section class="bg-azul">
         <div class="animate container">
+          <div class="nebulosa-laranja"></div>
+          <div class="nebulosa-azul_2"></div>
           <h1 class="titulo-demonstracao-2">
             Por que contratar a Get Commerce?
           </h1>
@@ -441,7 +453,7 @@
                 <div class="row mt-50 align-items-center align-items content" id="content">
                     <div class="col-md-6 mr-15">
                         <div>
-                            <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
+                            <img class="watermark" src="assets/images/aspas.svg" alt="" height="65" width="50">
                         </div>
                         <h1 id="titulo" class="b-titulo-imprensa">Get Commerce dobra de tamanho em 2022</h1>
                         <div>
@@ -462,10 +474,10 @@
                         </div>
                     </div>
                     <div id="img" class="col-md-6 text-align-center">
-                        <img class="img-imprensa bg-preto" src="images/img11.jpg" alt=""/>
-                        <img class="d-none" src="images/startups.jpg" alt="">
-                        <img class="d-none" src="images/abcomm.jpg" alt="">
-                        <img class="d-none" src="images/forbes.jpg" alt="">
+                        <img class="img-imprensa bg-preto" src="assets/images/img11.jpg" alt=""/>
+                        <img class="d-none" src="assets/images/img10.png" alt="">
+                        <img class="d-none" src="assets/images/abcomm.jpg" alt="">
+                        <img class="d-none" src="assets/images/forbes.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -473,7 +485,7 @@
                 <div class="row align-items-center mt-70 w-100 alignment">
                     <button id="button-1" class="bg-empresas col-md-3 display-flex" data-source="baguete" onclick="changeContent(this)">
                         <div>
-                            <img class="img-empresas" src="images/img12.jpg" alt="">
+                            <img class="img-empresas" src="assets/images/img12.jpg" alt="">
                         </div>
                         <div class="col-md-6">
                             <div class="button-links">
@@ -484,7 +496,7 @@
                     </button>
                     <button id="button-2" class="bg-empresas col-md-3 display-flex" data-source="startups" onclick="changeContent(this)">
                         <div>
-                            <img class="img-empresas" src="images/img13.jpg" alt="">
+                            <img class="img-empresas" src="assets/images/img13.jpg" alt="">
                         </div>
                         <div class="col-md-6">
                             <div class="button-links">
@@ -495,7 +507,7 @@
                     </button>
                     <button id="button-3" class="bg-empresas col-md-3 display-flex" data-source="abcomm" onclick="changeContent(this)">
                         <div>
-                            <img class="img-empresas" src="images/img14.jpg" alt="">
+                            <img class="img-empresas" src="assets/images/img14.jpg" alt="">
                         </div>
                         <div class="col-md-6">
                             <div class="button-links">
@@ -506,7 +518,7 @@
                     </button>
                     <button id="button-4" class="bg-empresas col-md-3 display-flex" data-source="forbes" onclick="changeContent(this)">
                         <div>
-                            <img class="img-empresas" src="images/img15.jpg" alt="">
+                            <img class="img-empresas" src="assets/images/img15.jpg" alt="">
                         </div>
                         <div class="col-md-6">
                             <div class="button-links">
@@ -521,6 +533,7 @@
     </section>
       <section class="bg-azul">
       <div class="container animate">
+        <div class="nebulosa-laranja_3"></div>
         <div>
           <h2 class="titulo-planos">Escolha seu plano Tiny e <br> ganhe teste grátis por 30 dias</h1>
         </div>
@@ -532,7 +545,7 @@
                 <h4 class="sub-planos">Começar</h4>
                 <span class="desc-planos">O início correto para seu <br> negócio. <br></span>
                 <div>
-                  <ul>
+                  <ul class="mt-15">
                     <li><i class="fa-solid fa-user i-planos"></i>1 usuário</li>
                     <li><i class="fa-solid fa-database i-planos"></i>20 MB de dados</li>
                     <li><i class="fa-solid fa-cubes i-planos"></i>gestão de estoque</li>
@@ -548,7 +561,7 @@
                 <h4 class="sub-planos">Crescer</h4>
                 <span class="desc-planos">O parceiro do seu <br> crescimento</span>
                 <div>
-                  <ul>
+                  <ul class="mt-15">
                     <li><i class="fa-solid fa-user i-planos"></i>5 usuários</li>
                     <li><i class="fa-solid fa-database i-planos"></i>100 MB de dados</li>
                     <li><i class="fa-solid fa-cube i-planos"></i>pick & packing</li>
@@ -564,7 +577,7 @@
                 <h4 class="sub-planos">Evoluir</h4>
                 <span class="desc-planos">O passo além para <br> sua empresa.</span>
                 <div>
-                  <ul>
+                  <ul class="mt-15">
                     <li><i class="fa-solid fa-user i-planos"></i>10 usuários</li>
                     <li><i class="fa-solid fa-database i-planos"></i>300 MB de dados</li>
                     <li><i class="fa-solid fa-repeat i-planos"></i>importação automática</li>
@@ -580,7 +593,7 @@
                 <h4 class="sub-planos">Potencializar</h4>
                 <span class="desc-planos">O grande plano para seu <br> negócio.</span>
                 <div>
-                  <ul>
+                  <ul class="mt-15">
                     <li><i class="fa-solid fa-user i-planos"></i>15 usuários</li>
                     <li><i class="fa-solid fa-database i-planos "></i>800 MB de dados</li>
                     <li><i class="fa-solid fa-user-gear i-planos"></i>gerente de contas</li>
@@ -717,7 +730,7 @@
           <div class="col-md-6">
             <h2 class="titulo-banner-demonstracao">A solução ideal para o <br>seu negócio está no Tiny</h2>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 justify-content-center display-flex">
             <button class="btn-banner-demonstracao">Criar conta grátis</button>
           </div>
         </div>
@@ -728,9 +741,9 @@
       <div>
         <div class="row align-items-start">
             <div class="col-md-3 pr-50">
-              <img class="img-1-rodape" src="images/logo.png" alt="">
+              <img class="img-1-rodape" src="assets/images/logo.png" alt="">
               <p>A Get Commerce é o jeito mais simples e seguro para você vender pela internet.</p>
-              <img class="img-2-rodape" src="images/img16.png" alt="">
+              <img class="img-2-rodape" src="assets/images/img16.png" alt="">
             </div>
             <div class="col-md-3 links-footer">
                 <h4 class="titulo-rodape">Links Úteis</h4>
@@ -768,205 +781,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".dropdown").on("mouseenter", function () {
-          $(this).addClass("show");
-          $(this)
-            .find(".dropdown-menu")
-            .addClass("show")
-            .css("display", "flex");
-        });
-
-        $(".dropdown").on("mouseleave", function () {
-          $(this).removeClass("show");
-          $(this).find(".dropdown-menu").removeClass("show").css("display", "");
-        });
-      });
-
-      document.addEventListener('DOMContentLoaded', function() {
-      var elements = document.querySelectorAll('.animate');
-      
-      function checkVisibility() {
-        elements.forEach(function(element) {
-          var rect = element.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            element.classList.add('visible');
-          }
-        });
-      }
-
-      window.addEventListener('scroll', checkVisibility);
-      window.addEventListener('resize', checkVisibility);
-      
-      // Inicialização
-      checkVisibility();
-    });
-
-
-    document.addEventListener("DOMContentLoaded", function() {
-
-  var lastScrollTop = 0;
-
-  window.addEventListener("scroll", function() {
-    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-      // Scrolling down
-      document.documentElement.style.backgroundAttachment = "scroll";
-      document.documentElement.style.scrollBehavior = "auto";
-    } else {
-      // Scrolling up
-      document.documentElement.style.backgroundAttachment = "fixed";
-      document.documentElement.style.scrollBehavior = "smooth";
-    }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  }, false);
-});
-
-let activeButton = null;
-function changeContent(button) {
-  const source = button.getAttribute('data-source');
-  const content = document.getElementById('content');
-  const empresasBtns = document.querySelectorAll('.bg-empresas');
-
-  // Remover classes de todos os botões
-  empresasBtns.forEach(btn => {
-      btn.classList.remove('bg-active');
-      btn.querySelector('.empresa-nome').classList.remove('titulo-azul');
-  });
-
-  // Adicionar classes ao botão clicado
-  button.classList.add('bg-active');
-  button.querySelector('.empresa-nome').classList.add('titulo-azul');
-
-  // Adicionar efeito de fade-out
-  content.classList.remove('fade-in');
-  content.classList.add('fade-out');
-
-    setTimeout(() => {
-        switch (source) {
-            case 'baguete':
-                content.innerHTML = `
-                <div class="col-md-6">
-              <div>
-                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
-              </div>
-              <h1 id="titulo" class="b-titulo-imprensa">Get Commerce dobra de tamanho em 2022</h1>
-              <div>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-              </div>
-              <p id="desc" class="txt-l">
-                Com isso, a Get Commerce com aprimoramento constante de sua tecnologia de IA, possibilitou um faturamento até 30% maior
-                para os seus clientes que são lojas físicas, marcas próprias e indústrias, migrando para o digital como um importante
-                canal de vendas.
-              </p>
-              <div class="mt-40">
-                <h3 id="nome">Baguete</h3>
-                <span id="link">baguete.com.br</span>
-              </div>
-            </div>
-            <div id="img" class="col-md-6 text-align-center">
-              <img class="img-imprensa bg-preto d-b" src="images/img11.jpg" alt=""/>
-            </div>
-
-                `
-            break;    
-            ;
-            case 'startups':
-                content.innerHTML = `
-                <div class="col-md-6">
-              <div>
-                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
-              </div>
-              <h1 id="titulo" class="b-titulo-imprensa">Get Commerce levanta R$ 1,2 milhão para ser a RD Station das lojas</h1>
-              <div>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-              </div>
-              <p id="desc" class="txt-l">
-                Criada em 2018, a ferramenta segue um modelo de loja pronta, com tudo o que é preciso para realizar vendas online, desde a configuração das formas de pagamento e envio, à incorporação com o Facebook e configuração do Google Analytics, a ferramenta de marketing digital do Google. Desde sua fundação, a startup atingiu mais de 650 mil pedidos, 27 milhões de pageviews mensais e R$ 160 milhões transacionados diretamente na plataforma.
-              </p>
-              <div class="mt-40">
-                <h3 id="nome">Startups</h3>
-                <span id="link">startups.com.br</span>
-              </div>
-            </div>
-            <div id="img" class="col-md-6 text-align-center">
-              <img class="img-imprensa bg-preto d-b" src="images/startups.jpg" alt=""/>
-            </div>
-                `;
-                break;
-            case 'abcomm':
-                content.innerHTML = `
-                <div class="col-md-6">
-              <div>
-                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
-              </div>
-              <h1 id="titulo" class="b-titulo-imprensa">Get Commerce: eleita melhor plataforma de ecommerce do Brasil pela ABComm está conquistando o mundo</h1>
-              <div>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-              </div>
-              <p id="desc" class="txt-l">
-                Com o uso da tecnologia Get Commerce, nossos clientes têm um aumento de, até 30% nas vendas. Na nossa plataforma já foram gerados mais de 700.000 pedidos, e transacionados mais de R$ 165.000.000. São mais de 27 milhões de pageviews mensais. Tudo isso com alta satisfação de nossos clientes.
-              </p>
-              <div class="mt-40">
-                <h3 id="nome">ABCOMM</h3>
-                <span id="link">abcomm.org</span>
-              </div>
-            </div>
-            <div id="img" class="col-md-6 text-align-center">
-              <img class="img-imprensa bg-preto d-b" src="images/abcomm.jpg" alt=""/>
-            </div>
-                `;
-                break;
-            case 'forbes':
-                content.innerHTML = `
-                <div class="col-md-6">
-              <div>
-                <img class="watermark" src="images/aspas.svg" alt="" height="65" width="50">
-              </div>
-              <h1 id="titulo" class="b-titulo-imprensa">60 Startups vão testar as suas inovações em parceria com empresas</h1>
-              <div>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-                <span><i class="fa-solid fa-star star"></i></span>
-              </div>
-              <p id="desc" class="txt-l">
-                Neste momento, os projetos com maior potencial irão conectar-se com mentores, investidores e atores do ecossistema, que os ajudarão a impulsionar o seu desenvolvimento, tais como as empresas Banco Montepio, Brisa, KCS IT, Gaiurb e Águas de Gaia.
-              </p>
-              <div class="mt-40">
-                <h3 id="nome">Forbes</h3>
-                <span id="link">forbespt.com</span>
-              </div>
-            </div>
-            <div id="img" class="col-md-6 text-align-center">
-              <img class="img-imprensa bg-preto d-b" src="images/forbes.jpg" alt=""/>
-            </div>
-                `;
-                break;
-            default:
-                break;
-        }
-        content.classList.remove('fade-out');
-        setTimeout(() => {
-            content.classList.add('fade-in');
-        }, 20);
-    }, 300);
-}
-
-    </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

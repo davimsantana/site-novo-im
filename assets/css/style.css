@@ -1377,13 +1377,6 @@ ul {
   .accordion-item {
     width: 700px;
   }
-
-  .img-b-1 {
-  }
-  .img-b-2 {
-  }
-  .img-b {
-  }
 }
 
 @media (max-width: 700px) {
@@ -1677,10 +1670,6 @@ ul {
 @media (max-width: 375px) {
   .img-logo {
     width: 60%;
-  }
-  .img-b {
-  }
-  .img-b-2 {
   }
   h3 {
     white-space: wrap;

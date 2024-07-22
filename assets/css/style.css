@@ -1649,12 +1649,13 @@ ul {
   }
 
   .nebulosa-azul {
-    top: 1280px;
-    left: -600px;
+    top: 1430px;
+    left: -300px;
     opacity: 1;
-    width: 1000px;
-    height: 1000px;
-  }
+    width: 600px;
+    height: 600px;
+} 
+
   .nebulosa-azul_2 {
     right: -780px;
     top: 700px;

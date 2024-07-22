@@ -1460,7 +1460,7 @@ ul {
   }
   .banner-title{
     font-size: 32px;
-    width: 100%;
+    width: 94%;
   }
   .banner-description{
     font-size: 1.25rem;
@@ -1651,7 +1651,7 @@ ul {
   .nebulosa-azul {
     top: 1280px;
     left: -600px;
-    opacity: 1;
+    opacity: .7;
     width: 1000px;
     height: 1000px;
   }

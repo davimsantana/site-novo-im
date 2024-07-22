@@ -1649,19 +1649,18 @@ ul {
   }
 
   .nebulosa-azul {
-    top: 1430px;
-    left: -300px;
+    top: 1280px;
+    left: -600px;
     opacity: 1;
-    width: 600px;
-    height: 600px;
-} 
-
+    width: 1000px;
+    height: 1000px;
+  }
   .nebulosa-azul_2 {
     right: -780px;
     top: 700px;
     width: 1200px;
     height: 1200px;
-  }
+}
 
   .nebulosa-laranja {
     left: -680px;

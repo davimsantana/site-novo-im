@@ -391,25 +391,25 @@ ul {
   width: 100% !important;
 }
 
-.nebulosa-azul{
+.nebulosa-azul {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  left: -550px;
-  top: 1280px;
+  left: -600px;
+  top: 1350px;
   width: 1200px;
   height: 1000px;
-  background: radial-gradient(circle, #1d4a7f 0%, transparent 45%);
+  background: radial-gradient(circle, #2a67af 0%, transparent 45%);
   border-radius: 50%;
   opacity: 1;
   z-index: 0;
 }
 
-.nebulosa-roxa{
+.nebulosa-roxa {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  top: 670px;
+  top: 730px;
   right: -420px;
   width: 610px;
   height: 1000px;
@@ -418,21 +418,21 @@ ul {
   opacity: 1;
 }
 
-.nebulosa-laranja{
+.nebulosa-laranja {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  left: -680px;
-  top: 0px;
+  left: -860px;
+  top: -300px;
   width: 1200px;
-  height: 1000px;
-  background: radial-gradient(circle, #fb90067a 0%, transparent 50%);
+  height: 1500px;
+  background: radial-gradient(circle, #fb90069c 0%, transparent 50%);
   border-radius: 50%;
-  opacity: .7;
+  opacity: .73;
   z-index: 0;
 }
 
-.nebulosa-azul_2{
+.nebulosa-azul_2 {
   margin: 0px;
   padding: 0px;
   position: fixed;
@@ -446,18 +446,17 @@ ul {
 }
 
 
-
-.nebulosa-laranja_3{
+.nebulosa-laranja_3 {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  right: -970px;
+  right: -950px;
   top: -840px;
   width: 1200px;
   height: 2300px;
   background: radial-gradient(circle, #fb9006 0%, transparent 40%);
   border-radius: 50%;
-  opacity: .35;
+  opacity: .45;
   z-index: 0;
 }
 
@@ -1649,28 +1648,30 @@ ul {
     margin-top: 60px;
   }
 
-  .nebulosa-azul{
-    top: 1550px;
-    left: -680px;
+  .nebulosa-azul {
+    top: 1280px;
+    left: -600px;
     opacity: 1;
+    width: 1000px;
+    height: 1000px;
   }
-  .nebulosa-azul_2{
+  .nebulosa-azul_2 {
     right: -780px;
-    top: 1000px;
+    top: 700px;
     width: 1200px;
-    height: 510px;
+    height: 1200px;
   }
 
   .nebulosa-laranja {
-    left: -730px;
-    top: 130px;
+    left: -680px;
+    top: 120px;
     width: 1200px;
-    height: 700px;
-}
-  .nebulosa-roxa{
+    height: 1200px;
+  }
+  .nebulosa-roxa {
     top: 800px;
-    right: -360px;
-    width: 460px;
+    right: -670px;
+    width: 1000px;
     height: 1000px;
   }
   

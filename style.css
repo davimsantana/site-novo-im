@@ -2,9 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @font-face {
-  font-family: Friends;
-  src: url('assets/fonts/Friends-Black.otf');
+  font-family: Friends SemiBold;
+  src: url('assets/fonts/Friends-SemiBold.otf');
 }
+
+@font-face {
+  font-family: Friends Normal;
+  src: url('assets/fonts/Friends-Normal.otf');
+}
+
+@font-face {
+  font-family: Friends Bold;
+  src: url('assets/fonts/Friends-Normal.otf');
+  font-weight: bolder;
+}
+
 
 html {
   background-attachment: scroll;
@@ -12,10 +24,11 @@ html {
 
 body {
   margin: 0;
-  font-family: Friends, sans-serif !important;
+  font-family: Friends Bold, sans-serif !important;
   color: #54595f;
   overflow-x: hidden;
 }
+
 
 .sticky-effect {
   transform: translateY(0);
@@ -393,7 +406,7 @@ ul {
   top: 1180px;
   width: 1200px;
   height: 1200px;
-  background: radial-gradient(circle, #4164a5 0%, transparent 50%);
+  background: radial-gradient(circle, #2a67af 0%, transparent 50%);
   border-radius: 50%;
   opacity: .7;
   z-index: 0;
@@ -403,26 +416,26 @@ ul {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  top: 790px;
-  right: -490px;
-  width: 810px;
-  height: 810px;
-  background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 50%);
+  top: 730px;
+  right: -420px;
+  width: 610px;
+  height: 1000px;
+  background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 45%);
   border-radius: 50%;
-  opacity: .6;
+  opacity: 1;
 }
 
 .nebulosa-laranja {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  left: -670px;
-  top: 60px;
-  width: 1000px;
-  height: 1000px;
-  background: radial-gradient(circle, #fb9006ad 0%, transparent 50%);
+  left: -660px;
+  top: 120px;
+  width: 900px;
+  height: 700px;
+  background: radial-gradient(circle, #fb90069c 0%, transparent 65%);
   border-radius: 50%;
-  opacity: 0.6;
+  opacity: 0.75;
   z-index: 0;
 }
 
@@ -430,16 +443,16 @@ ul {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  right: -650px;
-  top: -300px;
-  width: 1000px;
-  height: 1000px;
-  background: radial-gradient(circle, #1d5b7f 0%, transparent 50%);
+  right: -680px;
+  top: -200px;
+  width: 1200px;
+  height: 510px;
+  background: radial-gradient(circle, #1d5b7f 0%, transparent 40%);
   border-radius: 50%;
-  opacity: .7;
+  opacity: 1;
 }
 
-.nebulosa-laranja_2 {
+.nebulosa-laranja_3 {
   margin: 0px;
   padding: 0px;
   position: fixed;
@@ -449,7 +462,7 @@ ul {
   height: 2300px;
   background: radial-gradient(circle, #fb9006 0%, transparent 40%);
   border-radius: 50%;
-  opacity: 0.6;
+  opacity: 0.45;
   z-index: 0;
 }
 
@@ -1621,25 +1634,25 @@ ul {
 
   .nebulosa-azul {
     top: 1250px;
-    left: -650px;
-    opacity: .7;
+    left: -660px;
+    opacity: 0.45;
     width: 1000px;
     height: 1000px;
-  }
+  } 
   .nebulosa-azul_2 {
-    right: -780px;
-    top: 700px;
-    width: 1200px;
-    height: 1200px;
-    opacity: .9;
+    right: -680px;
+    top: 800px;
+    width: 1000px;
+    height: 1000px;
+    opacity: .85;
   }
 
   .nebulosa-laranja {
-    left: -850px;
+    left: -700px;
     top: 0px;
     width: 1200px;
     height: 1200px;
-    opacity: 0.55;
+    opacity: 0.5;
   }
   .nebulosa-roxa {
     top: 800px;

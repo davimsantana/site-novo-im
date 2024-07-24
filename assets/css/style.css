@@ -422,7 +422,7 @@ ul {
   height: 1000px;
   background: radial-gradient(circle, #fb9006ad 0%, transparent 50%);
   border-radius: 50%;
-  opacity: 0.6;
+  opacity: 0.5;
   z-index: 0;
 }
 

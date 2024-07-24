@@ -1741,4 +1741,13 @@ ul {
   .nav {
     width: 60%;
   }
+  .nebulosa-laranja{
+    left: -860px;
+  }
+  .nebulosa-azul_2{
+    right: -850px;
+  }
+  .nebulosa-laranja_2{
+    right: -1150px;
+  }
 }

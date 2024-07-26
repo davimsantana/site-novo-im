@@ -13,6 +13,27 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .bg-nebulosas {
+        position: relative;
+        z-index: 1;
+        padding: 20px; /* ajuste conforme necessário */
+        }
+
+        .bg-nebulosas::before {
+            content: "";
+            background-image: url('assets/images/background-nebulosas.png');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Estende a largura até a viewport */
+            height: 100%;
+            z-index: -1;
+            margin-left: calc(-50vw + 50%);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary navbar-expand-lg pt-20">
@@ -173,7 +194,7 @@
       <main class="container">
         <section class="bg-nebulosas col-md-12">
             <div>
-                <div class="text-align-center mt-150 mb-150">
+                <div class="text-align-center pb-150">
                     <h1 class="titulo-fc">Olá, tudo bem com você?</h1>
                     <span class="span-fc">Fique à vontade para enviar sua mensagem</span>
                 </div>
@@ -182,7 +203,7 @@
         <section class="display-flex justify-content-center">
             <div class="col-md-6 mr-35">
                 <h3>Texto de Exemplo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quae similique facere, aperiam exercitationem numquam nobis. Blanditiis corrupti fuga </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quae similique facere, aperiam exercitationem numquam nobis.</p>
             </div>
             <div class="col-md-6">
                 <div class="display-flex mr-50">

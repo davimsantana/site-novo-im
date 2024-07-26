@@ -15,6 +15,11 @@ body {
   overflow-x: hidden;
 }
 
+.navbar{
+  padding-top: 0;
+  padding-bottom: 0px;
+}
+
 .sticky-effect {
   transform: translateY(0);
 }
@@ -675,6 +680,14 @@ h3 {
 
 .mt-150{
   margin-top: 150px;
+}
+
+.pt-150{
+  padding-top: 150px;
+}
+
+.pb-150{
+  padding-bottom: 150px;
 }
 
 .mb-150{
@@ -1380,8 +1393,7 @@ ul {
 
 .bg-nebulosas{
   background-image: url('assets/images/background-nebulosas.png');
-  position: relative;
-  z-index: 999;
+  width: 100%;
 }
 
 .titulo-fc{

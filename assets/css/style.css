@@ -629,6 +629,10 @@ h3 {
   margin-right: 50px;
 }
 
+.mr-35{
+  margin-right: 35px;
+}
+
 .mt-15 {
   margin-top: 15px;
 }
@@ -671,6 +675,10 @@ h3 {
 
 .mt-150{
   margin-top: 150px;
+}
+
+.mb-150{
+  margin-bottom: 150px;
 }
 
 .pb-112 {
@@ -1371,7 +1379,9 @@ ul {
 }
 
 .bg-nebulosas{
-  background-image: url(assets/images/background-nebulosas.png);
+  background-image: url('assets/images/background-nebulosas.png');
+  position: relative;
+  z-index: 999;
 }
 
 .titulo-fc{
@@ -1384,7 +1394,46 @@ ul {
 }
 
 .span-fc{
-  font-size: 22px;
+  font-size: 25px;
+}
+
+.w-card{
+  background-color: #01205f;
+  padding: 30px;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+.c-card{
+  background-color: #4d628f;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.card-p{
+  color: white;
+  margin: 10px 0px 10px 0px;
+}
+
+.card-span{
+  color: white;
+  font-size: 20px;
+}
+
+.card-link{
+  color: white;
+  text-decoration: none;
+}
+
+.fa-whatsapp, .fa-comment-dots{
+  color: white;
+  font-size: 21px;
+}
+
+.seta-w{
+  color: white;
+  font-size: 12px;
+  margin: 0px 10px 0px 0px;
 }
 
 @media (max-width: 1200px) {

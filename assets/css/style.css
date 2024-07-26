@@ -636,7 +636,7 @@ h3 {
 }
 
 .mr-35{
-  margin-right: 35px;
+  margin-right: 35px !important;
 }
 
 .mt-15 {
@@ -770,6 +770,10 @@ h3 {
 
 .box-space {
   padding-left: 25px;
+}
+
+.f-w700{
+  font-weight: 700;
 }
 
 .titulo-beneficios-1 {
@@ -1407,7 +1411,7 @@ ul {
 }
 
 .span-fc{
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .w-card{
@@ -1415,17 +1419,20 @@ ul {
   padding: 30px;
   margin-right: 40px;
   border-radius: 5px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .c-card{
   background-color: #4d628f;
   padding: 30px;
   border-radius: 5px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .card-p{
   color: white;
   margin: 10px 0px 10px 0px;
+  font-weight: 200;
 }
 
 .card-span{
@@ -1436,6 +1443,7 @@ ul {
 .card-link{
   color: white;
   text-decoration: none;
+  font-weight: 200;
 }
 
 .fa-whatsapp, .fa-comment-dots{
@@ -1447,6 +1455,19 @@ ul {
   color: white;
   font-size: 12px;
   margin: 0px 10px 0px 0px;
+}
+
+.t-txt{
+  font-weight: 900;
+  font-size: 23px;
+}
+
+.margin-auto{
+  margin: auto;
+}
+
+.bg-gradiente{
+  background: linear-gradient(#f1f1f1, white);
 }
 
 @media (max-width: 1200px) {

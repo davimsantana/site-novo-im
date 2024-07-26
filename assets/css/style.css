@@ -96,6 +96,7 @@ nav > .container {
   align-items: center !important;
   justify-content: center !important;
   flex-direction: row;
+  padding-top: 16px;
   width: 85%;
 }
 

@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @font-face {
-  font-family: Friends;
-  src: url('assets/fonts/Friends-Black.otf');
+  font-family: 'Friends';
+  src: url('assets/fonts/Friends-UltraBold.otf');
 }
 
 html {
@@ -669,6 +667,10 @@ h3 {
 
 .mt-120 {
   margin-top: 120px;
+}
+
+.mt-150{
+  margin-top: 150px;
 }
 
 .pb-112 {
@@ -1347,6 +1349,11 @@ ul {
 .container-fluid {
   flex-wrap: nowrap !important;
 }
+
+.bg-transparent{
+  background-color: transparent;
+}
+
 .navbar-nav .dropdown-menu {
   position: static;
   float: none;
@@ -1361,6 +1368,23 @@ ul {
 
 .dropdown-menu.show {
   display: flex;
+}
+
+.bg-nebulosas{
+  background-image: url(assets/images/background-nebulosas.png);
+}
+
+.titulo-fc{
+  color: #01205f;
+  font-weight: 900;
+  font-size: 45px;
+  letter-spacing: -2px;
+  margin: 160px auto auto;
+  width: 75%;
+}
+
+.span-fc{
+  font-size: 22px;
 }
 
 @media (max-width: 1200px) {

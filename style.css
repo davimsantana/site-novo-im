@@ -1373,6 +1373,7 @@ ul {
   display: flex;
 }
 
+
 @media (max-width: 1200px) {
   .home {
     display: none;

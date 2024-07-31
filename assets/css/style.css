@@ -4,6 +4,10 @@
   src: url('assets/fonts/Friends-UltraBold.otf');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   background-attachment: scroll;
 }
@@ -540,6 +544,10 @@ ul {
   padding-left: 10px;
 }
 
+.p-0{
+  padding: 0;
+}
+
 .txt-btn1 {
   margin-top: 20px;
   margin-left: 0;
@@ -631,12 +639,31 @@ h3 {
   margin-right: 15px;
 }
 
+.mr-25{
+  margin-right: 25px;
+}
+.pr-25{
+  padding-right: 25px;
+}
+
 .mr-50 {
   margin-right: 50px;
 }
 
-.mr-35{
-  margin-right: 35px;
+.pl-45{
+  padding-left: 45px;
+}
+
+.pr-35{
+  padding-right: 35px;
+}
+
+.pr-80{
+  padding-right: 80px;
+}
+
+.mr-15{
+  margin-right: 15px;
 }
 
 .mt-15 {
@@ -655,8 +682,41 @@ h3 {
   margin-top: 50px;
 }
 
+.form-container {
+  display: flex;
+}
+
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
 .pt-50 {
   padding-top: 50px;
+}
+
+.pt-25{
+  padding-top: 25px;
+}
+
+.pt-15{
+  padding-top: 15px;
+}
+
+.pt-10{
+  padding-top: 10px;
+}
+
+.pl-15{
+  padding-left: 15px;
+}
+
+.pb-25{
+  padding-bottom: 25px;
+}
+
+.pb-15{
+  padding-bottom: 15px;
 }
 
 .pt-100 {
@@ -668,7 +728,11 @@ h3 {
 }
 
 .mt-70 {
-  margin-top: 80px;
+  margin-top: 70px;
+}
+
+.mb-70{
+  margin-bottom: 120px;
 }
 
 .mt-111 {
@@ -764,12 +828,20 @@ h3 {
   width: 100%;
 }
 
+.w-90{
+  width: 90%;
+}
+
 .w-94 {
   width: 100%;
 }
 
 .box-space {
   padding-left: 25px;
+}
+
+.f-w700{
+  font-weight: 700;
 }
 
 .titulo-beneficios-1 {
@@ -1118,11 +1190,6 @@ h4 {
   opacity: 1;
 }
 
-#nome {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 0;
-}
 
 .empresa-nome {
   font-size: 16px;
@@ -1407,7 +1474,7 @@ ul {
 }
 
 .span-fc{
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .w-card{
@@ -1415,17 +1482,20 @@ ul {
   padding: 30px;
   margin-right: 40px;
   border-radius: 5px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .c-card{
   background-color: #4d628f;
   padding: 30px;
   border-radius: 5px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .card-p{
   color: white;
   margin: 10px 0px 10px 0px;
+  font-weight: 200;
 }
 
 .card-span{
@@ -1436,6 +1506,7 @@ ul {
 .card-link{
   color: white;
   text-decoration: none;
+  font-weight: 200;
 }
 
 .fa-whatsapp, .fa-comment-dots{
@@ -1447,6 +1518,68 @@ ul {
   color: white;
   font-size: 12px;
   margin: 0px 10px 0px 0px;
+}
+
+.t-txt{
+  font-weight: 900;
+  font-size: 23px;
+}
+
+.margin-auto{
+  margin: auto;
+}
+
+.bg-gradiente{
+  background: linear-gradient(#f1f1f1, white);
+  display: flex;
+  width: 100%;
+}
+
+input{
+  margin: 0px 15px 15px 0px;
+  background-color: transparent;
+  border: 1px #3333331f solid;
+  height: 35px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 95%;
+  outline: none;
+}
+
+input:focus{
+  border: 1px #3333331f solid;
+}
+
+input::placeholder{
+  font-size: 15px;
+  color: #333333a2;
+  position: absolute;
+  top: 6px;
+}
+
+.h-100p{
+  height: 100px;
+}
+
+.l-fc-form{
+  color: black;
+}
+
+.contatos{
+  border-top: 1px solid rgba(0, 0, 0, .05);
+}
+
+.c-i-box{
+  background-color: #01205f;
+  font-size: 22px;
+  padding: 20px 25px 20px 25px;
+  color: white;
+  border-radius: 18px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.txt-black{
+  color: black;
 }
 
 @media (max-width: 1200px) {

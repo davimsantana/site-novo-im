@@ -274,9 +274,9 @@ ul {
 
 .banner-title {
   color: #01205f;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 45px;
-  letter-spacing: -2px;
+  letter-spacing: -0.04px;
   margin: 160px auto 36px auto;
   width: 75%;
 }
@@ -515,8 +515,8 @@ ul {
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 700;
+  letter-spacing: -0.04em;
   margin-bottom: 17px;
-  font-weight: 900;
 }
 
 .d-flex {
@@ -856,11 +856,11 @@ h3 {
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 700;
+  letter-spacing: -0.04em;
   margin-bottom: 17px;
   width: 55%;
   margin: 0px auto 17px auto;
   color: #01205f;
-  font-weight: 900;
 }
 
 .titulo-beneficios-2 {
@@ -871,7 +871,8 @@ h3 {
   width: 58%;
   margin: 0px auto 17px auto;
   color: #01205f;
-  font-weight: 900;
+  font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
 .b-box-1 > p {
@@ -1528,7 +1529,7 @@ ul {
 }
 
 .t-txt{
-  font-weight: 900;
+  font-weight: 700;
   font-size: 23px;
 }
 
@@ -1551,6 +1552,8 @@ input, textarea{
   padding: 10px;
   width: 95%;
   outline: none;
+  position: relative;
+  z-index: 1;
 }
 
 input:focus{

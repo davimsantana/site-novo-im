@@ -1621,7 +1621,7 @@ textarea::placeholder{
   height: 1000px;
   background: radial-gradient(circle, #1d5b7f 0%, transparent 50%);
   border-radius: 50%;
-  opacity: .2;
+  opacity: .1;
   z-index: 0;
 }
 

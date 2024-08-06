@@ -2056,9 +2056,6 @@ textarea::placeholder{
     z-index: 0;
   }
 
-  .card-link{
-    font-size: 12px;
-  }
 
   @keyframes float {
     0% {

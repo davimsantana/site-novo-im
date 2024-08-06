@@ -224,3 +224,28 @@ setTimeout(() => {
   }, 20);
 }, 300);
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  
+  const navbar = document.querySelector('.container-fluid');
+  const image = document.querySelector('.img-logo')
+
+  if (navbar) {
+      console.log("Navbar found, attaching scroll listener");
+
+      function onScroll() {
+          console.log("Scroll position:", window.scrollY);
+          if (window.scrollY > 50) { 
+              navbar.classList.add('scrolled');
+              image.classList.add('s-image')
+          } else {
+              navbar.classList.remove('scrolled');
+              image.classList.remove('s-image')
+          }
+      }
+
+      window.addEventListener('scroll', onScroll);
+  } else {
+      console.error("Element with class 'container-fluid' not found.");
+  }
+});

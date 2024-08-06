@@ -4,9 +4,6 @@
   src: url('assets/fonts/Friends-UltraBold.otf');
 }
 
-* {
-  box-sizing: border-box;
-}
 
 html {
   background-attachment: scroll;
@@ -93,6 +90,7 @@ nav > .container {
   position: fixed;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.5s ease;
 }
 
 .nav {
@@ -100,7 +98,7 @@ nav > .container {
   align-items: center !important;
   justify-content: center !important;
   flex-direction: row;
-  padding-top: 16px;
+  margin: 0 auto;
   width: 85%;
 }
 
@@ -120,6 +118,7 @@ button.navbar-toggler.collapsed:focus-visible {
   border: 0;
   outline: 0;
 }
+
 
 .button-links {
   border: 0;
@@ -167,6 +166,7 @@ ul {
 .img-logo {
   width: 200px;
   margin-right: 10px;
+  transition: width 0.5s ease;
 }
 
 .img-logo-nav {
@@ -844,6 +844,14 @@ h3 {
   font-weight: 700;
 }
 
+.f-w500{
+  font-weight: 500;
+}
+
+.txt-c{
+  color: #333333f0;
+}
+
 .titulo-beneficios-1 {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -1256,7 +1264,6 @@ h4 {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(235, 235, 235);
   padding: 10px;
-  box-sizing: border-box;
   border-radius: 10px;
   flex-direction: column;
   height: auto;
@@ -1466,10 +1473,10 @@ ul {
 
 .titulo-fc{
   color: #01205f;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 45px;
-  letter-spacing: -2px;
-  margin: 160px auto auto;
+  letter-spacing: -0.04em;
+  margin: 150px auto auto;
   width: 75%;
 }
 
@@ -1481,15 +1488,15 @@ ul {
   background-color: #01205f;
   padding: 30px;
   margin-right: 40px;
-  border-radius: 5px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .c-card{
   background-color: #4d628f;
   padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border-radius: 10px;
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-p{
@@ -1506,7 +1513,7 @@ ul {
 .card-link{
   color: white;
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .fa-whatsapp, .fa-comment-dots{
@@ -1535,11 +1542,11 @@ ul {
   width: 100%;
 }
 
-input{
+input, textarea{
   margin: 0px 15px 15px 0px;
   background-color: transparent;
   border: 1px #3333331f solid;
-  height: 35px;
+  height: 40px;
   border-radius: 5px;
   padding: 10px;
   width: 95%;
@@ -1554,11 +1561,20 @@ input::placeholder{
   font-size: 15px;
   color: #333333a2;
   position: absolute;
-  top: 6px;
+  font-style: italic;
+  top: 8px;
 }
 
-.h-100p{
-  height: 100px;
+textarea::placeholder{
+  font-size: 15px;
+  color: #333333a2;
+  position: absolute;
+  font-style: italic;
+  top: 8px;
+}
+
+.h-90p{
+  height: 90px;
 }
 
 .l-fc-form{
@@ -1575,12 +1591,48 @@ input::placeholder{
   padding: 20px 25px 20px 25px;
   color: white;
   border-radius: 18px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .txt-black{
   color: black;
 }
+
+.scrolled{
+  background-color: white !important;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.s-image{
+  width: 180px;
+}
+
+.m-0{
+  margin: 0;
+}
+
+.nebulosa-fc {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  left: -400px;
+  top: 300px;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, #1d5b7f 0%, transparent 50%);
+  border-radius: 50%;
+  opacity: .2;
+  z-index: 0;
+}
+
+.flex-wrap{
+  flex-wrap: nowrap;
+}
+
+.d-mobile{
+  display: none;
+}
+
 
 @media (max-width: 1200px) {
   .home {
@@ -1680,7 +1732,7 @@ input::placeholder{
     font-size: 29px;
   }
   .img-logo {
-    width: 55% !important;
+    width: 60% !important;
     margin-left: 0px;
     margin-right: 0px;
     padding-top: 0px;
@@ -1870,6 +1922,134 @@ input::placeholder{
     width: 1000px;
     height: 1000px;
     opacity: .65;
+  }
+
+  .flex-wrap{
+    flex-wrap: wrap;
+  }
+  
+  .titulo-fc{  
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .span-fc{
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .t-txt, .txt-c{
+    text-align: center;
+    margin: 0 auto;
+    width: 97%;
+  }
+
+  .t-txt{
+    margin-bottom: 30px;
+  }
+
+  .mr-50{
+    margin-right: 0;
+  }
+
+  .pr-35{
+    padding-right: 0px;
+  }
+
+  .pr-80{
+    padding-right: 0;
+  }
+
+  .fc-txt-container{
+    padding: 0px 16px 0px 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .mt-50{
+    margin-top: 50px;
+  }
+  
+  .w-card, .c-card{
+    padding: 20px;
+    margin-right: 0px;
+    height: 197px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+  }
+  
+  .w-card {
+    background-color: #01205f;
+  } 
+  .c-card {
+    background-color: #4d628f;
+  } 
+
+  .gap-15{
+    gap: 15px;
+  }
+
+  .form-group{
+    width: 100% !important;
+  }
+
+  .form-group > input{
+    width: 100% !important;
+  }
+
+  input, textarea{
+    width: 100%;
+  }
+  
+  button.navbar-toggler{
+    border: 0;
+  }
+
+  .s-image{
+    width: 55% !important;
+  }
+  
+  .pb-150{
+    padding-bottom: 100px;
+  }
+
+  .d-mobile{
+    display: block;
+  }
+
+  .d-desktop{
+    display: none;
+  }
+
+  .d-mobile > .t-txt, .d-mobile > .txt-c{
+    text-align: start;
+  } 
+
+  .pl-45{
+    padding-left: 0;
+  }
+
+  .t-cont{
+    font-weight: 900;
+    font-size: 23px;
+  }
+
+  .nebulosa-fc{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: -300px;
+    top: 1050px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #1d5b7f 0%, transparent 50%);
+    border-radius: 50%;
+    opacity: .1;
+    z-index: 0;
   }
 
   @keyframes float {

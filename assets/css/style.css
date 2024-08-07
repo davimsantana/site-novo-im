@@ -686,8 +686,7 @@ h3 {
   display: flex;
 }
 
-
-.form-group label {
+.l-fc-form{
   margin-bottom: 5px;
 }
 
@@ -727,8 +726,8 @@ h3 {
   padding-top: 111px;
 }
 
-.mt-70 {
-  margin-top: 70px;
+.mt-50 {
+  margin-top: 50px;
 }
 
 .mb-70{
@@ -751,8 +750,8 @@ h3 {
   padding-top: 150px;
 }
 
-.pb-150{
-  padding-bottom: 150px;
+.pb-80{
+  padding-bottom: 80px;
 }
 
 .mb-150{
@@ -844,8 +843,8 @@ h3 {
   font-weight: 700;
 }
 
-.f-w500{
-  font-weight: 500;
+.f-w400{
+  font-weight: 400;
 }
 
 .txt-c{
@@ -1487,7 +1486,8 @@ ul {
 
 .w-card{
   background-color: #01205f;
-  padding: 30px;
+  padding: 33px;
+  width: 260px;
   margin-right: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1495,15 +1495,16 @@ ul {
 
 .c-card{
   background-color: #4d628f;
-  padding: 30px;
+  padding: 33px;
+  width: 260px;
   border-radius: 10px;
   box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-p{
   color: white;
-  margin: 10px 0px 10px 0px;
-  font-weight: 300;
+  margin: 5px 0px 7px 0px;
+  font-weight: 100;
 }
 
 .card-span{
@@ -1515,7 +1516,6 @@ ul {
   color: white;
   text-decoration: none;
   font-weight: 300;
-
 }
 
 .fa-whatsapp, .fa-comment-dots{
@@ -1945,7 +1945,7 @@ textarea::placeholder{
   .t-txt, .txt-c{
     text-align: center;
     margin: 0 auto;
-    width: 97%;
+    width: 100%;
   }
 
   .t-txt{
@@ -1978,20 +1978,13 @@ textarea::placeholder{
   .w-card, .c-card{
     padding: 20px;
     margin-right: 0px;
-    height: 197px;
+    height: 170px;
     width: 100%;
     font-size: 14px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex: 1;
   }
-  
-  .w-card {
-    background-color: #01205f;
-  } 
-  .c-card {
-    background-color: #4d628f;
-  } 
 
   .gap-15{
     gap: 15px;
@@ -2056,6 +2049,9 @@ textarea::placeholder{
     z-index: 0;
   }
 
+  .card-link{
+    font-size: 11.5px;
+  }
 
   @keyframes float {
     0% {
@@ -2070,7 +2066,7 @@ textarea::placeholder{
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .img-logo {
     width: 60%;
   }
@@ -2079,6 +2075,21 @@ textarea::placeholder{
   }
   .bg-image {
     display: none;
+  }
+  .w-card, .c-card{
+    height: 170px;
+  }
+  .card-link{
+    font-size: 9.5px;
+  }
+  .card-p{
+    font-size: 12px;
+  }
+  .titulo-fc{
+    font-size: 29px;
+  }
+  .span-fc{
+    font-size: 15px;
   }
 }
 

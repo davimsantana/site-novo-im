@@ -1563,7 +1563,7 @@ input:focus{
 
 input::placeholder{
   font-size: 15px;
-  color: #333333a2;
+  color: #3333337e;
   position: absolute;
   font-style: italic;
   top: 8px;
@@ -1571,7 +1571,7 @@ input::placeholder{
 
 textarea::placeholder{
   font-size: 15px;
-  color: #333333a2;
+  color: #3333337e;
   position: absolute;
   font-style: italic;
   top: 8px;
@@ -1935,6 +1935,7 @@ textarea::placeholder{
   .titulo-fc{  
     font-size: 32px;
     width: 100%;
+    margin-top: 100px;
   }
 
   .span-fc{
@@ -2051,6 +2052,10 @@ textarea::placeholder{
 
   .card-link{
     font-size: 11.5px;
+  }
+
+  .pb-80{
+    padding-bottom: 70px;
   }
 
   @keyframes float {

@@ -543,6 +543,7 @@ ul {
   color: #01205f;
   font-weight: 700;
   font-size: 51px;
+  font-family: 'FriendsBold';
   letter-spacing: -0.04px;
   margin: 25px auto 25px auto;
   width: 100%;
@@ -553,6 +554,7 @@ ul {
   font-weight: 700;
   font-size: 51px;
   letter-spacing: -0.04px;
+  font-family: 'FriendsBold';
   margin: 25px auto 25px auto;
   width: 100%;
 }

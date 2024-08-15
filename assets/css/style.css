@@ -188,8 +188,11 @@ ul {
 }
 
 .img-login{
-  height: 100vh;
-  object-fit: cover;
+  width: 100%;   /* A imagem se ajusta à largura do contêiner */
+  height: 100vh;  /* Mantém a proporção original da imagem */
+  max-width: 100%; /* Garante que a imagem não exceda o tamanho original */
+  display: block; /* Remove qualquer espaço abaixo da imagem */
+  object-fit: contain; /* Ajusta a imagem ao contêiner sem cortar */
   box-shadow: -1px 2px 6px #00000080;
 }
 
@@ -1617,7 +1620,7 @@ input, textarea{
 
 .checkbox-container > input{
   margin-bottom: 0;
-  margin-left: 10px;
+  margin-left: 0px;
   width: 27px;
 }
 
@@ -1633,6 +1636,10 @@ input, textarea{
 
 .checkbox-container > label{
   white-space: nowrap;
+}
+
+.checkmark {
+  border-radius: 5px; /* Aqui aplicamos o border-radius */
 }
 
 .forms-login > input{
@@ -1687,6 +1694,7 @@ textarea::placeholder{
 
 .txt-blue{
   color: #001b61;
+  padding-bottom: 50px;
 }
 
 .scrolled{
@@ -1761,6 +1769,10 @@ textarea::placeholder{
 
 .titulo-login, .forms-login > input{
   max-width: 600px;
+}
+
+.d-desktop{
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -2146,6 +2158,15 @@ textarea::placeholder{
 
   .d-desktop{
     display: none;
+  }
+
+  .titulo-login{
+    font-size: 43px;
+    margin-top: 90px;
+  }
+
+  .w-55{
+    width: 95% !important;
   }
 
   .d-mobile > .t-txt, .d-mobile > .txt-c{

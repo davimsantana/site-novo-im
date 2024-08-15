@@ -23,7 +23,7 @@
     <style>
       .bg-login{
         background-image: url("assets/images/fundo-pagina-login.png");
-        background-size: contain;
+        background-size: cover;
         height: 100%;
       }
       .container{
@@ -37,10 +37,223 @@
 </head>
 <body>
 
+  <nav class="navbar bg-body-tertiary navbar-expand-lg pt-20 d-mobile">
+    <div
+      class="container container-fluid bg-transparent justify-content-center"
+    >
+      <div class="nav">
+        <div class="nowrap display-flex align-items-center">
+          <a href=""
+            ><img class="img-logo" src="assets/images/logo.png" alt="Logo"
+          /></a>
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="display-flex">
+            <a href=""
+              ><img
+                class="img-logo-nav"
+                src="assets/images/logo.png"
+                alt="Logo"
+            /></a>
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link home"
+                href="https://davimsantana.github.io/site-novo-im/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Plataforma
+              </a>
+              <ul class="dropdown-menu">
+                <a
+                  class="link-dropdown"
+                  href="https://www.internetmedia.com.br/"
+                  >Portal de Notícias <br
+                /></a>
+                <a
+                  class="link-dropdown"
+                  href="https://www.internetmedia.com.br/"
+                  >Guia Comercial</a
+                >
+                <ul>
+                  <li><h2 class="titulo-dropdown">Como te Ajudamos</h2></li>
+                  <li class="icon-container">
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-fingerprint"></i
+                      ><span class="">Recursos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-sharp fa-solid fa-laptop-code"></i
+                      ><span class="">Temas</span>
+                    </a>
+                  </li>
+                  <li class="icon-container">
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-user"></i
+                      ><span class="">UltraCheckout</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-sharp fa-solid fa-laptop-code"></i
+                      ><span class="">Vender Nas Redes Sociais</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-money-bill-1"></i
+                      ><span class="">UltraCheckout</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-diagram-project"></i
+                      ><span class="">Super Buscaa</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-dollar-sign"></i
+                      ><span class="">Vitrines de Recomendação</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-cart-shopping"></i
+                      ><span class="">Recuperação de Carrinhos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-rocket"></i
+                      ><span class="">Migrações</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="pr-30">
+                  <li>
+                    <h2 class="titulo-dropdown">Incremente sua loja</h2>
+                  </li>
+                  <li class="icon-container">
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-credit-card"></i
+                      ><span class="">Meios de Pagamento</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="nav-i fa-solid fa-code-branch"></i
+                      ><span class="">Sistema de Gestão</span>
+                    </a>
+                  </li>
+                  <li class="icon-container">
+                    <a class="dropdown-item" href="#">
+                      <i aria-hidden="true" class="nav-i fas fa-dolly"></i
+                      ><span class="">Meios de Entrega</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i
+                        aria-hidden="true"
+                        class="nav-i fas fa-network-wired"
+                      ></i
+                      ><span class="">Redes Sociais</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i aria-hidden="true" class="nav-i fas fa-lock"></i
+                      ><span class="">Segurança e Anti-Fraude</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i aria-hidden="true" class="nav-i far fa-envelope"></i
+                      ><span class="">Marketing e Comunicação</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i
+                        aria-hidden="true"
+                        class="nav-i fas fa-fingerprint"
+                      ></i
+                      ><span class="">Hubs Marketplaces</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i aria-hidden="true" class="nav-i fas fa-users"></i
+                      ><span class="">Recuperação de Carrinhos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i
+                        aria-hidden="true"
+                        class="nav-i fas fa-paper-plane"
+                      ></i
+                      ><span class="">Recuperação de Carrinhos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i aria-hidden="true" class="nav-i far fa-chart-bar"></i
+                      ><span class="">Comparadores de Preços</span>
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nowrap" href="#">Planos e Preços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-nav btn-primary">
+            <span>Fale com Especialista</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
 <main>
   <section class="bg-login col-md-12 display-flex">
       <section class="w-55 container text-align-center">
-        <div class="header">
+        <div class="header d-desktop">
             <a href="https://davimsantana.github.io/site-novo-im/"><i class="fa-solid fa-angle-left exit-arrow"></i></a>
             <img class="img-logo-l" src="assets/images/logo.png" alt="">
         </div>
@@ -60,6 +273,7 @@
         <div class="display-flex align-items-center justify-content-sb">
           <div class="checkbox-container">
             <input  name="remember" type="checkbox">
+            <span class="checkmark"></span>
             <label  for="remember">Lembre de mim</label>
           </div>
           <div>
@@ -74,8 +288,8 @@
             Ainda não tem uma conta? <a href="https://davimsantana.github.io/site-novo-im/cadastro"><span class="l-span">Cadastre-se</span></a>
         </p>
     </section>
-    <section class="w-45">
-        <img class="img-login w-100" src="assets/images/homem_img.png" alt="">
+    <section class="w-45 d-desktop">
+        <img class="d-desktop img-login w-100" src="assets/images/homem_img.png" alt="">
     </section>
   </section>
 </main>

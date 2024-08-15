@@ -11,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Friends, sans-serif !important;
+  font-family: FriendsSbold, sans-serif !important;
   color: #54595f;
   overflow-x: hidden;
 }
@@ -1182,6 +1182,7 @@ h4 {
   border: 0;
   margin: 15px 0px 20px 0px;
   font-weight: 300;
+  font-family: 'FriendsNormal';
 }
 
 .sub-d {

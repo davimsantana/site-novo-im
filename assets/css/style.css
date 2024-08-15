@@ -2171,11 +2171,11 @@ textarea::placeholder{
 
   .titulo-login{
     font-size: 43px;
-    margin-top: 90px;
+    margin-top: 90px !important;
   }
 
   .titulo-cadastro{
-    margin-top: 90px;
+    margin-top: 90px !important;
     font-size: 39.7px;
   }
 

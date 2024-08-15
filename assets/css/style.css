@@ -539,7 +539,7 @@ ul {
 .titulo-login{
   color: #01205f;
   font-weight: 700;
-  font-size: 49px;
+  font-size: 51px;
   letter-spacing: -0.04px;
   margin: 25px auto 25px auto;
   width: 100%;
@@ -1637,6 +1637,7 @@ input, textarea{
 
 .forms-login > input{
   width: 100%;
+  margin-right: 0px;
 }
 
 input:focus{
@@ -1756,6 +1757,10 @@ textarea::placeholder{
 .r-senha{
   color: #01205f;
   text-decoration: none;
+}
+
+.titulo-login, .forms-login > input{
+  max-width: 600px;
 }
 
 @media (max-width: 1200px) {

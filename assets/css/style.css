@@ -986,7 +986,7 @@ h3 {
 }
 
 .large-card ul li::before {
-  content: "✔";
+  content: "?";
   color: #175cff;
 }
 
@@ -1615,6 +1615,26 @@ input, textarea{
   z-index: 1;
 }
 
+.checkbox-container > input{
+  margin-bottom: 0;
+  margin-left: 10px;
+  width: 27px;
+}
+
+.checkbox-container > input{
+  margin-bottom: 0;
+  width: 22px;
+  accent-color: #01205f; 
+}
+
+.checkbox-container input[type="checkbox"]:hover {
+  accent-color: #003366; /* Mantém a mesma cor quando passa o mouse */
+}
+
+.checkbox-container > label{
+  white-space: nowrap;
+}
+
 .forms-login > input{
   width: 100%;
 }
@@ -1725,6 +1745,17 @@ textarea::placeholder{
 .remember-me{
   display: flex;
   align-items: start;
+}
+
+.checkbox-container{
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.r-senha{
+  color: #01205f;
+  text-decoration: none;
 }
 
 @media (max-width: 1200px) {
@@ -2264,3 +2295,4 @@ textarea::placeholder{
     right: -1150px;
   }
 }
+

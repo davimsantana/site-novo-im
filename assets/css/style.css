@@ -548,6 +548,15 @@ ul {
   width: 100%;
 }
 
+.titulo-cadastro{
+  color: #01205f;
+  font-weight: 700;
+  font-size: 51px;
+  letter-spacing: -0.04px;
+  margin: 25px auto 25px auto;
+  width: 100%;
+}
+
 .d-flex {
   display: flex;
   align-items: center;
@@ -2163,6 +2172,11 @@ textarea::placeholder{
   .titulo-login{
     font-size: 43px;
     margin-top: 90px;
+  }
+
+  .titulo-cadastro{
+    margin-top: 90px;
+    font-size: 39.7px;
   }
 
   .w-55{

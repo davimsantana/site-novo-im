@@ -2179,7 +2179,7 @@ textarea::placeholder{
 
   .titulo-cadastro{
     margin-top: 90px !important;
-    font-size: 39.7px;
+    font-size: 39px;
   }
 
   .w-55{
@@ -2258,6 +2258,10 @@ textarea::placeholder{
   }
   .span-fc{
     font-size: 15px;
+  }
+  .titulo-cadastro{
+    margin-top: 90px !important;
+    font-size: 38px;
   }
 }
 

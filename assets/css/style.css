@@ -542,7 +542,7 @@ ul {
 .titulo-login{
   color: #01205f;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 45px;
   font-family: 'FriendsBold';
   letter-spacing: -0.04px;
   margin: 25px auto 25px auto;
@@ -552,7 +552,7 @@ ul {
 .titulo-cadastro{
   color: #01205f;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 45px;
   letter-spacing: -0.04px;
   font-family: 'FriendsBold';
   margin: 25px auto 25px auto;
@@ -1710,7 +1710,6 @@ textarea::placeholder{
 
 .txt-blue{
   color: #001b61;
-  padding-bottom: 50px;
 }
 
 .scrolled{

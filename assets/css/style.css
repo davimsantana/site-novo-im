@@ -2286,7 +2286,6 @@ textarea::placeholder{
     width: 220px;
   }
   .titulo-cadastro{
-    margin-top: 90px !important;
     font-size: 2.2rem;
   }
 }

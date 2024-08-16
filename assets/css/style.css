@@ -2234,7 +2234,7 @@ textarea::placeholder{
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 420px) {
   .img-logo {
     width: 60%;
   }
@@ -2261,7 +2261,7 @@ textarea::placeholder{
   }
   .titulo-cadastro{
     margin-top: 90px !important;
-    font-size: 38px;
+    font-size: 36.5px;
   }
 }
 
@@ -2286,6 +2286,10 @@ textarea::placeholder{
   }
   .img-imprensa {
     width: 220px;
+  }
+  .titulo-cadastro{
+    margin-top: 90px !important;
+    font-size: 32.5px;
   }
 }
 

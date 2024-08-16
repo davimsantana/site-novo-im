@@ -2177,7 +2177,7 @@ textarea::placeholder{
 
   .titulo-login{
     margin-top: 0;
-    font-size: 43px;
+    font-size: 2.4rem;
   }
 
   .titulo-cadastro{
@@ -2287,6 +2287,9 @@ textarea::placeholder{
     width: 220px;
   }
   .titulo-cadastro{
+    font-size: 2.2rem;
+  }
+  .titulo-login{
     font-size: 2.2rem;
   }
 }

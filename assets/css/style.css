@@ -2234,7 +2234,7 @@ textarea::placeholder{
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
   .img-logo {
     width: 60%;
   }

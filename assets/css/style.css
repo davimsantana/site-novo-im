@@ -325,20 +325,30 @@ ul {
 
 .bd-btn{
   background-color: #001a61;
-  font-family: FriendsNormal;
+  font-family: 'FriendsNormal';
   font-weight: 100;
   width: 100%;
   color: white;
   height: 40px;
   border: 0;
+  font-size: 15px;
   outline: 0;
   border-radius: 5px;
+  transition: .5s;
+}
+
+.bd-btn:hover{
+  color: #01205f;
+  border-color: #01205f;
+  border: 1px solid #01205f;
+  background-color: white;
 }
 
 .banner-description {
   font-size: 20px;
   margin-bottom: 25px;
 }
+
 
 .b-btn1 {
   margin: 10px;
@@ -533,6 +543,13 @@ ul {
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 17px;
+}
+
+.titulo-exemplos-d{
+  color: #01205f;
+  font-family: 'FriendsRegular';
+  font-size: 30px;
+  letter-spacing: -0.04px;
 }
 
 .demonstracao-2-p {
@@ -865,6 +882,10 @@ h3 {
   margin-top: 200px;
 }
 
+.mt-25{
+  margin-top: 25px;
+}
+
 .mt-20 {
   margin-top: 30px;
 }
@@ -873,8 +894,16 @@ h3 {
   margin-bottom: 30px;
 }
 
+.mb-25{
+  margin-bottom: 25px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.mb-35{
+  margin-bottom: 35px;
 }
 
 .mb-50 {
@@ -1605,7 +1634,9 @@ ul {
 }
 
 .span-bd{
+  color: #333333;
   font-size: 20px;
+  font-family: 'FriendsRegular';
 }
 
 .w-card{
@@ -1717,7 +1748,7 @@ input:focus{
 input::placeholder{
   font-size: 15px;
   color: #3333337e;
-  position: absolute;
+
   font-style: italic;
   top: 8px;
 }
@@ -1844,8 +1875,22 @@ textarea::placeholder{
   margin-bottom: 4px;
 }
 
+.t-dce{
+  color: black;
+  font-weight: 100;
+  font-family: 'FriendsNormal';
+  margin-bottom: 4px;
+}
+
 .s-dc{
   color: white;
+  font-family: 'FriendsNormal';
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.s-dce{
+  color: black;
   font-family: 'FriendsNormal';
   font-weight: 400;
   font-size: 15px;
@@ -1854,12 +1899,24 @@ textarea::placeholder{
 .btn-dc{
   font-weight: 200;
   border: 0;
-  font-family: 'FriendsNormal';
+  font-family: 'FriendsRegular';
   padding: 10px;
   border-radius: 20px;
   height: 45px;
   font-size: 14px;
-  width: 100%;
+  width: 85%;
+}
+
+.btn-dce{
+  font-weight: 200;
+  border: 0;
+  font-family: 'FriendsRegular';
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #bababa;
+  height: 45px;
+  font-size: 14px;
+  width: 80%;
 }
 
 .i-dc{
@@ -1870,6 +1927,17 @@ textarea::placeholder{
   border-radius: 10px;
   margin-right: 25px;
 }
+
+.i-dce{
+  color: white;
+  background-color: #01205f;
+  font-size: 26px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 25px;
+}
+
+
 
 @media (max-width: 1200px) {
   .home {
@@ -2304,6 +2372,48 @@ textarea::placeholder{
   .pb-80{
     padding-bottom: 70px;
   }
+
+  .bd-title{
+    font-size: 28px;
+  }
+
+  .span-bd {
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 65%;
+  } 
+
+  .bd-btn{
+    font-size: 11px;
+  }
+
+  .t-dc {
+    font-size: 16px;
+  }
+
+  .btn-dc {
+    font-size: 11px;
+    width: 100%;
+  }
+
+  .s-dc {
+    font-size: 13px;
+  }
+
+  .t-dce {
+    font-size: 14px;
+  }
+
+  .btn-dce {
+    font-size: 11px;
+    width: 100%;
+  }
+
+  .s-dce {
+    font-size: 13px;
+  }
+  
 
   @keyframes float {
     0% {

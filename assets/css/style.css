@@ -307,7 +307,6 @@ ul {
   font-size: 45px;
   letter-spacing: -0.04em;
   margin: 150px auto 10px auto;
-  width: 75%;
 }
 
 .bd-input{
@@ -2378,7 +2377,7 @@ textarea::placeholder{
   }
 
   .bd-title{
-    font-size: 30.1px;
+    font-size: 33px;
   }
 
   .span-bd {

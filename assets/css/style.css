@@ -303,10 +303,10 @@ ul {
 
 .bd-title{
   color: #01205f;
-  font-weight: 700;
+  font-family: 'FriendsSbold';
   font-size: 45px;
-  letter-spacing: -0.04px;
-  margin: 160px auto 10px auto;
+  letter-spacing: -0.04em;
+  margin: 150px auto 10px auto;
   width: 75%;
 }
 
@@ -2379,7 +2379,6 @@ textarea::placeholder{
 
   .bd-title{
     font-size: 30px;
-    white-space: nowrap;
   }
 
   .span-bd {

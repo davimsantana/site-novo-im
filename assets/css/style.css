@@ -2378,7 +2378,8 @@ textarea::placeholder{
   }
 
   .bd-title{
-    font-size: 28px;
+    font-size: 30px;
+    white-space: nowrap;
   }
 
   .span-bd {

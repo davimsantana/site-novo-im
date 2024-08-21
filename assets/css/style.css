@@ -1929,7 +1929,7 @@ textarea::placeholder{
   font-size: 26px;
   padding: 15px;
   border-radius: 15px;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .i-dce{
@@ -1938,7 +1938,7 @@ textarea::placeholder{
   font-size: 26px;
   padding: 15px;
   border-radius: 15px;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 
@@ -2428,6 +2428,10 @@ textarea::placeholder{
 
   .titulo-exemplos-d{
     font-size: 24px;
+  }
+
+  .i-dc, .i-dce{
+    margin-right: 15px;
   }
 
   @keyframes float {

@@ -702,6 +702,10 @@ h3 {
   flex-direction: column;
 }
 
+.fd-m{
+  flex-direction: row;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -1924,8 +1928,8 @@ textarea::placeholder{
   background-color: #fb9006;
   font-size: 26px;
   padding: 15px;
-  border-radius: 10px;
-  margin-right: 25px;
+  border-radius: 15px;
+  margin-right: 15px;
 }
 
 .i-dce{
@@ -1933,8 +1937,8 @@ textarea::placeholder{
   background-color: #01205f;
   font-size: 26px;
   padding: 15px;
-  border-radius: 10px;
-  margin-right: 25px;
+  border-radius: 15px;
+  margin-right: 15px;
 }
 
 
@@ -2385,15 +2389,17 @@ textarea::placeholder{
   } 
 
   .bd-btn{
-    font-size: 11px;
+    margin-top: 15px;
+    font-size: 14px;
   }
 
   .t-dc {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .btn-dc {
-    font-size: 11px;
+    margin-top: 20px;
+    font-size: 14px;
     width: 100%;
   }
 
@@ -2402,11 +2408,13 @@ textarea::placeholder{
   }
 
   .t-dce {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .btn-dce {
-    font-size: 11px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 14px;
     width: 100%;
   }
 
@@ -2414,6 +2422,13 @@ textarea::placeholder{
     font-size: 13px;
   }
   
+  .fd-m{
+    flex-direction: column;
+  }
+
+  .titulo-exemplos-d{
+    font-size: 24px;
+  }
 
   @keyframes float {
     0% {

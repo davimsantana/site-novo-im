@@ -37,6 +37,9 @@
         font-family: 'FriendsRegular';
         src: url('assets/fonts/Friends-Regular.otf');
       }
+      .c-dominio-exemplo:last-child > .border-bottom{
+          border-bottom: 0 !important;
+        }
       .container{
         max-width: 50% !important;
       }
@@ -87,9 +90,17 @@
           max-width: 95% !important;
         }
         .c-dominio-encontrado, .c-dominio-exemplo{
-          padding: 20px;
+          padding: 30px;
         }
-        
+        input{
+          width: 100% !important;
+        }
+        .mb-35{
+          margin: 0 !important;
+        }
+        .c-dominio-exemplo:last-child{
+          margin-bottom: 300px;
+        }
       }
     </style>
 </head>
@@ -322,7 +333,7 @@
             </div>
           </section>
           <section class="col-md-12">
-            <div class="display-flex pb-40">
+            <div class="display-flex fd-m pb-40">
                 <div class="col-md-8">
                     <input class="bd-input" id="dominio" name="dominio" type="text" placeholder="www.exemplo.com.br">
                 </div>
@@ -332,12 +343,12 @@
             </div>
           </section>
           <section>
-            <section class="c-dominio-encontrado display-flex col-md-12">
+            <section class="c-dominio-encontrado fd-m display-flex col-md-12">
                 <div class="col-md-8 display-flex">
                     <div class="">   
                         <i class="fa-solid fa-check i-dc"></i>
                     </div>
-                    <div class="">
+                    <div class="display-flex fd-c justify-content-center">
                         <h3 class="t-dc">Este Domínio está disponível</h3>
                         <span class="s-dc">www.exemplo.com.br</span>
                     </div>
@@ -352,12 +363,12 @@
               </div>
               <div class="c-dominio-exemplos col-md-12">
                   <div class="c-dominio-exemplo">
-                    <div class="border-bottom display-flex">
+                    <div class="border-bottom display-flex fd-m">
                       <div class="col-md-8 display-flex">
                         <div class="">
                             <i class="fa-solid fa-check i-dce"></i>
                         </div>
-                        <div class="mb-35 pr-25">
+                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
                             <h3 class="t-dce">www.exemplo.com.br</h3>
                             <span class="s-dce">Domínio disponível</span>
                         </div>
@@ -368,12 +379,12 @@
                     </div>
                   </div>
                   <div class="c-dominio-exemplo">
-                    <div class="border-bottom display-flex">
+                    <div class="border-bottom display-flex fd-m">
                       <div class="col-md-8 display-flex">
                         <div class="">
                             <i class="fa-solid fa-check i-dce"></i>
                         </div>
-                        <div class="mb-35 pr-25">
+                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
                             <h3 class="t-dce">www.exemplo.com.br</h3>
                             <span class="s-dce">Domínio disponível</span>
                         </div>
@@ -384,12 +395,12 @@
                     </div>
                   </div>
                   <div class="c-dominio-exemplo">
-                    <div class="border-bottom display-flex">
+                    <div class="border-bottom display-flex fd-m">
                       <div class="col-md-8 display-flex">
                         <div class="">
                             <i class="fa-solid fa-check i-dce"></i>
                         </div>
-                        <div class="mb-35 pr-25">
+                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
                             <h3 class="t-dce">www.exemplo.com.br</h3>
                             <span class="s-dce">Domínio disponível</span>
                         </div>
@@ -400,13 +411,13 @@
                     </div>
                   </div>
                   <div class="c-dominio-exemplo">
-                    <!--Quando fizer o JavaScript, tirar a linha do ultimo-->
-                    <div class="display-flex">
+                    <!--No JavaScript a linha do ultimo tem que sumir-->
+                    <div class="border-bottom display-flex fd-m">
                       <div class="col-md-8 display-flex">
                         <div class="">
                             <i class="fa-solid fa-check i-dce"></i>
                         </div>
-                        <div class="mb-35">
+                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
                             <h3 class="t-dce">www.exemplo.com.br</h3>
                             <span class="s-dce">Domínio disponível</span>
                         </div>

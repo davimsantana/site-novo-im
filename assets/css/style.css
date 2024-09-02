@@ -2183,6 +2183,10 @@ textarea::placeholder{
   transition: width 0.5s ease;
 }
 
+.wm-100{
+
+}
+
 @media (max-width: 1200px) {
   .home {
     display: none;
@@ -2706,17 +2710,17 @@ textarea::placeholder{
 
   .demo-title{
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 42px;
   }
 
   .demo-sub{
     margin-top: 0;
-    font-size: 19.7px;
+    font-size: 20.7px;
   }
 
   .demo-p{
-    font-size: 13px;
-    width: 70%;
+    font-size: 15px;
+    width: 80%;
     margin-bottom: 25px;
   }
 
@@ -2800,6 +2804,10 @@ textarea::placeholder{
 
   .pb-100{
     padding-bottom: 40px;
+  }
+
+  .wm-100{
+    width: 100%;
   }
 
   @keyframes float {

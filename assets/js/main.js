@@ -229,6 +229,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   const navbar = document.querySelector('.container-fluid');
   const image = document.querySelector('.img-logo')
+  const links = document.querySelectorAll('.nav-link')
 
   if (navbar) {
       console.log("Navbar found, attaching scroll listener");
@@ -238,9 +239,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
           if (window.scrollY > 50) { 
               navbar.classList.add('scrolled');
               image.classList.add('s-image')
+              links.classList.add('txt-blue')
           } else {
               navbar.classList.remove('scrolled');
               image.classList.remove('s-image')
+              links.classList.remove('txt-blue')
           }
       }
 

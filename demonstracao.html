@@ -41,18 +41,58 @@
             font-family: 'FriendsThin';
             src: url('assets/fonts/Friends-Thin.otf');
           }
+          @font-face {
+            font-family: 'FriendsUl';
+            src: url('assets/fonts/Friends-UltraLight.otf');
+          }
+          .scrolled .nav-link {
+              color: #01205f !important;
+          }
+          .scrolled .btn-nav {
+              background-color: #01205f !important;
+              border: 1px solid #01205f;
+          }
+          .scrolled .btn-nav:hover {
+              background-color: transparent !important;
+              border: 1px solid #01205f !important;
+          }
+          .scrolled .d-nonel{
+            display: block !important;
+          }
+          .scrolled .d-blockl{
+            display: none !important;
+          }
           .nav-link{
-            color: white;
+            color: white !important;
           }
           .bg-azul-nebulosas{
             background-image: url('assets/images/bg-azul-nebulosas.png');
+            background-repeat: no-repeat;
+            background-size: cover;
             width: 100%;
             height: 518px;
           }
           .btn-nav{
-            background-color: transparent;
-            border: 1px #ffffff5c solid;
+            background-color: transparent !important;
+            border: 1px #ffffff5c solid !important;
           }
+          .bg-homem{
+            background-image: url('assets/images/bg-homem.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 8px;
+            width: 100%;
+            padding: 40px;
+            height: 509px;
+          }
+          .bg-homem::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0,); /* Ajuste a opacidade aqui */
+            z-index: 1; /* Mantém o overlay atrás do conteúdo */
+          }
+    
         </style>
       </head>
 <body>
@@ -62,11 +102,17 @@
               class="container container-fluid bg-transparent justify-content-center"
             >
               <div class="nav">
-                <div class="nowrap display-flex align-items-center">
-                  <a href=""
-                    ><img class="img-logo" src="assets/images/logo-light.png" alt="Logo"
-                  /></a>
-                  <div>
+                <div class="nowrap display-flex align-items-center w-100">
+                    <div>
+                      <a href="#" class="w-100"
+                        ><img class="img-logo-l d-blockl" src="assets/images/logo-light.png" alt="Logo"
+                      /></a>
+                    <div>
+                      </div>
+                      <a href="#"
+                        ><img class="img-logo d-nonel" src="assets/images/logo.png" alt="Logo"
+                      /></a>
+                    </div>
                     <button
                       class="navbar-toggler"
                       type="button"
@@ -78,7 +124,6 @@
                     >
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                  </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <div class="display-flex">
@@ -271,17 +316,18 @@
           </nav>
     </header>
     <main>
-        <section class="bg-azul-nebulosas">
-            <div class="display-flex h-100 container">
-                <div class="col-md-6 h-100 display-flex align-items-center">
+        <section class="bg-azul-nebulosas display-flex align-items-center">
+            <div class="display-flex container fd-m">
+                <div class="col-md-6 display-flex align-items-center">
                     <div>
                         <h1 class="demo-title">Demonstração</h1>
                         <p class="demo-sub">Aprenda mais sobre o sistema!</p>
-                        <p class="demo-p mb-20">Agende uma demonstração personalizada ao vivo, sob medida para o seu segmento</p>
+                        <p class="demo-p mb-15">Agende uma demonstração personalizada ao vivo, sob medida para o seu segmento</p>
                         <div class="display-flex">
                           <input class="demo-input" placeholder="exemplo@email.com" id="idemail" name="email" type="text">
-                          <input class="demo-ibtn" type="submit" value="Agendar Demo"><span class="span-w">Ou acessar as gravações -></span>
+                          <input class="demo-ibtn" type="submit" value="Agendar Demo">
                         </div>
+                        <p class="span-w">Ou acessar as gravações -></p>
                         
                     </div>
                 </div>
@@ -292,6 +338,155 @@
                 </div>
             </div>
         </section>
+        <section class="pt-100 pb-100 container">
+            <div class="display-flex flex-wrapt">
+                <button class="btn-videos">Todos</button>
+                <button class="btn-videos">Portal de Notícias</button>
+                <button class="btn-videos">Guia Comercial</button>
+            </div>
+            <div>
+                <h2 class="demoh2 mt-70 mb-70">Todas as demonstrações</h2>
+                <div>
+                    <div class="display-flex fd-c">
+                        <div class="display-flex justify-content-sb mb-100 vcards-line1">
+                            <div class="card-video">
+                                <img src="assets/images/thumbnail.png" alt="">
+                                <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                                <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                                <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                                <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                            <div class="card-video">
+                              <img src="assets/images/thumbnail.png" alt="">
+                              <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                              <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                              <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                              <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                            <div class="card-video">
+                              <img src="assets/images/thumbnail.png" alt="">
+                              <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                              <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                              <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                              <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                            <div class="card-video">
+                              <img src="assets/images/thumbnail.png" alt="">
+                              <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                              <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                              <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                              <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                        </div>
+                        <div class="display-flex justify-content-sb vcards-line2">
+                            <div class="card-video">
+                              <img src="assets/images/thumbnail.png" alt="">
+                              <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                              <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                              <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                              <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                            <div class="card-video">
+                              <img src="assets/images/thumbnail.png" alt="">
+                              <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                              <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                              <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                              <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                            <div class="card-video">
+                              <img src="assets/images/thumbnail.png" alt="">
+                              <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                              <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                              <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                              <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                            <div class="card-video">
+                              <img src="assets/images/thumbnail.png" alt="">
+                              <div class="mt-17"><span class="span-cardv">ANÁLISE DO FUNIL</span></div>
+                              <h3 class="titulo-cardv">ANÁLISE DE MARKETING AVANÇADA</h3>
+                              <p class="txt-cardv">Descubra como colher dados, analisar campanhas e fazer melhorias nas estratégias de marketing</p>
+                              <a href="#" class="link-cardv">Assistir ></a>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>          
+        </section>
+        <section class="container">
+            <div class="bg-homem display-flex d-desktop-f">
+                <div class="col-md-5">
+                  <a href=""></a>
+                </div>
+                <div class="col-md-7 display-flex fd-c justify-content-center">
+                    <div class="bg-t">
+                      <h2 class="title-bgh">Se prefirir, receba uma demonstração ao vivo</h2>
+                      <p class="color-white">É virtual e personalizada. Você aprende direto com especialista, tira dúvidas e ainda recebe um plano com estratégias do seu segmento. <br>Agende gratuitamente, sem compromisso!</p>
+                      <a href="#">Agende uma demonstração!</a><span class="color-white pl-5">></span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-mobile">
+              <div class="">
+                <h2 class="title-bgh">Se prefirir, receba uma demonstração ao vivo</h2>
+                      <p class="text-d">É virtual e personalizada. Você aprende direto com especialista, tira dúvidas e ainda recebe um plano com estratégias do seu segmento. <br>Agende gratuitamente, sem compromisso!</p>
+                      <a class="link-d" href="#">Agende uma demonstração!</a><span class="span-d pl-5">></span>
+              </div>
+            </div>
+        </section>
+        <div class="bg-homem d-mobile">
+
+        </div>
     </main>
+    <footer class="container mt-200">
+      <section class="mb">
+        <div>
+          <div class="row align-items-start">
+            <div class="col-md-3 pr-50">
+              <img class="img-1-rodape" src="assets/images/logo.png" alt="" />
+              <p>
+                Criar Portal de Notícias, Criar site Guia Comercial, Site para
+                imobiliárias, site para prefeituras, criação de aplicativos,
+                site para igrejas, etc...
+              </p>
+              <img class="img-2-rodape" src="assets/images/img16.png" alt="" />
+            </div>
+            <div class="col-md-3 links-footer">
+              <h4 class="titulo-rodape">Links Úteis</h4>
+              <a href="#">Blog</a><br />
+              <a href="#">+ 234 Recursos</a><br />
+              <a href="#">Planos e Preços</a><br />
+              <a href="#">Central de Ajuda</a><br />
+              <a href="#">Desenvolvedores</a><br />
+              <a href="#">Integre seu ERP</a><br />
+              <a href="#">Guia da Marca</a>
+            </div>
+            <div class="col-md-3 links-footer">
+              <h4 class="titulo-rodape">Sobre Nós</h4>
+              <a href="#">Quem Somos</a><br />
+              <a href="#">Fale conosco</a><br />
+              <a href="#">Termos de uso</a><br />
+              <a href="#">LGPD</a><br />
+              <a href="#">Trabalhe conosco</a>
+            </div>
+            <div class="col-md-3 numeros-fc">
+              <h4 class="titulo-rodape">Fale Conosco</h4>
+              <span>Vendas: <a href="#">(21) 97649-3627</a></span> <br />
+              <span>Suporte: <a href="#">(21) 98132-72990</a></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mb-20">
+        Internet Media - Todos os direitos reservados | Política de Privacidade
+        - Termos de Uso - Termos e Condições
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -2065,6 +2065,7 @@ textarea::placeholder{
   justify-content: center;
   align-items: center;
   border: 1px solid #7c859f;
+  margin-bottom: 30px;
 }       
 
 .video-container iframe {
@@ -2709,7 +2710,7 @@ textarea::placeholder{
   }
 
   .demo-title{
-    margin-top: 30px;
+    margin-top: 70px;
     font-size: 42px;
   }
 
@@ -2730,7 +2731,7 @@ textarea::placeholder{
   }
 
   .bg-azul-nebulosas{
-    height: 618px !important;
+    height: 668px !important;
   }
 
   .pt-100{

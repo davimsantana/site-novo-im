@@ -173,7 +173,7 @@ ul {
 }
 
 .img-logo-l{
-  width: 200px;
+  width: 180px;
   margin-right: 10px;
   transition: width 0.5s ease;
 }
@@ -2065,7 +2065,6 @@ textarea::placeholder{
   justify-content: center;
   align-items: center;
   border: 1px solid #7c859f;
-  margin-bottom: 30px;
 }       
 
 .video-container iframe {
@@ -2122,11 +2121,14 @@ textarea::placeholder{
   z-index: 1; /* Garante que o conteúdo fique acima do overlay */
 }
 
+.g-40{
+  gap: 40px;
+}
+
 .card-video{
   display: flex;
   flex-direction: column;
   border: 1px solid #bababa;
-  max-width: 249px;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
@@ -2134,6 +2136,7 @@ textarea::placeholder{
   bottom: 0;
   transition: bottom 0.3s ease;
   padding: 20px;
+  width: 23%
 }
 
 .card-video:hover{
@@ -2711,12 +2714,13 @@ textarea::placeholder{
 
   .demo-title{
     margin-top: 50px;
-    font-size: 42px;
+    font-size: 47px;
+    font-family: 'FriendsSbold';
   }
 
   .demo-sub{
     margin-top: 0;
-    font-size: 20.7px;
+    font-size: 23px;
   }
 
   .demo-p{
@@ -2745,7 +2749,7 @@ textarea::placeholder{
 
   .title-bgh{
     color: #333333;
-    font-size: 30px;
+    font-size: 39px;
     letter-spacing: -0.04em;
     font-family: 'FriendsSbold';
   }
@@ -2755,7 +2759,7 @@ textarea::placeholder{
     margin: 20px 0px 25px 0px !important;
     margin: 0;
     font-family: 'FriendsNormal';
-    font-size: 18px;
+    font-size: 19px;
     color: #333333;
   }
 
@@ -2765,7 +2769,7 @@ textarea::placeholder{
     font-family: 'FriendsRegular';
     text-underline-offset: 5px;
     font-family: 'FriendsSbold';
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .span-d{
@@ -2881,7 +2885,7 @@ textarea::placeholder{
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1900px) {
   .container {
     max-width: 70%;
   }
@@ -2907,6 +2911,9 @@ textarea::placeholder{
   }
   .titulo-beneficios-2 {
     width: 40%;
+  }
+  .bg-azul-nebulosas{
+    height: 608px;
   }
 }
 

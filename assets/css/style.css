@@ -2923,6 +2923,10 @@ textarea::placeholder{
     margin-bottom: 45px;
   }
 
+  .tg-card{
+    background-color: #12336c75;
+  }
+
   @keyframes float {
     0% {
       transform: translateY(0);
@@ -3085,3 +3089,5 @@ textarea::placeholder{
     right: -1150px;
   }
 }
+
+/*Se fazer código ruim fosse um crime, eu seria o primeio a ser preso.*/

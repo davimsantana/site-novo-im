@@ -2269,7 +2269,6 @@ textarea::placeholder{
 
 
 
-
 @media (max-width: 1200px) {
   .home {
     display: none;
@@ -3035,6 +3034,18 @@ textarea::placeholder{
   }
   .bg-azul-video{
     height: 758px !important;
+  }
+  .tg-card p{
+    font-size: 20px;
+  }
+  .title-video h1{
+    font-size: 50px;
+    line-height: 1;
+    margin: 0.2rem 0 0.2rem 0;
+  }
+  .title-video p{
+    font-size: 18px;
+    width: 80%;
   }
   .bg-t{
     padding: 80px 40px 80px 40px;

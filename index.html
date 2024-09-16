@@ -16,18 +16,30 @@
     />
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-      @font-face {
-        font-family: 'FriendsBold';
-        src: url('assets/fonts/Friends-UltraBold.otf');
-      }
-      @font-face {
-        font-family: 'FriendsSbold';
-        src: url('assets/fonts/Friends-SemiBold.otf');
-      }
-      @font-face {
-        font-family: 'FriendsNormal';
-        src: url('assets/fonts/Friends-Normal.otf');
-      }
+        @font-face {
+            font-family: 'FriendsBold';
+            src: url('assets/fonts/Friends-UltraBold.otf');
+        }
+        @font-face {
+            font-family: 'FriendsSbold';
+            src: url('assets/fonts/Friends-SemiBold.otf');
+        }
+        @font-face {
+            font-family: 'FriendsNormal';
+            src: url('assets/fonts/Friends-Normal.otf');
+        }
+        @font-face {
+            font-family: 'FriendsRegular';
+            src: url('assets/fonts/Friends-Regular.otf');
+        }
+        @font-face {
+            font-family: 'FriendsThin';
+            src: url('assets/fonts/Friends-Thin.otf');
+        }
+        @font-face {
+            font-family: 'FriendsUl';
+            src: url('assets/fonts/Friends-UltraLight.otf');
+        }
     </style>
   </head>
   <body>
@@ -355,6 +367,83 @@
           </div>
         </div>   
       </section>
+      <section class="bg-azul">
+        <div class="bloco-layout mb-70">
+            <div class="n-1"></div>
+            <div class="n-2"></div>
+            <div class="n-3"></div>
+            <div class="container">
+                <h1 class="mt-80">Templates criados para o sucesso do seu site</h1>
+                <p>Lorem ipsum dolor sit amet, consecteur adipiscing <br> elit. Praesent sollicitudin lorem. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                  <button class="prev-slide" onclick="prevSlide()"><i class="fa-solid fa-angle-up"></i></button>
+                  <div class="carousel-indicators">
+                      <button class="active" onclick="goToSlide(0)"></button>
+                      <button onclick="goToSlide(1)"></button>
+                      <button onclick="goToSlide(2)"></button>
+                      <button onclick="goToSlide(3)"></button>
+                      <button onclick="goToSlide(4)"></button>
+                  </div>
+                  <button class="next-slide" onclick="nextSlide()"><i class="fa-solid fa-angle-down"></i></button>
+              </div>                           
+            </div>
+        </div>
+      </section>    
       <section class="bg-cinza">
         <div class="container">
           <div class="mb-50 text-align-center">
@@ -789,7 +878,98 @@
       </section>
         <div class="mb-20">Internet Media - Todos os direitos reservados | Política de Privacidade - Termos de Uso - Termos e Condições</div>
     </footer>
+    <script>
+     document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const indicators = document.querySelectorAll('.carousel-indicators button');
 
+    // Constantes para o carrossel
+    const slidesToShow = 3; // Número de slides visíveis ao mesmo tempo
+    const slideGap = 15; // Espaçamento entre slides em pixels
+
+    // Função para calcular a largura do slide e do track
+    const updateSlideWidth = () => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        return slideWidth;
+    }
+
+    let slideWidth = updateSlideWidth();
+    const totalSlides = slides.length;
+
+    let currentSlide = 0; // Índice do slide atual
+
+    // Atualiza a posição dos slides
+    function updateSlidePosition() {
+        slideWidth = updateSlideWidth(); // Atualiza a largura do slide
+        const moveAmount = currentSlide * (slideWidth + slideGap);
+        track.style.transform = `translateX(-${moveAmount}px)`; // Move os slides
+    }
+
+    // Move para o próximo slide
+    function nextSlide() {
+        if (currentSlide < totalSlides - slidesToShow) {
+            currentSlide++;
+        } else {
+            currentSlide = 0; // Volta ao primeiro slide
+        }
+        updateSlidePosition();
+        updateIndicators();
+    }
+
+    // Move para o slide anterior
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+        } else {
+            currentSlide = totalSlides - slidesToShow; // Vai para o último grupo visível
+        }
+        updateSlidePosition();
+        updateIndicators();
+    }
+
+    // Move para o slide especificado pelos indicadores
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlidePosition();
+        updateIndicators();
+    }
+
+    // Atualiza os indicadores com base no slide atual
+    function updateIndicators() {
+        indicators.forEach((indicator, i) => {
+            if (i === currentSlide) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    }
+
+    // Inicializa o carrossel
+    updateSlidePosition();
+    updateIndicators();
+
+    // Adiciona eventos de clique aos botões de controle
+    document.querySelector('.next-slide').addEventListener('click', nextSlide);
+    document.querySelector('.prev-slide').addEventListener('click', prevSlide);
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => goToSlide(i));
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

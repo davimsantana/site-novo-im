@@ -252,3 +252,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
       console.error("Element with class 'container-fluid' not found.");
   }
 });
+

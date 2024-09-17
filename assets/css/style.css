@@ -3182,6 +3182,18 @@ textarea::placeholder{
     margin-bottom: 20px;
   }
 
+  .n-1{
+    left: -840px;
+    top: 5050px;
+  }
+
+  .n-2{
+    width: 600px;
+    height: 600px;
+    left: 100px;
+    top: 5800px;
+  }
+
   @keyframes float {
     0% {
       transform: translateY(0);
@@ -3323,6 +3335,41 @@ textarea::placeholder{
 @media (min-width: 2000px) {
   .container {
     max-width: 60% !important;
+  }
+  .bloco-layout .container{
+    max-width: 85% !important;
+
+  }
+  .carousel-indicators button{
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-controls{
+    height: 450px;
+    gap: 20px;
+  }
+  .n-1{
+    top: 4850px;
+    left: -300px;
+    width: 1500px;
+  }
+  .n-2{
+    left: 1000px;
+    top: 4850px;
+  }
+  .n-3{
+    top: 4100px;
+    left: -540px;
+  }
+  .prev-slide, .next-slide{
+    font-size: 30px;
+  }
+  .prev-slide{
+    top: 65px;
+    font-size: 32px;
+  }
+  .next-slide{
+    bottom: 65px;
   }
   .banner-description {
     margin: 0px auto 15px auto;

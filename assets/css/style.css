@@ -2312,11 +2312,14 @@ textarea::placeholder{
   margin-right: 15px; /* Espaçamento entre os slides */
   transition: 0.5s;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.175);
+  flex: 0 0 calc(100% / 3 - 10px); /* Para 3 slides visíveis com gap */
 }
 
 .carousel-slide {
   position: relative;
-  display: inline-block; 
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform; 
 }
 
 .carousel-slide img {
@@ -3136,18 +3139,23 @@ textarea::placeholder{
     flex-direction: row;
   }
 
+  .carousel-controls{
+    height: 150px;
+    width: 200px;
+  }
+
   .carousel{
     width: 100%;
   }
 
   .prev-slide{
-    top: 137px;
-    right: 60px;
+    bottom: 45px;
+    right: 180px;
   }
 
   .next-slide{
-    bottom: 137px;
-    left: 60px;
+    top: 45px;
+    left: 180px;
   }
 
   .overlay button{
@@ -3156,15 +3164,22 @@ textarea::placeholder{
     background-color: white;
     color: #000;
     bottom: 20px;
-    width: 100px;
-    /* height: 40px; */
-    font-size: 12px;
-    left: 12px;
-    padding: 2px;
+    width: 120px;
+    font-size: 13px;
+    left: 40px;
+    padding: 5px;
     border-radius: 50px;
     font-family: 'FriendsNormal';
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
     z-index: 2;
+  }
+  .carousel-slide {
+    flex: 0 0 calc(100% / 2 - 7.5px); /* Para 2 slides visíveis com gap */
+    height: 250px;
+  }
+
+  .bloco-layout{
+    margin-bottom: 20px;
   }
 
   @keyframes float {
@@ -3327,22 +3342,6 @@ textarea::placeholder{
   }
   .nebulosa-laranja_2{
     right: -1150px;
-  }
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-}
-
-.carousel-slide {
-  flex: 0 0 calc(100% / 3 - 10px); /* Para 3 slides visíveis com gap */
-}
-
-@media (max-width: 560px) {
-  .carousel-slide {
-      flex: 0 0 calc(100% / 2 - 7.5px); /* Para 2 slides visíveis com gap */
   }
 }
 

@@ -433,11 +433,7 @@
                 <div class="carousel-controls">
                   <button class="prev-slide" onclick="prevSlide()"><i class="fa-solid fa-angle-up d-desktop"></i><i class="fa-solid fa-angle-left d-mobile"></i></button>
                   <div class="carousel-indicators">
-                      <button class="active" onclick="goToSlide(0)"></button>
-                      <button onclick="goToSlide(1)"></button>
-                      <button onclick="goToSlide(2)"></button>
-                      <button onclick="goToSlide(3)"></button>
-                      <button onclick="goToSlide(4)"></button>
+                
                   </div>
                   <button class="next-slide" onclick="nextSlide()"><i class="fa-solid fa-angle-down d-desktop"></i><i class="fa-solid fa-angle-right d-mobile"></i></button>
               </div>                           
@@ -882,33 +878,46 @@
      document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(track.children);
-    const indicators = document.querySelectorAll('.carousel-indicators button');
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
 
     // Constantes para o carrossel
     const slidesToShow = 3; // Número de slides visíveis ao mesmo tempo
     const slideGap = 15; // Espaçamento entre slides em pixels
 
+    let currentSlide = 0; // Índice do slide atual
+    let slideWidth = updateSlideWidth(); // Inicializa a largura do slide
+    const totalSlides = slides.length;
+
     // Função para calcular a largura do slide e do track
-    const updateSlideWidth = () => {
+    function updateSlideWidth() {
         const slideWidth = slides[0].getBoundingClientRect().width;
         return slideWidth;
     }
 
-    let slideWidth = updateSlideWidth();
-    const totalSlides = slides.length;
-
-    let currentSlide = 0; // Índice do slide atual
-
     // Atualiza a posição dos slides
-    function updateSlidePosition() {
+    function updateSlidePosition(smooth = true) {
         slideWidth = updateSlideWidth(); // Atualiza a largura do slide
         const moveAmount = currentSlide * (slideWidth + slideGap);
+        track.style.transition = smooth ? 'transform 0.5s ease' : 'none'; // Transição suave
         track.style.transform = `translateX(-${moveAmount}px)`; // Move os slides
     }
 
-    // Move para o próximo slide
+    // Cria os indicadores dinamicamente com base no número total de slides
+    function createIndicators() {
+        indicatorsContainer.innerHTML = ''; // Limpa indicadores antigos
+        for (let i = 0; i < totalSlides; i++) {
+            const button = document.createElement('button');
+            button.addEventListener('click', () => goToSlide(i));
+            if (i === currentSlide) {
+                button.classList.add('active');
+            }
+            indicatorsContainer.appendChild(button);
+        }
+    }
+
+    // Move para o próximo slide com loop contínuo
     function nextSlide() {
-        if (currentSlide < totalSlides - slidesToShow) {
+        if (currentSlide < totalSlides - 1) {
             currentSlide++;
         } else {
             currentSlide = 0; // Volta ao primeiro slide
@@ -922,7 +931,7 @@
         if (currentSlide > 0) {
             currentSlide--;
         } else {
-            currentSlide = totalSlides - slidesToShow; // Vai para o último grupo visível
+            currentSlide = totalSlides - 1; // Vai para o último slide
         }
         updateSlidePosition();
         updateIndicators();
@@ -937,6 +946,7 @@
 
     // Atualiza os indicadores com base no slide atual
     function updateIndicators() {
+        const indicators = document.querySelectorAll('.carousel-indicators button');
         indicators.forEach((indicator, i) => {
             if (i === currentSlide) {
                 indicator.classList.add('active');
@@ -948,15 +958,89 @@
 
     // Inicializa o carrossel
     updateSlidePosition();
+    createIndicators();
     updateIndicators();
 
     // Adiciona eventos de clique aos botões de controle
     document.querySelector('.next-slide').addEventListener('click', nextSlide);
     document.querySelector('.prev-slide').addEventListener('click', prevSlide);
-    indicators.forEach((indicator, i) => {
-        indicator.addEventListener('click', () => goToSlide(i));
-    });
+
+    // Adiciona eventos de touch para suporte a swipe
+    track.addEventListener('touchstart', touchStart);
+    track.addEventListener('touchend', touchEnd);
+    track.addEventListener('touchmove', touchMove);
+
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID;
+    let isDragging = false;
+
+    function touchStart(event) {
+        isDragging = true;
+        startPos = event.touches[0].clientX;
+        animationID = requestAnimationFrame(animation);
+    }
+
+    function touchMove(event) {
+        if (isDragging) {
+            const currentPosition = event.touches[0].clientX;
+            currentTranslate = prevTranslate + currentPosition - startPos;
+        }
+    }
+
+    function touchEnd() {
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+        const movedBy = currentTranslate - prevTranslate;
+
+        if (movedBy < -100) {
+            nextSlide();
+        } else if (movedBy > 100) {
+            prevSlide();
+        } else {
+            updateSlidePosition(); // Retorna ao slide atual
+        }
+
+        prevTranslate = currentSlide * -(slideWidth + slideGap);
+        setPositionByIndex();
+    }
+
+    function animation() {
+        setSliderPosition();
+        if (isDragging) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+    function setSliderPosition() {
+        track.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function setPositionByIndex() {
+        track.style.transition = 'transform 0.3s ease-out';
+        currentTranslate = currentSlide * -(slideWidth + slideGap);
+        prevTranslate = currentTranslate;
+        setSliderPosition();
+    }
+
+    window.addEventListener('resize', updateSlideWidth);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

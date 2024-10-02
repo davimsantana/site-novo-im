@@ -1,19 +1,20 @@
 $(document).ready(function () {
   $(".dropdown").on("mouseenter", function () {
     $(this).addClass("show");
-    $(this)
-      .find(".dropdown-menu")
-      .addClass("show")
-      .addClass("animate")
+    $(this).find(".dropdown-menu").addClass("show");
   });
 
-  
+  $(".dropdown").on("mouseleave", function () {
+    const dropdownMenu = $(this).find(".dropdown-menu");
+    dropdownMenu.addClass("hide"); // Adiciona a animação de desaparecimento
 
-  $(".dropdown").on("mouseenter", function () {
-    $(this).removeClass("show");
-    $(this).find(".dropdown-menu").removeClass("show").css("display", "");
+    // Aguarda a animação de desaparecimento terminar antes de remover as classes
+    setTimeout(function () {
+      dropdownMenu.removeClass("show hide"); // Remove as classes após a animação
+    }, 300); // Tempo deve ser igual à duração da animação
   });
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
 var elements = document.querySelectorAll('.animate');
@@ -49,15 +50,6 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $('.navbar-toggler').on('click', function () {
-    $('#navbarNav').toggleClass('show');
-  });
-
-  $('.close').on('click', function () {
-    $('#navbarNav').removeClass('show');
-  });
-});
 
 
 
@@ -229,7 +221,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   const navbar = document.querySelector('.container-fluid');
   const image = document.querySelector('.img-logo')
-  const links = document.querySelectorAll('.nav-link')
 
   if (navbar) {
       console.log("Navbar found, attaching scroll listener");
@@ -239,11 +230,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
           if (window.scrollY > 50) { 
               navbar.classList.add('scrolled');
               image.classList.add('s-image')
-              links.classList.add('txt-blue')
           } else {
               navbar.classList.remove('scrolled');
               image.classList.remove('s-image')
-              links.classList.remove('txt-blue')
           }
       }
 
@@ -253,3 +242,188 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 });
 
+// Código do carrosel de index.html
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+  // Verifica o número de slides visíveis
+  let slidesToShow = window.innerWidth <= 768 ? 2 : 3; // 2 slides no mobile, 3 no desktop
+  const slideGap = 15; // Espaçamento entre slides em pixels
+
+  let currentSlide = 0; // Índice do slide atual
+  let slideWidth = updateSlideWidth(); // Inicializa a largura do slide
+  const totalSlides = slides.length;
+
+  // Função para calcular a largura do slide e do track
+  function updateSlideWidth() {
+      return slides[0].getBoundingClientRect().width;
+  }
+
+  // Atualiza a posição dos slides
+  function updateSlidePosition(smooth = true) {
+      slideWidth = updateSlideWidth(); // Atualiza a largura do slide
+      const moveAmount = currentSlide * (slideWidth + slideGap);
+      track.style.transition = smooth ? 'transform 0.5s ease' : 'none'; // Transição suave
+      track.style.transform = `translateX(-${moveAmount}px)`; // Move os slides
+  }
+
+  // Cria os indicadores dinamicamente com base no número total de cliques possíveis
+  function createIndicators() {
+      indicatorsContainer.innerHTML = ''; // Limpa indicadores antigos
+      const totalIndicators = Math.ceil((totalSlides - slidesToShow + 1) / 1); // Calcula o número de indicadores
+      for (let i = 0; i < totalIndicators; i++) {
+          const button = document.createElement('button');
+          button.addEventListener('click', () => goToSlide(i));
+          if (i === Math.floor(currentSlide / 1)) {
+              button.classList.add('active');
+          }
+          indicatorsContainer.appendChild(button);
+      }
+  }
+
+  // Move para o próximo slide considerando slides visíveis
+  function nextSlide() {
+      if (currentSlide < totalSlides - slidesToShow) {
+          currentSlide++;
+      } else {
+          currentSlide = 0; // Volta ao primeiro slide
+      }
+      updateSlidePosition();
+      updateIndicators();
+  }
+
+  // Move para o slide anterior
+  function prevSlide() {
+      if (currentSlide > 0) {
+          currentSlide--;
+      } else {
+          currentSlide = totalSlides - slidesToShow; // Vai para o último conjunto de slides visíveis
+      }
+      updateSlidePosition();
+      updateIndicators();
+  }
+
+  // Move para o slide especificado pelos indicadores
+  function goToSlide(slideIndex) {
+      currentSlide = slideIndex * 1; 
+      updateSlidePosition();
+      updateIndicators();
+  }
+
+  // Atualiza os indicadores com base no slide atual
+  function updateIndicators() {
+      const indicators = document.querySelectorAll('.carousel-indicators button');
+      indicators.forEach((indicator, i) => {
+          if (i === Math.floor(currentSlide / 1)) {
+              indicator.classList.add('active');
+          } else {
+              indicator.classList.remove('active');
+          }
+      });
+  }
+
+  // Inicializa o carrossel
+  updateSlidePosition();
+  createIndicators();
+  updateIndicators();
+
+  // Adiciona eventos de clique aos botões de controle
+  document.querySelector('.next-slide').addEventListener('click', nextSlide);
+  document.querySelector('.prev-slide').addEventListener('click', prevSlide);
+
+  // Adiciona eventos de touch para suporte a swipe
+  track.addEventListener('touchstart', touchStart);
+  track.addEventListener('touchend', touchEnd);
+  track.addEventListener('touchmove', touchMove);
+
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let animationID;
+  let isDragging = false;
+
+  function touchStart(event) {
+      isDragging = true;
+      startPos = event.touches[0].clientX;
+      animationID = requestAnimationFrame(animation);
+      track.style.transition = 'none';
+  }
+
+  function touchMove(event) {
+      if (isDragging) {
+          const currentPosition = event.touches[0].clientX;
+          currentTranslate = prevTranslate + currentPosition - startPos;
+      }
+  }
+
+  function touchEnd() {
+  isDragging = false;
+  cancelAnimationFrame(animationID);
+
+  const movedBy = currentTranslate - prevTranslate;
+
+  if (movedBy < -100) {
+      if (currentSlide < totalSlides - slidesToShow) {
+          nextSlide();
+      } else {
+          currentSlide = 0; // Volta ao primeiro slide ao arrastar após o último
+          updateSlidePosition(); 
+      }
+  } else if (movedBy > 100) {
+      if (currentSlide > 0) {
+          prevSlide();
+      } else {
+          currentSlide = totalSlides - slidesToShow; // Vai para o último conjunto de slides visíveis
+          updateSlidePosition();
+      }
+  } else {
+      updateSlidePosition(); // Atualiza a posição se não houver movimentação suficiente
+  }
+
+  prevTranslate = currentSlide * -(slideWidth + slideGap);
+  setPositionByIndex();
+  updateIndicators();
+}
+
+  function animation() {
+      setSliderPosition();
+      if (isDragging) {
+          requestAnimationFrame(animation);
+      }
+  }
+
+  function setSliderPosition() {
+      track.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function setPositionByIndex() {
+      track.style.transition = 'transform 0.3s ease-out';
+      currentTranslate = currentSlide * -(slideWidth + slideGap);
+      prevTranslate = currentTranslate;
+      setSliderPosition();
+  }
+
+  window.addEventListener('resize', () => {
+      slidesToShow = window.innerWidth <= 768 ? 2 : 3; // Atualiza o número de slides mostrados
+      slideWidth = updateSlideWidth();
+      updateSlidePosition(false);
+      createIndicators();
+      updateIndicators();
+  });
+});
+
+// Mostrar ou esconder a seh=nha
+function mostrasenha() {
+  const input = document.querySelector("#senha")
+  const btn = document.querySelector(".btn-eye")
+  input.type = (input.type === 'text') ? 'password' : 'text';
+  if (input.type === "text") {
+    btn.innerHTML = '<i class="fa-solid fa-eye-slash"></i>'
+  }
+  else{
+    btn.innerHTML = '<i class="fa-solid fa-eye"></i>'
+  }
+}

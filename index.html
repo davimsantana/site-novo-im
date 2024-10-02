@@ -72,8 +72,13 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Plataforma 
+                Plataformas 
               </a>
+              <ul class="dropdown-menu">
+                <a href="#">Portal de Notícias</a>
+                <a href="#">Guia Comercial</a>
+              </ul>
+              <!--
               <ul class="dropdown-menu">
                 <a class="link-dropdown" href="https://www.internetmedia.com.br/">Portal de Notícias <br></a>
                 <a class="link-dropdown" href="https://www.internetmedia.com.br/">Guia Comercial</a>
@@ -180,6 +185,7 @@
                   </li>
                 </ul>
               </ul>
+            -->
             </li>
             <li class="nav-item">
               <a class="nav-link nowrap" href="#">Planos e Preços</a>
@@ -188,7 +194,10 @@
               <a class="nav-link" href="#">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://davimsantana.github.io/site-novo-im/fale_conosco">Contato</a>
+              <a class="nav-link mr-40" href="https://davimsantana.github.io/site-novo-im/fale_conosco">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://davimsantana.github.io/site-novo-im/login"><i class="fa-solid fa-user mr-5"></i> Login</a>
             </li>
           </ul>
           <button type="button" class="btn btn-nav btn-primary">
@@ -198,7 +207,7 @@
       </div>
       </div>
     </nav>
-    <main class="animate element stiky overflow-hidden">
+    <main class="element stiky overflow-hidden">
       <section class="container section">
         <div class="banner justify-content-center">
           <h1 class="banner-title">
@@ -368,7 +377,7 @@
         </div>   
       </section>
       <section class="bg-azul">
-        <div class="bloco-layout mb-70">
+        <div class="bloco-layout animate">
             <div class="n-1"></div>
             <div class="n-2"></div>
             <div class="n-3"></div>
@@ -428,20 +437,31 @@
                             <button>Ver modelo de layout</button>
                           </div>
                         </div>
+                        <div class="carousel-slide">
+                          <img src="assets/images/bloco-layout.png" alt="Slide 1">
+                          <div class="gradient-overlay"></div>
+                          <div class="overlay">
+                            <button>Ver modelo de layout</button>
+                          </div>
+                        </div>
+            
                     </div>
                 </div>
-                <div class="carousel-controls">
-                  <button class="prev-slide" onclick="prevSlide()"><i class="fa-solid fa-angle-up d-desktop"></i><i class="fa-solid fa-angle-left d-mobile"></i></button>
+                <div class="w-20">
+                  <div class="carousel-controls">
+                    <button class="prev-slide" onclick="prevSlide()"><i class="fa-solid fa-angle-up d-desktop"></i><i class="fa-solid fa-angle-left d-mobile"></i></button>
                   <div class="carousel-indicators">
                 
                   </div>
-                  <button class="next-slide" onclick="nextSlide()"><i class="fa-solid fa-angle-down d-desktop"></i><i class="fa-solid fa-angle-right d-mobile"></i></button>
-              </div>                           
+                    <button class="next-slide" onclick="nextSlide()"><i class="fa-solid fa-angle-down d-desktop"></i><i class="fa-solid fa-angle-right d-mobile"></i></button>
+                  </div>    
+                </div>
+                       
             </div>
         </div>
       </section>    
       <section class="bg-cinza">
-        <div class="container">
+        <div class="container animate">
           <div class="mb-50 text-align-center">
             <h1 class="titulo-beneficios-1 pt-100">Nós te ajudamos a vender muito mais</h1>
             <p>Afinal de contas, o sonho de todo lojista é vender muito além dos limites da sua cidade.</p>
@@ -527,7 +547,7 @@
               <div class="col-md-3 mt-30">
                 <i aria-hidden="true" class="fas fa-chart-line i-d-2 i-bg"></i>
                 <h3 class="sub-d">Aumento Ticket Médio</h3>
-                <p class="desc">Vendas com maior valor agregado, resultado das recomendações automáticas e recuperação de carrinhos.</p>               
+                <p class="desc">Vendas com maior valor, resultado das recomendações automáticas e recuperação de carrinhos.</p>               
               </div>
               <div class="col-md-3 mt-30">
                 <i aria-hidden="true" class="fas fa-robot i-d-2 i-bg"></i>
@@ -630,14 +650,14 @@
             </div>
         </div>
     </section>
-      <section class="bg-azul">
-      <div class="container animate">
+      <section class="bg-azul animate">
+      <div class="container">
         <div class="nebulosa-laranja_2"></div>
         <div>
           <h2 class="titulo-planos">Escolha seu plano Tiny e <br> ganhe teste grátis por 30 dias</h1>
         </div>
         <div>
-        <div>
+        <div class="animate">
           <div class="row align-items-center pb-70">
             <div class="col-md-3">
               <div class="bg-branco">
@@ -874,186 +894,6 @@
       </section>
         <div class="mb-20">Internet Media - Todos os direitos reservados | Política de Privacidade - Termos de Uso - Termos e Condições</div>
     </footer>
-    <script>
-     document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const indicatorsContainer = document.querySelector('.carousel-indicators');
-
-    // Constantes para o carrossel
-    const slidesToShow = 3; // Número de slides visíveis ao mesmo tempo
-    const slideGap = 15; // Espaçamento entre slides em pixels
-
-    let currentSlide = 0; // Índice do slide atual
-    let slideWidth = updateSlideWidth(); // Inicializa a largura do slide
-    const totalSlides = slides.length;
-
-    // Função para calcular a largura do slide e do track
-    function updateSlideWidth() {
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        return slideWidth;
-    }
-
-    // Atualiza a posição dos slides
-    function updateSlidePosition(smooth = true) {
-        slideWidth = updateSlideWidth(); // Atualiza a largura do slide
-        const moveAmount = currentSlide * (slideWidth + slideGap);
-        track.style.transition = smooth ? 'transform 0.5s ease' : 'none'; // Transição suave
-        track.style.transform = `translateX(-${moveAmount}px)`; // Move os slides
-    }
-
-    // Cria os indicadores dinamicamente com base no número total de slides
-    function createIndicators() {
-        indicatorsContainer.innerHTML = ''; // Limpa indicadores antigos
-        for (let i = 0; i < totalSlides; i++) {
-            const button = document.createElement('button');
-            button.addEventListener('click', () => goToSlide(i));
-            if (i === currentSlide) {
-                button.classList.add('active');
-            }
-            indicatorsContainer.appendChild(button);
-        }
-    }
-
-    // Move para o próximo slide com loop contínuo
-    function nextSlide() {
-        if (currentSlide < totalSlides - 1) {
-            currentSlide++;
-        } else {
-            currentSlide = 0; // Volta ao primeiro slide
-        }
-        updateSlidePosition();
-        updateIndicators();
-    }
-
-    // Move para o slide anterior
-    function prevSlide() {
-        if (currentSlide > 0) {
-            currentSlide--;
-        } else {
-            currentSlide = totalSlides - 1; // Vai para o último slide
-        }
-        updateSlidePosition();
-        updateIndicators();
-    }
-
-    // Move para o slide especificado pelos indicadores
-    function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateSlidePosition();
-        updateIndicators();
-    }
-
-    // Atualiza os indicadores com base no slide atual
-    function updateIndicators() {
-        const indicators = document.querySelectorAll('.carousel-indicators button');
-        indicators.forEach((indicator, i) => {
-            if (i === currentSlide) {
-                indicator.classList.add('active');
-            } else {
-                indicator.classList.remove('active');
-            }
-        });
-    }
-
-    // Inicializa o carrossel
-    updateSlidePosition();
-    createIndicators();
-    updateIndicators();
-
-    // Adiciona eventos de clique aos botões de controle
-    document.querySelector('.next-slide').addEventListener('click', nextSlide);
-    document.querySelector('.prev-slide').addEventListener('click', prevSlide);
-
-    // Adiciona eventos de touch para suporte a swipe
-    track.addEventListener('touchstart', touchStart);
-    track.addEventListener('touchend', touchEnd);
-    track.addEventListener('touchmove', touchMove);
-
-    let startPos = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let animationID;
-    let isDragging = false;
-
-    function touchStart(event) {
-        isDragging = true;
-        startPos = event.touches[0].clientX;
-        animationID = requestAnimationFrame(animation);
-    }
-
-    function touchMove(event) {
-        if (isDragging) {
-            const currentPosition = event.touches[0].clientX;
-            currentTranslate = prevTranslate + currentPosition - startPos;
-        }
-    }
-
-    function touchEnd() {
-        isDragging = false;
-        cancelAnimationFrame(animationID);
-        const movedBy = currentTranslate - prevTranslate;
-
-        if (movedBy < -100) {
-            nextSlide();
-        } else if (movedBy > 100) {
-            prevSlide();
-        } else {
-            updateSlidePosition(); // Retorna ao slide atual
-        }
-
-        prevTranslate = currentSlide * -(slideWidth + slideGap);
-        setPositionByIndex();
-    }
-
-    function animation() {
-        setSliderPosition();
-        if (isDragging) {
-            requestAnimationFrame(animation);
-        }
-    }
-
-    function setSliderPosition() {
-        track.style.transform = `translateX(${currentTranslate}px)`;
-    }
-
-    function setPositionByIndex() {
-        track.style.transition = 'transform 0.3s ease-out';
-        currentTranslate = currentSlide * -(slideWidth + slideGap);
-        prevTranslate = currentTranslate;
-        setSliderPosition();
-    }
-
-    window.addEventListener('resize', updateSlideWidth);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

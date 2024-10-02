@@ -59,6 +59,11 @@ p {
   opacity: 1; /* Quando a classe show é adicionada, a opacidade é definida como 1, tornando o elemento visível */
 }
 
+
+#navbarNav{
+  display: none;
+}
+
 .container-txt {
   margin: 100px;
 }
@@ -211,8 +216,56 @@ ul {
 }
 
 .dropdown-menu {
-  display: none;
-  animation: dropdown-show 0.3s ease forwards;
+  display: none; /* Inicialmente escondido */
+  opacity: 0; /* Para animação de aparecimento */
+}
+
+.dropdown-menu.show {
+  display: block; /* Exibe o menu */
+  animation: dropdown-show 0.3s ease forwards; /* Animação de aparição */
+  padding: 20px;
+  width: 180px;
+  height: 100px;
+  margin-top: -10px;
+}
+
+.dropdown-menu a{
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  padding-bottom: 10px;
+}
+
+.dropdown-menu a:hover{
+  color: #0d6efd;
+}
+
+.dropdown-menu.hide {
+  animation: dropdown-hide 0.1s ease forwards; /* Animação de desaparecimento */
+}
+
+/* Animação para aparecer */
+@keyframes dropdown-show {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Movimento inicial para baixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Volta para a posição original */
+  }
+}
+
+/* Animação para desaparecer */
+@keyframes dropdown-hide {
+  from {
+    opacity: 1;
+    transform: translateY(0); /* Posição original */
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px); /* Movimento para baixo */
+  }
 }
 
 .txt-icons {
@@ -823,6 +876,10 @@ h3 {
   margin-right: 15px;
 }
 
+.mr-40{
+  margin-right: 40px;
+}
+
 .mr-25{
   margin-right: 25px;
 }
@@ -1152,9 +1209,7 @@ h3 {
   grid-template-rows: auto auto; /* Duas linhas automáticas */
   gap: 30px 10px; /* Espaçamento entre os cartões */
   padding: 16px;
-  max-width: 1200px;
   font-size: 16px;
-
   color: #54595f;
 }
 
@@ -1404,7 +1459,6 @@ h4 {
 .desc {
   color: #d6d5e1;
   margin: 0px 10px 0px 10px;
-  width: 81%;
   justify-content: baseline;
   margin: auto;
 }
@@ -1731,21 +1785,6 @@ ul {
   background-color: transparent;
 }
 
-.navbar-nav .dropdown-menu {
-  position: static;
-  float: none;
-  width: auto;
-  margin-top: 0;
-}
-
-.link-dropdown {
-  display: none;
-  font-size: 16px;
-}
-
-.dropdown-menu.show {
-  display: flex;
-}
 
 .bg-nebulosas{
   background-image: url('assets/images/background-nebulosas.png');
@@ -2269,6 +2308,7 @@ textarea::placeholder{
 
 .bloco-layout {
   color: white;
+  margin-bottom: 70px;
 }
 
 .bloco-layout p {
@@ -2279,7 +2319,7 @@ textarea::placeholder{
 .bloco-layout h1 {
   margin-top: 50px;
   margin-bottom: 20px;
-  font-size: 39px;
+  font-size: 2.5rem;
   letter-spacing: -0.04em;
 }
 
@@ -2369,39 +2409,46 @@ textarea::placeholder{
 
 
 .carousel-controls {
-  position: relative;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 300px;
+  top: 50%;
+  height: auto;
+  margin-right: 10px;
+}
+
+
+.tf-x{
+  transform: translate(-50%, -0%);
 }
 
 .prev-slide, .next-slide {
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 20px;
   color: #8191b0;
   cursor: pointer;
-  position: absolute;
 }
 
 .prev-slide {
-  top: 45px; /* Ajusta a posição mais próxima dos indicadores */
+  top: calc(50% - 130px);
 }
 
 .next-slide {
-  bottom: 45px; /* Ajusta a posição mais próxima dos indicadores */
+  bottom: calc(50% - 130px);
 }
 
 .carousel-indicators {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center; /* Centraliza os indicadores */
+  gap: 12px;
+  position: relative;
+  height: calc(100% - 50px); /* Garante que a altura dos indicadores não exceda a área entre as setas */
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .carousel-indicators button {
@@ -2417,6 +2464,18 @@ textarea::placeholder{
   background-color: #fb9006;
   border: 1px solid white;
 }
+
+
+.w-20{
+  width: 20%;
+}
+
+
+
+
+
+
+
 
 .n-1{
   margin: 0px;
@@ -2460,6 +2519,16 @@ textarea::placeholder{
   z-index: 0;
 }
 
+.mr-5{
+  margin-right: 5px;
+}
+
+.btn-eye{
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 19px;
+}
 
 
 
@@ -3184,7 +3253,7 @@ textarea::placeholder{
 
   .n-1{
     left: -840px;
-    top: 5050px;
+    top: 5040px;
   }
 
   .n-2{
@@ -3192,6 +3261,21 @@ textarea::placeholder{
     height: 600px;
     left: 100px;
     top: 5800px;
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static; 
+    flex-direction: row;
+    transform: translate(-0%, -0%); 
+  }
+  .bloco-layout{
+    margin-bottom: 90px;
+  }
+  .carousel-container{
+    margin-top: 90px;
   }
 
   @keyframes float {
@@ -3300,6 +3384,7 @@ textarea::placeholder{
   .titulo-beneficios-2 {
     width: 40%;
   }
+
   .bg-azul-nebulosas{
     height: 608px !important;
   }
@@ -3341,8 +3426,11 @@ textarea::placeholder{
 
   }
   .carousel-indicators button{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+  }
+  .carousel-indicators{
+    gap: 20px;
   }
   .carousel-controls{
     height: 450px;
@@ -3391,4 +3479,3 @@ textarea::placeholder{
     right: -1150px;
   }
 }
-

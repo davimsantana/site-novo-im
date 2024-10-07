@@ -481,8 +481,8 @@ ul {
   color: white;
   border-radius: 7px;
   transition: 0.5s;
-  background-color: #fb9006;
-  border-color: #fb9006;
+  background-color: #01205f;
+  border-color: #01205f;
   width: 215px;
   height: 48px;
   font-size: 16px;
@@ -1128,6 +1128,11 @@ h3 {
 .ml-20 {
   padding-left: 20px;
 }
+
+.ml-40{
+  margin-left: 40px;
+}
+
 
 .ml-60{
   margin-left: 60px;
@@ -2530,9 +2535,211 @@ textarea::placeholder{
   font-size: 19px;
 }
 
+.bloco-checkout{
+  margin-top: 120px;
+  display: flex;
+}
+
+.bloco-checkout ul{
+  padding: 0;
+}
+
+.bloco-checkout ul li{
+  color: #616161;
+  font-size: 0.875rem;
+  font-family: 'FriendsRegular';
+  padding-bottom: 5px;
+}
+
+.bloco-checkout h2{
+  color: #01205f;
+}
+
+.btn-submit-co{
+  background-color: #01205f;
+  color: white;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  height: auto;
+  transition: .3s;
+  font-size: 19px;
+}
+
+.btn-submit-co:hover{
+  background-color: transparent;
+  color: #01205f;
+  border-color: #01205f;
+}
+
+.co-p{
+  font-size: 1rem;
+  color: black;
+  font-family: 'FriendsSbold';
+}
+
+.co-a{
+  color: #01205f;
+  display: flex;
+  margin-left: 60px;
+  align-items: center;
+}
+
+.bloco-checkout select{
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px #3333331f solid;
+  cursor: pointer;
+}
+
+.bloco-checkout select option{
+  font-size: 15px;
+  font-family: 'FriendsSbold';
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.txt-radio{
+  width: 40%;
+  font-size: 1rem;
+  color: black;
+  font-family: 'FriendsSbold';
+}
+
+.d-radio{
+  width: 50%;
+  border: 1px #3333331f solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  height: 50px;
+}
+
+.d-radio a{
+  text-decoration: none;
+  color: black;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  border-radius: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
 
 
+.w-34{
+  width: 34%;
+}
 
+.w-66{
+  width: 60%;
+}
+
+.a-radio:hover{
+  
+}
+
+.radio-selected{
+  background-color: #d4e9ff !important;
+  border-radius: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  width: 50%;
+}
+
+.preco-destaque{
+  color: #333333;
+  font-size: 37px;
+  letter-spacing: 0.05em;
+}
+
+.co-borderB{
+  border-bottom: 1px #3333331f solid;
+}
+
+.co-borderR{
+  border-right: 1px #3333331f solid;
+}
+
+.co-label{
+  color: #01205f;
+}
+
+.info-container{
+  flex: 0 0 34%; /* Ocupa 34% da largura */
+  position: sticky; /* Permite que o container fique fixo durante a rolagem */
+  top: 0; /* Fixa o container no topo da tela */
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  overflow: hidden; /* Evita rolagem dentro do container de informações */
+}
+
+.form-container {
+  flex: 0 0 66%;
+  flex-direction: column;
+  overflow-y: auto; /* Permite rolagem no formulário */
+}
+
+.recursos li{
+  color: #333333 !important;
+  font-family: 'FriendsSbold' !important;
+  font-size: 16px !important;
+  padding: 0 !important;
+}
+
+.hide-form{
+  display: none;
+}
+
+.msg-input{
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+.form-fade-in{
+  opacity: 0; 
+  animation: fadeIn 0.3s ease-in forwards; 
+}
+
+.preco-fade-in {
+  opacity: 0; 
+  animation: fadeIn 0.5s ease-in forwards; 
+}
+
+.recursos-fade-in {
+  opacity: 0; 
+  animation: fadeIn 0.2s ease-in forwards; 
+}
+
+.disabled{
+  background-color: transparent;
+  border-color: #01205f;
+  color: #01205f;
+}
 
 @media (max-width: 1200px) {
   .home {

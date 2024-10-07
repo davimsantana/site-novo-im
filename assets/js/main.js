@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Mostrar ou esconder a seh=nha
+// Mostrar ou esconder a senha
 function mostrasenha() {
   const input = document.querySelector("#senha")
   const btn = document.querySelector(".btn-eye")
@@ -427,3 +427,166 @@ function mostrasenha() {
     btn.innerHTML = '<i class="fa-solid fa-eye"></i>'
   }
 }
+
+
+// Página Checkout
+
+function mostrarFormulario() {
+  const hideInputs = document.querySelector('.hide-form');
+  const Inputs = document.querySelectorAll('.p-inputs');
+  const btnForm = document.querySelector('.btn-submit-co');
+  let cInput = 0;
+
+  Inputs.forEach((input) => {
+    if (input.value === '') {
+      cInput = 0;
+      btnForm.disabled = true;
+      return;
+    } 
+    else {
+      cInput++;
+    }
+  });
+
+  if (cInput === Inputs.length) {
+    hideInputs.style.display = 'block';
+    btnForm.disabled = false;
+    btnForm.classList.remove('disabled')
+  } else {
+    hideInputs.style.display = 'none';
+  }
+}
+
+const btnForm = document.querySelector('.btn-submit-co');
+if (btnForm) {
+  btnForm.disabled = true;
+  btnForm.addEventListener('click', mostrarFormulario);
+}
+
+const Inputs = document.querySelectorAll('.p-inputs');
+Inputs.forEach((input) => {
+  input.addEventListener('input', mostrarFormulario);
+});
+
+$(document).ready(function() {
+  var $input = $('#icpf_cnpj');
+
+  function applyMask() {
+      // Remove todas as máscaras
+      $input.unmask();
+
+      // Verifica a quantidade de dígitos
+      var val = $input.val().replace(/\D/g, ''); // Remove caracteres não numéricos
+
+      if (val.length <= 11) {
+          // Aplica a máscara de CPF
+          $input.mask('999.999.999-99');
+      } else {
+          // Aplica a máscara de CNPJ
+          $input.mask('99.999.999/9999-99');
+      }
+
+      // Reaplica o valor do input para evitar que ele suma
+      $input.val(val);
+      // Restaura o cursor no final da entrada
+      setTimeout(function() {
+          var length = $input.val().length;
+          $input[0].setSelectionRange(length, length);
+      }, 0);
+  }
+
+  // Aplicar a máscara inicialmente
+  applyMask();
+
+  // Monitora a entrada do usuário
+  $input.on('input', function() {
+      applyMask();
+  });
+});
+
+
+const planos ={
+  basico: {
+    preco: "89,90",
+    recursos: ['5 usuários', '150 MB de dados', '8 GB de anexos e imagens']
+  },
+  intermediario: {
+    preco: "119,90",
+    recursos: ['10 usuários', '300 MB de dados', '12 GB de anexos e imagens']
+  },
+  profissional: {
+    preco: "229,90",
+    recursos: ['15 usuários', '500 MB de dados', '20 GB de anexos e imagens']
+  }
+}
+
+function atualizarPreco() {
+  const select = document.querySelector('.selecao-plano');
+  const plano = select.value;
+  const precoDestaque = document.querySelector('.preco-destaque');
+
+  precoDestaque.innerHTML = `${planos[plano].preco}`;
+}
+
+function atualizarRecursos() {
+  const select = document.querySelector('.selecao-plano');
+  const plano = select.value;
+  const ULrecursos = document.querySelector('.recursos')
+  const recursosList = document.querySelectorAll('.recurso');
+  const recursos = planos[plano].recursos;
+
+
+
+  recursosList.forEach((li, index) => {
+    li.innerHTML = recursos[index] || '';
+  });
+
+  
+}
+
+function mudarplano(planoselecionado){
+  const select = document.querySelector('.selecao-plano');
+  const plano = select.value;
+  const divPreco = document.querySelector('.preco');
+  const precoDestaque = document.querySelector('.preco-destaque');
+
+  divPreco.classList.remove('preco-fade-in');
+
+  precoDestaque.style.opacity = '0';
+
+  precoDestaque.innerHTML = `${planos[plano].preco}`;
+
+  void divPreco.offsetWidth;
+
+  setTimeout(function() {
+    precoDestaque.style.opacity = '1';
+    divPreco.classList.add('preco-fade-in');
+  }, 1);
+
+  atualizarRecursos()
+}
+
+function setSelected(element) {
+  const links = document.querySelectorAll('.a-radio');
+  const preco = document.querySelector('.preco');
+  const indicator = document.querySelector('.indicator');
+
+  links.forEach(function(link) {
+    link.classList.remove('radio-selected');
+  });
+
+  preco.classList.remove('preco-fade-in');
+
+  setTimeout(function() {
+    element.classList.add('radio-selected');
+    preco.classList.add('preco-fade-in');
+  }, 10);
+}
+
+window.onload = function() {
+  atualizarPreco()
+  atualizarRecursos()
+  mostrarFormulario()
+};
+
+

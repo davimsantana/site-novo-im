@@ -2682,7 +2682,7 @@ textarea::placeholder{
 }
 
 .form-container {
-  flex: 0 0 66%;
+  flex: 0 0 63%;
   flex-direction: column;
   overflow-y: auto; /* Permite rolagem no formulário */
 }

@@ -951,6 +951,10 @@ h3 {
   display: flex;
 }
 
+select{
+  background-color: white;
+}
+
 .forms-login{
   text-align: left;
 }

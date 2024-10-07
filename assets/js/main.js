@@ -573,7 +573,7 @@ function mudarPlano() {
   atualizarRecursos();
 }
 
-function setSelected(element) {
+function setSelected(element, event) {
   const links = document.querySelectorAll('.a-radio');
   event.preventDefault();
   

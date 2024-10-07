@@ -450,6 +450,9 @@ function mostrarFormulario() {
 
   if (cInput === Inputs.length) {
     hideInputs.style.display = 'block';
+    setTimeout(function() {
+      hideInputs.classList.add('form-fade-in');
+    }, 1);
     btnForm.disabled = false;
     btnForm.classList.remove('disabled')
   } else {

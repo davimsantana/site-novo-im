@@ -541,7 +541,7 @@ function atualizarPreco() {
       msgA.innerHTML = ''
     } else if (plano_pagamento == 'anual') {
       precoDestaque.innerHTML = `${planos[plano].preco_a}`;
-      msgA.innerHTML = `Economize <span class="msg_A">R$ ${(Number(planos[plano].preco_m.replace(',', '.')) * 12 - Number(planos[plano].preco_m.replace(',', '.')) * 10).toFixed(2).replace('.', ',')}</span>`;
+      
     }
   }
 }

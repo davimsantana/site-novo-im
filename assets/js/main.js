@@ -508,88 +508,89 @@ $(document).ready(function() {
 });
 
 
-const planos ={
+const planos = {
   basico: {
-    preco: "89,90",
+    preco_m: "89,90",
+    preco_a: "899,90",
     recursos: ['5 usuários', '150 MB de dados', '8 GB de anexos e imagens']
   },
   intermediario: {
-    preco: "119,90",
+    preco_m: "119,90",
+    preco_a: "1119,90",
     recursos: ['10 usuários', '300 MB de dados', '12 GB de anexos e imagens']
   },
   profissional: {
-    preco: "229,90",
+    preco_m: "229,90",
+    preco_a: "2229,90",
     recursos: ['15 usuários', '500 MB de dados', '20 GB de anexos e imagens']
   }
-}
+};
 
 function atualizarPreco() {
   const select = document.querySelector('.selecao-plano');
   const plano = select.value;
   const precoDestaque = document.querySelector('.preco-destaque');
-
-  precoDestaque.innerHTML = `${planos[plano].preco}`;
+  const pagamento = document.querySelector('.radio-selected');
+  const msgA = document.querySelector('.msg_anual')
+  
+  if (pagamento) {
+    const plano_pagamento = pagamento.dataset.plano;
+    
+    if (plano_pagamento == 'mensal') {
+      precoDestaque.innerHTML = `${planos[plano].preco_m}`;
+      msgA.innerHTML = ''
+    } else if (plano_pagamento == 'anual') {
+      precoDestaque.innerHTML = `${planos[plano].preco_a}`;
+      msgA.innerHTML = `Economize <span class="msg_A">R$ ${(Number(planos[plano].preco_m.replace(',', '.')) * 12 - Number(planos[plano].preco_m.replace(',', '.')) * 10).toFixed(2).replace('.', ',')}</span>`;
+    }
+  }
 }
 
 function atualizarRecursos() {
   const select = document.querySelector('.selecao-plano');
   const plano = select.value;
-  const ULrecursos = document.querySelector('.recursos')
   const recursosList = document.querySelectorAll('.recurso');
   const recursos = planos[plano].recursos;
-
-
 
   recursosList.forEach((li, index) => {
     li.innerHTML = recursos[index] || '';
   });
-
-  
 }
 
-function mudarplano(planoselecionado){
-  const select = document.querySelector('.selecao-plano');
-  const plano = select.value;
+function mudarPlano() {
   const divPreco = document.querySelector('.preco');
   const precoDestaque = document.querySelector('.preco-destaque');
 
   divPreco.classList.remove('preco-fade-in');
-
   precoDestaque.style.opacity = '0';
 
-  precoDestaque.innerHTML = `${planos[plano].preco}`;
-
-  void divPreco.offsetWidth;
-
   setTimeout(function() {
+    atualizarPreco();
     precoDestaque.style.opacity = '1';
     divPreco.classList.add('preco-fade-in');
   }, 1);
 
-  atualizarRecursos()
+  atualizarRecursos();
 }
 
 function setSelected(element) {
   const links = document.querySelectorAll('.a-radio');
-  const preco = document.querySelector('.preco');
-  const indicator = document.querySelector('.indicator');
-
+  
   links.forEach(function(link) {
     link.classList.remove('radio-selected');
   });
 
-  preco.classList.remove('preco-fade-in');
+  element.classList.add('radio-selected');
 
-  setTimeout(function() {
-    element.classList.add('radio-selected');
-    preco.classList.add('preco-fade-in');
-  }, 10);
+  mudarPlano();  
 }
 
 window.onload = function() {
-  atualizarPreco()
-  atualizarRecursos()
-  mostrarFormulario()
+  atualizarPreco();
+  atualizarRecursos();
+
+  const select = document.querySelector('.selecao-plano');
+  select.addEventListener('change', mudarPlano);
 };
 
 

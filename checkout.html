@@ -65,6 +65,14 @@
         z-index: -1;
         margin-left: calc(-50vw + 50%);
       }
+      @media (max-width: 560px){
+        .container{
+          max-width: 95% !important;
+        }
+        input{
+        width: 100%;
+      }
+      }
     </style>
   </head>
   <body>
@@ -130,14 +138,16 @@
         <section>
             <div class="container bloco-checkout">
                 <div class="w-66 co-borderR form-container">
-                    <h2>Crie sua conta para testar o <br>Olist Tiny por 30 dias grátis</h2>
-                    <ul>
-                        <li><i class="fa-solid fa-check mr-5"></i>Sem cobrança durante o período de teste</li>
-                        <li><i class="fa-solid fa-check mr-5"></i>Acesse todas as funcionalidades do plano escolhido</li>
-                        <li><i class="fa-solid fa-check mr-5"></i>Cancele a assinatura mensal a qualquer momento</li>
-                        <li><i class="fa-solid fa-check mr-5"></i>Configure sua conta em poucos minutos</li>
-                        <li><i class="fa-solid fa-check mr-5"></i>Abra sua Conta Digital grátis e tenha o financeiro integrado</li>
-                    </ul>
+                    <div class="d-desktop">
+                      <h2>Crie sua conta para testar o <br>Olist Tiny por 30 dias grátis</h2>
+                      <ul>
+                          <li><i class="fa-solid fa-check mr-5"></i>Sem cobrança durante o período de teste</li>
+                          <li><i class="fa-solid fa-check mr-5"></i>Acesse todas as funcionalidades do plano escolhido</li>
+                          <li><i class="fa-solid fa-check mr-5"></i>Cancele a assinatura mensal a qualquer momento</li>
+                          <li><i class="fa-solid fa-check mr-5"></i>Configure sua conta em poucos minutos</li>
+                          <li><i class="fa-solid fa-check mr-5"></i>Abra sua Conta Digital grátis e tenha o financeiro integrado</li>
+                      </ul>
+                    </div>
                     <form action="teste.php" method="POST">
                         <label for="inome">Nome</label> <br>
                         <input type="text" id="inome" name="nome"  placeholder="como gostaria de ser chamado" class="p-inputs" required>
@@ -157,6 +167,16 @@
                     </form>
                 </div>
                 <div class="w-34 ml-40 info-container">
+                  <div class="d-mobile">
+                    <h2>Crie sua conta para testar o <br>Olist Tiny por 30 dias grátis</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-check mr-5"></i>Sem cobrança durante o período de teste</li>
+                        <li><i class="fa-solid fa-check mr-5"></i>Acesse todas as funcionalidades do plano escolhido</li>
+                        <li><i class="fa-solid fa-check mr-5"></i>Cancele a assinatura mensal a qualquer momento</li>
+                        <li><i class="fa-solid fa-check mr-5"></i>Configure sua conta em poucos minutos</li>
+                        <li><i class="fa-solid fa-check mr-5"></i>Abra sua Conta Digital grátis e tenha o financeiro integrado</li>
+                    </ul>
+                  </div>
                     <div class="display-flex mb-20 justify-content-sb">
                         <p class="co-p">Escolha um plano para <br> iniciar o teste:</p>
                         <a class="co-a" href="#">conhecer planos</a>
@@ -178,12 +198,13 @@
                     <div class="display-flex align-items-center justify-content-sb mb-20 mt-20">
                         <p class="txt-radio">Conheça as opções de pagamento:</p>
                         <div class="d-radio">
-                          <a href="#" class="a-radio radio-selected" onclick="setSelected(this)">mensal</a>
-                          <a href="#" class="a-radio" onclick="setSelected(this)">anual</a>
+                          <a href="#" class="a-radio radio-selected" data-plano="mensal" onclick="setSelected(this)">mensal</a>
+                          <a href="#" class="a-radio" data-plano="anual" onclick="setSelected(this)">anual</a>
                         </div>
                     </div>
                     <div class="preco">
-                        <span class="mr-5">R$</span><span class="preco-destaque"></span><span>/mês</span>
+                        <span class="mr-5">R$</span><span class="preco-destaque"></span><span>/mês</span><br>
+                        <span class="msg_anual"></span>
                     </div>
                 </div>
             </div>

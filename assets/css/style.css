@@ -2675,16 +2675,12 @@ textarea::placeholder{
 
 .info-container{
   flex: 0 0 34%; /* Ocupa 34% da largura */
-  position: sticky; /* Permite que o container fique fixo durante a rolagem */
-  top: 0; /* Fixa o container no topo da tela */
-  height: 100vh; /* Ocupa 100% da altura da viewport */
   overflow: hidden; /* Evita rolagem dentro do container de informações */
 }
 
 .form-container {
   flex: 0 0 63%;
   flex-direction: column;
-  overflow-y: auto; /* Permite rolagem no formulário */
 }
 
 .recursos li{
@@ -2700,6 +2696,15 @@ textarea::placeholder{
 
 .msg-input{
   display: none;
+}
+
+span.msg_A{
+  color: #01205f;
+  font-family: 'FriendsSBold'
+}
+
+select:focus{
+  outline: 0;
 }
 
 @keyframes fadeIn {
@@ -3484,6 +3489,25 @@ textarea::placeholder{
   .carousel-container{
     margin-top: 90px;
   }
+
+  .bloco-checkout{
+    flex-direction: column-reverse;
+    margin-top: 90px;
+  }
+
+  .info-container{
+    margin-left: 0px;
+    width: 100%;
+    border-bottom: 1px #3333331f solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form-container{
+    border: 0;
+    width: 100%;
+  }
+
 
   @keyframes float {
     0% {

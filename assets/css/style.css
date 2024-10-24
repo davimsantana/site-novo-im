@@ -2281,6 +2281,78 @@ textarea::placeholder{
   color: #caccd6;
 }
 
+.pc-title{
+  font-size: 45px;
+  margin: 0;
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'FriendsSbold';
+  letter-spacing:-0.04em;
+}
+
+.card-pc p{
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 30px;
+}
+
+.card-pc iframe{
+  display: flex;
+  margin: 0 auto;
+}
+
+
+.circulo-pc{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #01205f;
+  text-align: center;
+}
+
+.btn-pc{
+  display: flex;
+  background-color: #fb9006;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 35px;
+  margin-top: 30px;
+  width: 60%;
+  justify-content: center;
+  font-size: 17px;
+  transition: .3s;
+}
+
+.btn-pc:hover i{
+
+}
+
+.btn-pc:hover{
+  background-color: #01205f;
+}
+
+
+
+.btn-pc i{
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.span-pc{
+  color: white;
+  font-family: 'FriendsThin';
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+
+
 .tg-card{
   background-color: #0a2865;
   border: 1px solid #7c859f;

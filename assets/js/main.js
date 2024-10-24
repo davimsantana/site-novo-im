@@ -573,9 +573,8 @@ function mudarPlano() {
   atualizarRecursos();
 }
 
-function setSelected(element, event) {
+function setSelected(element) {
   const links = document.querySelectorAll('.a-radio');
-  event.preventDefault();
   
   links.forEach(function(link) {
     link.classList.remove('radio-selected');

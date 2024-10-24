@@ -2318,7 +2318,6 @@ textarea::placeholder{
   background-color: #fb9006;
   color: white;
   text-decoration: none;
-  border: 2px solid #fff;
   padding: 15px;
   border-radius: 35px;
   margin-top: 30px;
@@ -2334,6 +2333,7 @@ textarea::placeholder{
 
 .btn-pc:hover{
   background-color: #01205f;
+  box-shadow: 5px 5px 5px #01205f;
 }
 
 

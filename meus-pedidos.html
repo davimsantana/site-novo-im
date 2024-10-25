@@ -80,10 +80,10 @@
             font-weight: bold;
             color: #01205f;
             border-bottom: 1px solid #3333331f;
-            border-top: 1px solid #3333331f;
         }
 
         td {
+            border-top: 1px solid #3333331f;
             color: #333333;
         }
 
@@ -111,6 +111,9 @@
             padding-bottom: 130px;
             margin-bottom: 50px;
             width: 100%;
+        }
+        .bt0{
+            border-top: 0;
         }
       @media (min-width: 1900px){
         .container{
@@ -143,7 +146,7 @@
             color: white;
             width: 100%;
             text-align: center;
-            margin-top: 10px;
+            margin-bottom: 5px;
             border-radius: 5px;
             padding: 10px;
             text-decoration: none
@@ -262,15 +265,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>2214</td>
-                            <td>Plano Intermediário Mensal - 1 Franquias</td>
-                            <td>24/10/2024</td>
-                            <td>R$119.90</td>
-                        </tr>
+                            <tr>
+                                <td>2214</td>
+                                <td>Plano Intermediário Mensal - 1 Franquias</td>
+                                <td>24/10/2024</td>
+                                <td>R$119.90</td>
+                            </tr>
+                            <tr class="button-row">
+                                <td colspan="4" class="bt0">
+                                    <a class="btn-pagar" href="#">Pagar</a>
+                                </td>
+                            </tr>
                     </tbody>
                 </table>
-                <a class="btn-pagar" href="#">Pagar</a>
             </div>
         </section>
       </main>

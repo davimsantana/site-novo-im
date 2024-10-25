@@ -2895,6 +2895,10 @@ select:focus{
   color: #01205f;
 }
 
+footer .col-md-3:first-child{
+  margin-left: 0px;
+}
+
 footer .col-md-3{
   margin-left: 25px;
 }

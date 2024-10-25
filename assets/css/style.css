@@ -1800,6 +1800,23 @@ ul {
   width: 100%;
 }
 
+.gray{
+  color: #333333;
+}
+
+.titulo-mp{
+  color: #01205f;
+  font-weight: 700;
+  font-size: 70px;
+  letter-spacing: -0.04em;
+  margin: 150px auto auto;
+  width: 75%;
+}
+
+.span-mp{
+  font-size: 20px;
+}
+
 
 .titulo-fc{
   color: #01205f;
@@ -1809,6 +1826,7 @@ ul {
   margin: 150px auto auto;
   width: 75%;
 }
+
 
 .span-fc{
   font-size: 26px;
@@ -2875,6 +2893,10 @@ select:focus{
   background-color: transparent;
   border-color: #01205f;
   color: #01205f;
+}
+
+footer .col-md-3{
+  margin-left: 25px;
 }
 
 @media (max-width: 1200px) {

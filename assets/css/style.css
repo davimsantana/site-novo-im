@@ -2350,6 +2350,61 @@ textarea::placeholder{
   padding-top: 20px;
 }
 
+.pcn-1{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  left: -280px;
+  top: -240px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #4164a5 0%, transparent 50%);
+  border-radius: 50%;
+  opacity: .15;
+  z-index: 0;
+}
+
+.pcn-2{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  right: -220px;
+  top: 600px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #fb910685 0%, transparent 50%);
+  border-radius: 50%;
+  opacity: .15;
+  z-index: 0;
+}
+
+.pcn-3{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: -150px;
+  left: 950px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #211c4f 0%, #676388 0%, transparent 50%);
+  border-radius: 50%;
+  opacity: .15;
+}
+
+.pcn-4{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  left: -220px;
+  top: 500px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #fb910685 0%, transparent 50%);
+  border-radius: 50%;
+  opacity: .15;
+}
+
+
 
 
 

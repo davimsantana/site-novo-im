@@ -95,14 +95,22 @@
             color: #fb9006;
             text-decoration: none;
         }
-
-        a:hover {
-            text-decoration: underline;
-        }
-        .tabela-mb{
+        .tabela-mb-desktop{
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .tabela-mb-mobile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        .bg-gradiente{
+            background: linear-gradient(white, #f1f1f1);
+            padding-bottom: 130px;
+            margin-bottom: 50px;
+            width: 100%;
         }
       @media (min-width: 1900px){
         .container{
@@ -115,7 +123,34 @@
         }
         input{
         width: 100%;
-      }
+        }
+        .titulo-mp{
+            font-size: 45px;
+        }
+        .span-mp{
+            font-size: 16px;
+        }
+        .tabela-mb-desktop{
+            display: none;
+        }
+        .tabela-mb-mobile{
+            display: flex;
+        }
+        .btn-pagar{
+            display: block;
+            background-color: #fb9006;
+            color: white;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            text-decoration: none
+        }
+        .btn-pagar:hover{
+            background-color: #01205f;
+            box-shadow: 2px 2px 2px #01205f;
+        }
       }
     </style>
   </head>
@@ -187,7 +222,7 @@
                 >
                 </div>
         </section>
-        <section class="bg-gradiente tabela-mb">
+        <section class="bg-gradiente tabela-mb-desktop">
             <div class="container">
                 <table>
                     <thead>
@@ -211,8 +246,31 @@
                 </table>
             </div>
         </section>
+        <section class="bg-gradiente tabela-mb-mobile">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>PRODUTO</th>
+                            <th>DATA</th>
+                            <th>VALOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2214</td>
+                            <td>Plano Intermediário Mensal - 1 Franquias</td>
+                            <td>24/10/2024</td>
+                            <td>R$119.90</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="btn-pagar" href="#">Pagar</a>
+            </div>
+        </section>
       </main>
-      <footer class="container mt-200">
+      <footer class="container">
         <section class="mb">
         <div>
           <div class="row align-items-start">

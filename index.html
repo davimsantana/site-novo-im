@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         @font-face {
-            font-family: 'FriendsBold';
+            font-family: 'FriendsBold';font-family: 'FriendsBold';
             src: url('assets/fonts/Friends-UltraBold.otf');
         }
         @font-face {
@@ -40,6 +40,22 @@
             font-family: 'FriendsUl';
             src: url('assets/fonts/Friends-UltraLight.otf');
         }
+        .card-destaque-p{
+          background-image: url('assets/images/retangulo-azul-busca.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          border: 1px solid rgb(235, 235, 235);
+          padding: 55px 50px 60px;
+          border-radius: 10px;
+          flex-direction: column;
+          height: auto;
+          position: relative;
+          z-index: 1;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          box-shadow: 0px 5px 10px 0px #00000029;
+      }
     </style>
   </head>
   <body>
@@ -236,14 +252,13 @@
           </div>
         </div>
       </section>
-      <section class="bg-azul-2"></section>
+      <section class="bg-azul-2"><div class="nebulosa-roxa"></div></section>
       <section class="bg-azul overflow-hidden">
         <div class="container">
           <h1 class="titulo-demonstracao-1">
             Uma plataforma 5 estrelas, pronta para escalar o seu negócio
           </h1>
         </div>
-        <div class="nebulosa-roxa"></div>
         <div class="nebulosa-azul"></div>
         <div class="demonstracao container overflow-hidden text-center animate">
           <div class="row gx-5">
@@ -592,7 +607,7 @@
                             <span id="link">baguete.com.br</span>
                         </div>
                     </div>
-                    <div id="img" class="col-md-6 text-align-center">
+                    <div id="img" class="col-md-6 text-align-right">
                         <img class="img-imprensa bg-preto" src="assets/images/img11.jpg" alt=""/>
                         <img class="d-none" src="assets/images/img10.png" alt="">
                         <img class="d-none" src="assets/images/abcomm.jpg" alt="">
@@ -635,7 +650,7 @@
                             </div>
                         </div>
                     </button>
-                    <button id="button-4" class="bg-empresas col-md-3 display-flex" data-source="forbes" onclick="changeContent(this)">
+                    <button id="button-4" class="bg-empresas col-md-3 display-flex mb-0" data-source="forbes" onclick="changeContent(this)">
                         <div>
                             <img class="img-empresas" src="assets/images/img15.jpg" alt="">
                         </div>
@@ -650,24 +665,32 @@
             </div>
         </div>
     </section>
-      <section class="bg-azul animate">
+    <section class="animate bg-azul">
+      <div class="nebulosa-laranja-p"></div>
+      <div class="nebulosa-azul-p"></div>
       <div class="container">
-        <div class="nebulosa-laranja_2"></div>
-        <div>
-          <h2 class="titulo-planos">Escolha seu plano Tiny e <br> ganhe teste grátis por 30 dias</h1>
+        <div class="text-align-center pt-70 pb-70 animate">
+          <span class="i-span">Preços</span>
+          <h1 class="titulo-beneficios-2 mb-5 white">Conheça nossos planos e preços</h1>
+          <p class="white">Encontre o plano que ideal para a sua empresa.</p>
         </div>
-        <div>
-        <div class="animate">
+        <div class="display-flex align-items-center justify-content-center">
+        <div class="animate container-planos">
           <div class="row align-items-center pb-70">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="bg-branco">
-                <h4 class="sub-planos">Começar</h4>
-                <span class="desc-planos">O início correto para seu <br> negócio. <br></span>
+                <span class="sub-planos">Plano</span>
+                <h4 class="titulo-planos-c">Light</h4>
                 <div>
-                  <ul class="mt-15">
-                    <li><i class="fa-solid fa-user i-planos"></i>1 usuário</li>
-                    <li><i class="fa-solid fa-database i-planos"></i>20 MB de dados</li>
-                    <li><i class="fa-solid fa-cubes i-planos"></i>gestão de estoque</li>
+                  <ul class="mt-15 lista-planos">
+                    <li><i class="fa-solid fa-check"></i> 1 Administrador</li>
+                    <li><i class="fa-solid fa-check"></i> Suporte por chamado</li>
+                    <li><i class="fa-solid fa-check"></i> Produtos Ilimitados</li>
+                    <li><i class="fa-solid fa-check"></i> Visitas Ilimitadas</li>
+                    <li><i class="fa-solid fa-check"></i> Inteligência Artificial</li>
+                    <li><i class="fa-solid fa-check"></i> Certificado de Segurança</li>
+                    <li><i class="fa-solid fa-check"></i> Cloud Dedicado 1</li>
+                    <li><i class="fa-solid fa-check"></i> Ultracheckout</li>
                   </ul>
                 </div>
                 <div class="display-flex justify-content-center">
@@ -675,59 +698,54 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="bg-branco">
-                <h4 class="sub-planos">Crescer</h4>
-                <span class="desc-planos">O parceiro do seu <br> crescimento</span>
+            <div class="col-md-4">
+              <div class="card-destaque-p">
+                <i class="fa-solid fa-star cdp-star"></i>
+                <span class="sub-planos">Plano</span>
+                <h4 class="titulo-planos-c">Inteligente</h4>
                 <div>
-                  <ul class="mt-15">
-                    <li><i class="fa-solid fa-user i-planos"></i>5 usuários</li>
-                    <li><i class="fa-solid fa-database i-planos"></i>100 MB de dados</li>
-                    <li><i class="fa-solid fa-cube i-planos"></i>pick & packing</li>
+                  <ul class="mt-15 lista-planos">
+                    <li><i class="fa-solid fa-check"></i> 2 Administradores</li>
+                    <li><i class="fa-solid fa-check"></i> Suporte por Whats</li>
+                    <li><i class="fa-solid fa-check"></i> Produtos Ilimitados</li>
+                    <li><i class="fa-solid fa-check"></i> Visitas Ilimitadas</li>
+                    <li><i class="fa-solid fa-check"></i> Inteligência Artificial</li>
+                    <li><i class="fa-solid fa-check"></i> Certificado de Segurança</li>
+                    <li><i class="fa-solid fa-check"></i> Cloud Dedicado 1</li>
+                    <li><i class="fa-solid fa-check"></i> Ultracheckout</li>
                   </ul>
                 </div>
                 <div class="display-flex justify-content-center">
-                  <button class="btn-planos">Cresça agora</button>
+                  <button class="btn-planos">Começe agora</button>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="bg-branco">
-                <h4 class="sub-planos">Evoluir</h4>
-                <span class="desc-planos">O passo além para <br> sua empresa.</span>
+                <span class="sub-planos">Plano</span>
+                <h4 class="titulo-planos-c">Start</h4>
                 <div>
-                  <ul class="mt-15">
-                    <li><i class="fa-solid fa-user i-planos"></i>10 usuários</li>
-                    <li><i class="fa-solid fa-database i-planos"></i>300 MB de dados</li>
-                    <li><i class="fa-solid fa-repeat i-planos"></i>importação automática</li>
+                  <ul class="mt-15 lista-planos">
+                    <li><i class="fa-solid fa-check"></i> 4 Administradores</li>
+                    <li><i class="fa-solid fa-check"></i> Suporte por Whats</li>
+                    <li><i class="fa-solid fa-check"></i> Produtos Ilimitados</li>
+                    <li><i class="fa-solid fa-check"></i> Visitas Ilimitadas</li>
+                    <li><i class="fa-solid fa-check"></i> Inteligência Artificial</li>
+                    <li><i class="fa-solid fa-check"></i> Certificado de Segurança</li>
+                    <li><i class="fa-solid fa-check"></i> Cloud Dedicado 2</li>
+                    <li><i class="fa-solid fa-check"></i> Ultracheckout</li>
                   </ul>
                 </div>
                 <div class="display-flex justify-content-center">
-                  <button class="btn-planos">Evolua agora</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="bg-branco">
-                <h4 class="sub-planos">Potencializar</h4>
-                <span class="desc-planos">O grande plano para seu <br> negócio.</span>
-                <div>
-                  <ul class="mt-15">
-                    <li><i class="fa-solid fa-user i-planos"></i>15 usuários</li>
-                    <li><i class="fa-solid fa-database i-planos "></i>800 MB de dados</li>
-                    <li><i class="fa-solid fa-user-gear i-planos"></i>gerente de contas</li>
-                  </ul>
-                </div>
-                <div class="display-flex justify-content-center">
-                  <button class="btn-planos">Potencialize agora</button>
+                  <button class="btn-planos">Começe agora</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
       </div>
-      </section>
+    </div>
+  </section>
       <section class="container mt-70">
         <div class="text-align-center mb-50 col-sl-12 m-">
           <h3>Principais Duvidas</h3>

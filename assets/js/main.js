@@ -119,7 +119,7 @@ setTimeout(() => {
           <span id="link">baguete.com.br</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-center">
+      <div id="img" class="col-md-6 text-align-right">
         <img class="img-imprensa bg-preto d-b" src="assets/images/img11.jpg" alt=""/>
       </div>
 
@@ -148,7 +148,7 @@ setTimeout(() => {
           <span id="link">startups.com.br</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-center">
+      <div id="img" class="col-md-6 text-align-right">
         <img class="img-imprensa bg-preto d-b" src="assets/images/startups.jpg" alt=""/>
       </div>
           `;
@@ -175,7 +175,7 @@ setTimeout(() => {
           <span id="link">abcomm.org</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-center">
+      <div id="img" class="col-md-6 text-align-right">
         <img class="img-imprensa bg-preto d-b" src="assets/images/abcomm.jpg" alt=""/>
       </div>
           `;
@@ -202,7 +202,7 @@ setTimeout(() => {
           <span id="link">forbespt.com</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-center">
+      <div id="img" class="col-md-6 text-align-right">
         <img class="img-imprensa bg-preto d-b" src="assets/images/forbes.jpg" alt=""/>
       </div>
           `;

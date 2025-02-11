@@ -179,7 +179,7 @@ ul {
 }
 
 .img-logo-l{
-  width: 180px;
+  width: 220px;
   margin-right: 10px;
   transition: width 0.5s ease;
 }
@@ -2062,7 +2062,7 @@ textarea::placeholder{
 
 .header {
   position: relative;
-  text-align: center; /* Centraliza o logotipo */
+  bottom: 10%; 
 }
 
 .remember-me{
@@ -2081,9 +2081,6 @@ textarea::placeholder{
   text-decoration: none;
 }
 
-.titulo-login, .forms-login > input{
-  max-width: 600px;
-}
 
 .d-desktop{
   display: block;
@@ -3914,6 +3911,10 @@ select:focus{
   .bg-t > a{
     font-size: 19px;
   }
+  .titulo-cadastro{
+    font-size: 55px;
+  }
+
 }
 
 @media (min-width: 2000px) {

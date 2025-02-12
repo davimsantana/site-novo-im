@@ -1,3 +1,8 @@
+// Funciona para a função da linha 746 mostrardominios()
+
+
+//------------------------------------------------------------------------------------------------------
+
 $(document).ready(function () {
   $(".dropdown").on("mouseenter", function () {
     $(this).addClass("show");
@@ -119,7 +124,7 @@ setTimeout(() => {
           <span id="link">baguete.com.br</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-right">
+      <div id="img" class="col-md-6 text-align-center">
         <img class="img-imprensa bg-preto d-b" src="assets/images/img11.jpg" alt=""/>
       </div>
 
@@ -148,7 +153,7 @@ setTimeout(() => {
           <span id="link">startups.com.br</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-right">
+      <div id="img" class="col-md-6 text-align-center">
         <img class="img-imprensa bg-preto d-b" src="assets/images/startups.jpg" alt=""/>
       </div>
           `;
@@ -175,7 +180,7 @@ setTimeout(() => {
           <span id="link">abcomm.org</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-right">
+      <div id="img" class="col-md-6 text-align-center">
         <img class="img-imprensa bg-preto d-b" src="assets/images/abcomm.jpg" alt=""/>
       </div>
           `;
@@ -202,7 +207,7 @@ setTimeout(() => {
           <span id="link">forbespt.com</span>
         </div>
       </div>
-      <div id="img" class="col-md-6 text-align-right">
+      <div id="img" class="col-md-6 text-align-center">
         <img class="img-imprensa bg-preto d-b" src="assets/images/forbes.jpg" alt=""/>
       </div>
           `;
@@ -428,8 +433,39 @@ function mostrasenha() {
   }
 }
 
+function confirmaenviar() {
+  const senha = document.querySelector("#isenha");
+  const csenha = document.querySelector("#isenhac");
+  const msgsenhac = document.querySelector(".msgsenhac");
+  const submit = document.querySelector(".btn-submit-co");
+  const termos = document.querySelector("#itermos");
 
-// Página Checkout
+  if (senha.value !== csenha.value) {
+    setTimeout(function() {
+      msgsenhac.style.opacity = '1';
+      msgsenhac.classList.add('preco-fade-in');
+    }, 1);
+    msgsenhac.style.display = 'block';
+    submit.classList.add('disabled'); 
+  } else {
+    msgsenhac.style.display = 'none';
+    msgsenhac.classList.remove('preco-fade-in');
+    msgsenhac.style.opacity = '0';
+  }
+
+  if (!termos.checked || senha.value !== csenha.value) {
+    submit.classList.add('disabled');
+  } else {
+    submit.classList.remove('disabled');
+  }
+}
+
+document.getElementById("itermos").addEventListener("input", confirmaenviar);
+document.getElementById("isenha").addEventListener("input", confirmaenviar);
+document.getElementById("isenhac").addEventListener("input", confirmaenviar);
+
+
+
 
 function mostrarFormulario() {
   const hideInputs = document.querySelector('.hide-form');
@@ -471,41 +507,95 @@ Inputs.forEach((input) => {
   input.addEventListener('input', mostrarFormulario);
 });
 
-$(document).ready(function() {
-  var $input = $('#icpf_cnpj');
+document.addEventListener('DOMContentLoaded', function() {
+  var inputCpfCnpj = document.getElementById('icpf_cnpj');
+  var inputNomeEmpresa = document.querySelector('.hide-rs')
 
-  function applyMask() {
-      // Remove todas as máscaras
-      $input.unmask();
-
-      // Verifica a quantidade de dígitos
-      var val = $input.val().replace(/\D/g, ''); // Remove caracteres não numéricos
-
-      if (val.length <= 11) {
-          // Aplica a máscara de CPF
-          $input.mask('999.999.999-99');
-      } else {
-          // Aplica a máscara de CNPJ
-          $input.mask('99.999.999/9999-99');
+  var maskOptionsCpfCnpj = {
+    mask: [
+      {
+        mask: '000.000.000-00', 
+        maxLength: 11 
+      },
+      {
+        mask: '00.000.000/0000-00', 
+        maxLength: 14 
       }
+    ],
+    dispatch: function (appended, dynamicMasked) {
+      var number = (dynamicMasked.value + appended).replace(/\D/g,'');
 
-      // Reaplica o valor do input para evitar que ele suma
-      $input.val(val);
-      // Restaura o cursor no final da entrada
-      setTimeout(function() {
-          var length = $input.val().length;
-          $input[0].setSelectionRange(length, length);
-      }, 0);
+      return number.length > 11 ? dynamicMasked.compiledMasks[1] : dynamicMasked.compiledMasks[0];
+    }
+  };
+
+  var maskCpfCnpj = IMask(inputCpfCnpj, maskOptionsCpfCnpj);
+
+
+  var inputTelefone = document.getElementById('inumero');
+
+  var maskOptionsTelefone = {
+    mask: '(00) 00000-0000' 
+  };
+
+  var maskTelefone = IMask(inputTelefone, maskOptionsTelefone);
+
+});
+
+function mostrars(){
+  var inputCpfCnpj = document.getElementById('icpf_cnpj');
+  var inputNomeEmpresa = document.querySelector('.hide-rs')
+
+  if (inputCpfCnpj.value.length > 11){
+    setTimeout(function() {
+      inputNomeEmpresa.style.opacity = '1';
+      inputNomeEmpresa.classList.add('preco-fade-in');
+    }, 1);
+    inputNomeEmpresa.style.display = 'block'
   }
+  else{
+    inputNomeEmpresa.style.display = 'none'
+  }
+}
 
-  // Aplicar a máscara inicialmente
-  applyMask();
 
-  // Monitora a entrada do usuário
-  $input.on('input', function() {
-      applyMask();
+document.querySelector('.custom-select-trigger').addEventListener('click', function() {
+  this.parentNode.classList.toggle('open');
+});
+
+document.querySelectorAll('.custom-option').forEach(function(option) {
+  option.addEventListener('click', function() {
+    var select = document.querySelector('.selecao-plano');
+    var trigger = document.querySelector('.custom-select-trigger');
+
+    // Atualiza o valor do select nativo oculto
+    select.value = this.getAttribute('data-value');
+
+    // Atualiza o texto do trigger para o item selecionado
+    trigger.textContent = this.textContent;
+
+    // Fecha o dropdown
+    this.parentNode.parentNode.classList.remove('open');
+
+    // Disparar o evento 'change' no select nativo para acionar a função mudarplano
+    var event = new Event('change');
+    select.dispatchEvent(event); // Isso dispara o 'onchange' que estava sendo usado antes
   });
 });
+
+document.addEventListener('click', function(e) {
+  const isClickInside = document.querySelector('.custom-select').contains(e.target);
+  if (!isClickInside) {
+    document.querySelector('.custom-select').classList.remove('open');
+  }
+});
+
+
+
+
+
+
+
 
 
 const planos = {
@@ -525,6 +615,8 @@ const planos = {
     recursos: ['15 usuários', '500 MB de dados', '20 GB de anexos e imagens']
   }
 };
+
+
 
 function atualizarPreco() {
   const select = document.querySelector('.selecao-plano');
@@ -592,5 +684,114 @@ window.onload = function() {
   const select = document.querySelector('.selecao-plano');
   select.addEventListener('change', mudarPlano);
 };
+
+function aparecerbdominio(){
+    const inserirD = document.querySelector('.inserir-dominio')
+    const procurarD = document.querySelector('.procurar-dominio')
+
+    inserirD.style.display = 'none'
+    procurarD.style.display = 'block'
+
+    inserirD.style.opacity = '0'
+
+    setTimeout(function() {
+      procurarD.style.opacity = '1';
+      procurarD.classList.add('pd-fade-in');
+    }, 1);
+
+    
+}
+
+
+function mostrardominios() {
+
+  let dominio = document.querySelector('#IDbdominio')
+
+  dominio = dominio.value
+
+  var blocos_dominios = {
+    encontrado: {
+      bloco: `
+        <section class="c-dominio-encontrado fd-m display-flex col-md-12">
+          <div class="col-md-8 display-flex">
+              <div class="">   
+                  <i class="fa-solid fa-check i-dc"></i>
+              </div>
+              <div class="display-flex fd-c justify-content-center">
+                  <h3 class="t-dc">Este Domínio está disponível</h3>
+                  <span class="s-dc">${dominio}</span>
+              </div>
+          </div>
+          <div class="col-md-4 display-flex justify-content-center align-items-center">
+              <button class="btn-dc">Comprar Domínio</button>
+          </div>
+        </section>
+      `   
+    },
+    nao_encontrado: {
+      bloco: `
+        <section class="c-dominio-encontrado fd-m display-flex col-md-12">
+          <div class="col-md-8 display-flex">
+              <div class="">   
+                  <i class="fa-solid fa-x i-dcne"></i>
+              </div>
+              <div class="display-flex fd-c justify-content-center">
+                  <h3 class="t-dc">Domínio indisponível</h3>
+                  <span class="s-dc">${dominio}</span>
+              </div>
+          </div>
+          <div class="col-md-4 display-flex justify-content-center align-items-center">
+              <button class="btn-dc">Comprar Domínio</button>
+          </div>
+        </section>
+      `   
+    },
+    exemplo: {
+      bloco: `
+        <div class="c-dominio-exemplo">
+          <div class="border-bottom display-flex fd-m">
+            <div class="col-md-8 display-flex">
+              <div class="">
+                  <i class="fa-solid fa-check i-dce"></i>
+              </div>
+              <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
+                  <h3 class="t-dce">www.exemplo.com.br</h3>
+                  <span class="s-dce">Domínio disponível</span>
+              </div>
+            </div>
+            <div class="col-md-4 display-flex justify-content-center align-items-center mb-35">
+                <button class="btn-dce">Comprar Domínio</button>
+            </div>
+          </div>
+      </div>
+    `     
+    },
+  };
+
+  const Sdominios = document.querySelector('.dominios');
+
+  Sdominios.innerHTML = `
+                      <div class="text-align-center mt-25 mb-25">
+                        <h2 class="titulo-d">Domínios encontrados:</h1>
+                      </div>
+                    `
+
+  Sdominios.innerHTML += blocos_dominios.encontrado.bloco;
+
+  Sdominios.innerHTML += `<div class="text-align-center mt-25 mb-25">
+                            <h2 class="titulo-exemplos-d">Veja também</h1>
+                          </div>
+                        `
+  let exemplos = `<div class="c-dominio-exemplos col-md-12">`;
+
+  for (let blocos = 0; blocos < 3; blocos++){
+    exemplos += blocos_dominios.exemplo.bloco;
+  }
+
+  Sdominios.innerHTML += exemplos;
+
+}
+
+
 
 

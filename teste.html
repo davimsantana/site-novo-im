@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select {
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-select-trigger {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.custom-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-select.open .custom-options {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="custom-select-wrapper">
+        <div class="custom-select">
+          <div class="custom-select-trigger">Select an option</div>
+          <div class="custom-options">
+            <span class="custom-option" data-value="option1">Option 1</span>
+            <span class="custom-option" data-value="option2">Option 2</span>
+            <span class="custom-option" data-value="option3">Option 3</span>
+          </div>
+        </div>
+        <!-- Este select é oculto -->
+        <select id="select" style="display: none;">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <script>
+        document.querySelector('.custom-select-trigger').addEventListener('click', function() {
+  this.parentNode.classList.toggle('open');
+});
+
+document.querySelectorAll('.custom-option').forEach(function(option) {
+  option.addEventListener('click', function() {
+    var select = document.getElementById('select');
+    var trigger = document.querySelector('.custom-select-trigger');
+
+    // Atualiza o valor do select oculto
+    select.value = this.getAttribute('data-value');
+
+    // Atualiza o texto do trigger para mostrar o valor selecionado
+    trigger.textContent = this.textContent;
+
+    // Fechar o menu
+    this.parentNode.classList.remove('open');
+  });
+});
+
+document.addEventListener('click', function(e) {
+  const isClickInside = document.querySelector('.custom-select').contains(e.target);
+  if (!isClickInside) {
+    document.querySelector('.custom-select').classList.remove('open');
+  }
+});
+
+      </script>
+</body>
+</html>

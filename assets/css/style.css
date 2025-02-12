@@ -179,7 +179,7 @@ ul {
 }
 
 .img-logo-l{
-  width: 220px;
+  width: 180px;
   margin-right: 10px;
   transition: width 0.5s ease;
 }
@@ -1614,7 +1614,7 @@ h4 {
 }
 
 .sub-planos {
-  font-size: 18px;
+  font-size: 15px;
   color: #fb9006;
   font-family: 'FriendsRegular';
 }
@@ -1628,12 +1628,10 @@ h4 {
   height: auto;
   position: relative;
   z-index: 1;
-  margin-right: 10px;
-  margin-left: 10px;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  box-shadow: 0px 5px 10px 0px #00000029;
-  margin-top: 50px;
+  box-shadow: 0px 0px 10px #0000002e;
+  margin-top: 60px;
 }
 
 ul {
@@ -2062,7 +2060,7 @@ textarea::placeholder{
 
 .header {
   position: relative;
-  bottom: 10%; 
+  text-align: center; /* Centraliza o logotipo */
 }
 
 .remember-me{
@@ -2081,6 +2079,9 @@ textarea::placeholder{
   text-decoration: none;
 }
 
+.titulo-login, .forms-login > input{
+  max-width: 600px;
+}
 
 .d-desktop{
   display: block;
@@ -2875,6 +2876,7 @@ select:focus{
   color: #01205f;
   margin-top: 0;
   font-family: 'FriendsBold';
+  margin-bottom: 0;
 }
 
 .lista-planos{
@@ -2902,6 +2904,7 @@ select:focus{
 
 .card-destaque-p h4{
   color: #fb9006;
+  margin-bottom: 0;
 }
 
 .card-destaque-p .sub-planos{
@@ -2923,6 +2926,7 @@ select:focus{
   right: 20px;
 }
 
+/*
 .nebulosa-laranja-p{
   margin: 0px;
   padding: 0px;
@@ -2933,7 +2937,7 @@ select:focus{
   height: 800px;
   background: radial-gradient(circle, #fb9006ad 0%, transparent 50%);
   border-radius: 50%;
-  opacity: 0.4;
+  opacity: .2;
   z-index: 0;
 }
 
@@ -2947,7 +2951,12 @@ select:focus{
   height: 800px;
   background: radial-gradient(circle, #4164a5 0%, transparent 50%);
   border-radius: 50%;
-  opacity: .4;
+  opacity: .3;
+}
+*/
+
+.bg-cb{
+  background: linear-gradient(to bottom, #f8f9fa, #fff);
 }
 
 @keyframes fadeIn {
@@ -3911,10 +3920,6 @@ select:focus{
   .bg-t > a{
     font-size: 19px;
   }
-  .titulo-cadastro{
-    font-size: 55px;
-  }
-
 }
 
 @media (min-width: 2000px) {

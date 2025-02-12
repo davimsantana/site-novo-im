@@ -883,6 +883,7 @@ h3 {
   margin-right: 15px;
 }
 
+
 .mr-40{
   margin-right: 40px;
 }
@@ -1065,6 +1066,10 @@ select{
 
 .pb-112 {
   padding-bottom: 112px;
+}
+
+.mt-0{
+  margin-top: 0;
 }
 
 .mt-200 {
@@ -2062,7 +2067,7 @@ textarea::placeholder{
 
 .header {
   position: relative;
-  text-align: center; /* Centraliza o logotipo */
+  bottom: 10%;
 }
 
 .remember-me{
@@ -2081,9 +2086,6 @@ textarea::placeholder{
   text-decoration: none;
 }
 
-.titulo-login, .forms-login > input{
-  max-width: 600px;
-}
 
 .d-desktop{
   display: block;
@@ -3390,6 +3392,15 @@ select:focus{
     font-size: 2.4rem;
   }
 
+  .checkbox-container > input{
+    width: 20px;
+  } 
+
+  .r-senha, .checkbox-container > label{
+    font-size: 14px;
+  }
+  
+
   .titulo-cadastro{
     margin-top: 0;
     font-size: 2.4rem;
@@ -3913,6 +3924,9 @@ select:focus{
   }
   .bg-t > a{
     font-size: 19px;
+  }
+  .titulo-cadastro, .titulo-login{
+    font-size: 55px;
   }
 }
 

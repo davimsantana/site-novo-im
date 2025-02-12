@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://www.internetmedia.com.br/favicon.ico" />
-    <title>
-      Buscar Domínio - Internet Media, Site de Notícias, Criar guia comercial!
-    </title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravações - Internet Media, Site de Notícias, Criar guia comercial!</title>
+    
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <style>
-      @font-face {
-        font-family: 'FriendsBold';
-        src: url('assets/fonts/Friends-UltraBold.otf');
-      }
-      @font-face {
-        font-family: 'FriendsSbold';
-        src: url('assets/fonts/Friends-SemiBold.otf');
-      }
-      @font-face {
-        font-family: 'FriendsNormal';
-        src: url('assets/fonts/Friends-Normal.otf');
-      }
-      @font-face {
-        font-family: 'FriendsRegular';
-        src: url('assets/fonts/Friends-Regular.otf');
-      }
-      .c-dominio-exemplo:last-child > .border-bottom{
-          border-bottom: 0 !important;
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+        @font-face {
+            font-family: 'FriendsBold';
+            src: url('assets/fonts/Friends-UltraBold.otf');
         }
-      .container{
-        max-width: 50% !important;
-      }
-
-      .bg-nebulosas {
-        position: relative;
-        z-index: 1;
-        padding: 20px; /* ajuste conforme necessário */
-      }
-
-      .bg-nebulosas::before {
-        content: "";
-        background-image: url("assets/images/background-nebulosas.png");
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw; /* Estende a largura até a viewport */
-        height: 100%;
-        z-index: -1;
-        margin-left: calc(-50vw + 50%);
-      }
-      .c-dominio-encontrado{
-        background-image: url("assets/images/retangulo-azul-busca.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 5px;
-        padding: 35px;
-      }
-      .c-dominio-exemplos{
-        background-color: #f2f2f2;
-        border: 1px solid #bababa;
-        border-radius: 5px 5px 0px 0px;
-        border-bottom: 0;
-      }
-      .c-dominio-exemplos:last-child{
-        padding-bottom: 25px;
-      }
-      .border-bottom{
-        border-bottom: 1px solid #bababa !important;
-      }
-      .c-dominio-exemplo{
-        padding: 35px 35px 0px 35px;
-      }
-      @media (max-width: 560px) {
-        .container{
-          max-width: 95% !important;
+        @font-face {
+            font-family: 'FriendsSbold';
+            src: url('assets/fonts/Friends-SemiBold.otf');
         }
-        .c-dominio-encontrado{
-          padding: 30px;
+        @font-face {
+            font-family: 'FriendsNormal';
+            src: url('assets/fonts/Friends-Normal.otf');
         }
-        .c-dominio-exemplo{
-          padding: 0px 30px 30px 30px;
+        @font-face {
+            font-family: 'FriendsRegular';
+            src: url('assets/fonts/Friends-Regular.otf');
         }
-        input{
-          width: 100% !important;
+        @font-face {
+            font-family: 'FriendsThin';
+            src: url('assets/fonts/Friends-Thin.otf');
         }
-        .mb-35{
-          margin: 0 !important;
+        @font-face {
+            font-family: 'FriendsUl';
+            src: url('assets/fonts/Friends-UltraLight.otf');
         }
-        .c-dominio-exemplo:first-child{
-          margin-top: 30px;
+        .bg-azul-video{
+            background-image: url('assets/images/bg-azul-video.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 658px;
+            display: flex;
+            align-items: center;
         }
-      }
+        .scrolled .nav-link {
+              color: #01205f !important;
+        }
+        .scrolled .btn-nav {
+            background-color: #01205f !important;
+            border: 1px solid #01205f;
+        }
+        .scrolled .btn-nav:hover {
+            background-color: transparent !important;
+            border: 1px solid #01205f !important;
+        }
+        .scrolled .d-nonel{
+            display: block !important;
+        }
+        .scrolled .d-blockl{
+            display: none !important;
+        }
+        .nav-link{
+            color: white !important;
+        }
+        .btn-nav{
+            background-color: transparent !important;
+            border: 1px #ffffff5c solid !important;
+        }
+        .accordion-item{
+          width: 91%;
+          margin-left: 90px;
+          color: #333333;
+        }
+        @media (max-width: 560px){.accordion-item{width: 100%; margin-left: 0px;}}
+        .accordion-button, .accordion-body{
+          background-color: #f2f2f2a1 !important;
+          border: 0;
+        }
+        .accordion-button, .accordion-button:focus{
+          color: #333333;
+          font-size: 20px;
+          font-family: 'FriendsSbold';
+          padding: 20px;
+        }
+        .accordion-body{
+          color: #333333;
+          font-size: 16px;
+          font-family: 'FriendsNormal';
+        }
+        .accordion-header{
+          border-top: 1px solid #dbdcdc;
+        }
+        .bg-cinza{
+          height: 600px;
+          background-color: #f2f2f2a1;
+        }
+        @media (max-width: 560px){.bg-cinza{align-items: normal !important; height: 100%;}}
+        .b-i1{
+          margin-top: 0px;
+          margin-bottom: 20px;
+        }
+        .ytp-cued-thumbnail-overlay-image{
+          background-position: normal;
+        }
+        @media (max-width: 560px){.mt-200{margin-top: 0;}}
     </style>
 </head>
 <body>
@@ -114,11 +121,17 @@
               class="container container-fluid bg-transparent justify-content-center"
             >
               <div class="nav">
-                <div class="nowrap display-flex align-items-center">
-                  <a href=""
-                    ><img class="img-logo" src="assets/images/logo.png" alt="Logo"
-                  /></a>
-                  <div>
+                <div class="nowrap display-flex align-items-center wm-100">
+                    <div>
+                      <a href="#" class="wm-100"
+                        ><img class="img-logo-l d-blockl" src="assets/images/logo-light.png" alt="Logo"
+                      /></a>
+                    <div>
+                      </div>
+                      <a href="#"
+                        ><img class="img-logo d-nonel" src="assets/images/logo.png" alt="Logo"
+                      /></a>
+                    </div>
                     <button
                       class="navbar-toggler"
                       type="button"
@@ -130,9 +143,7 @@
                     >
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                  </div>
                 </div>
-      
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <div class="display-flex">
                     <a href=""
@@ -324,112 +335,132 @@
           </nav>
     </header>
     <main>
-    <section class="container">
-          <section class="col-md-12">
-            <div class="display-flex fd-m pb-40">
+        <section class="bg-azul-video display-flex">
+            <div class="container display-flex mt-50 d-desktop-f">
                 <div class="col-md-8">
-                    <input class="bd-input" id="dominio" name="dominio" type="text" placeholder="www.exemplo.com.br">
+                    <div class="video-container mr-60">
+                        <iframe width="460" height="315" src="https://www.youtube.com/embed/S96fS0O_CLI?si=HIQFN3tsfm9UdLiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <button class="bd-btn">Verificar Disponibilidade</button>
+                <div class="col-md-4 display-flex fd-c">
+                    <div class="tg-card">
+                        <p>Vamos praticar?</p>
+                        <p class="mb-20">Crie seu Portal de Notícias</p>
+                        <a href="#">Teste Grátis -></a>
+                    </div>
+                    <div class="title-video display-flex fd-c h-100 justify-content-flexend">
+                      <span>PORTAL DE NOTÍCIAS</span>
+                      <h1>Primeiros passos Portal de Notícias</h1>
+                      <p>Aprenda como colocar notícias em seu Portal de Notícias em segundos!</p>
+                    </div>
                 </div>
             </div>
-          </section>
-          <section>
-            <section class="c-dominio-encontrado fd-m display-flex col-md-12">
-                <div class="col-md-8 display-flex">
-                    <div class="">   
-                        <i class="fa-solid fa-check i-dc"></i>
+            <div class="container display-flex mt-50 d-mobile">
+                <div class="title-video display-flex fd-c">
+                    <span>PORTAL DE NOTÍCIAS</span>
+                    <h1>Primeiros passos Portal de Notícias</h1>
+                    <p>Aprenda como colocar notícias em seu Portal de Notícias em segundos!</p>
+                </div>
+                <div class="video-container mb-35">
+                    <iframe width="460" height="315" src="https://www.youtube.com/embed/S96fS0O_CLI?si=HIQFN3tsfm9UdLiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="tg-card">
+                    <p>Vamos praticar?</p>
+                    <p class="mb-20">Crie seu Portal de Notícias</p>
+                    <a href="#">Teste Grátis -></a>
+                </div>
+            </div>
+        </section>
+        <section class="bg-cinza display-flex">
+            <div class="container display-flex flex-wrapt mt-200">
+                <div class="col-md-4 pergfreq">
+                    <div class="b-i1">
+                        <i class="fa-solid fa-chart-column"></i>
                     </div>
-                    <div class="display-flex fd-c justify-content-center">
-                        <h3 class="t-dc">Este Domínio está disponível</h3>
-                        <span class="s-dc">www.exemplo.com.br</span>
+                    <h3>Perguntas Frequentes</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscingelit. Curabitur efficitur, adipiscing elitr ctetur a</p>  
+                </div>
+                <div class="col-md-8 accordion-container">
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          O que é um Portal de Notícias?
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Plataformas de notícias
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Guia Comercial
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Plataformas de guias, comerciais
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          O que é o recurso Colunistas?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          São colunas, colunistas
+                        </div>
+                      </div>
                     </div>
                 </div>
-                <div class="col-md-4 display-flex justify-content-center align-items-center">
-                    <button class="btn-dc">Comprar Domínio</button>
-                </div>
-            </section>
-            <section>
-              <div class="text-align-center mt-25 mb-25">
-                <h2 class="titulo-exemplos-d">Veja outras opções:</h1>
-              </div>
-              <div class="c-dominio-exemplos col-md-12">
-                  <div class="c-dominio-exemplo">
-                    <div class="border-bottom display-flex fd-m">
-                      <div class="col-md-8 display-flex">
-                        <div class="">
-                            <i class="fa-solid fa-check i-dce"></i>
-                        </div>
-                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
-                            <h3 class="t-dce">www.exemplo.com.br</h3>
-                            <span class="s-dce">Domínio disponível</span>
-                        </div>
-                      </div>
-                      <div class="col-md-4 display-flex justify-content-center align-items-center mb-35">
-                          <button class="btn-dce">Comprar Domínio</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-dominio-exemplo">
-                    <div class="border-bottom display-flex fd-m">
-                      <div class="col-md-8 display-flex">
-                        <div class="">
-                            <i class="fa-solid fa-check i-dce"></i>
-                        </div>
-                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
-                            <h3 class="t-dce">www.exemplo.com.br</h3>
-                            <span class="s-dce">Domínio disponível</span>
-                        </div>
-                      </div>
-                      <div class="col-md-4 display-flex justify-content-center align-items-center mb-35">
-                          <button class="btn-dce">Comprar Domínio</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-dominio-exemplo">
-                    <div class="border-bottom display-flex fd-m">
-                      <div class="col-md-8 display-flex">
-                        <div class="">
-                            <i class="fa-solid fa-check i-dce"></i>
-                        </div>
-                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
-                            <h3 class="t-dce">www.exemplo.com.br</h3>
-                            <span class="s-dce">Domínio disponível</span>
-                        </div>
-                      </div>
-                      <div class="col-md-4 display-flex justify-content-center align-items-center mb-35">
-                          <button class="btn-dce">Comprar Domínio</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-dominio-exemplo">
-                    <!--No JavaScript a linha do ultimo tem que sumir-->
-                    <div class="border-bottom display-flex fd-m">
-                      <div class="col-md-8 display-flex">
-                        <div class="">
-                            <i class="fa-solid fa-check i-dce"></i>
-                        </div>
-                        <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
-                            <h3 class="t-dce">www.exemplo.com.br</h3>
-                            <span class="s-dce">Domínio disponível</span>
-                        </div>
-                      </div>
-                      <div class="col-md-4 display-flex justify-content-center align-items-center mb-35">
-                          <button class="btn-dce">Comprar Domínio</button>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </section>
-          </section>
-    </section>
+            </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="container mt-30">
+      <section class="mb">
+      <div>
+        <div class="row align-items-start">
+            <div class="col-md-3 pr-50">
+              <img class="img-1-rodape" src="assets/images/logo.png" alt="">
+              <p>Criar Portal de Notícias, Criar site Guia Comercial,
+                Site para imobiliárias, site para prefeituras, criação de aplicativos, site para igrejas, etc...</p>
+              <img class="img-2-rodape" src="assets/images/img16.png" alt="">
+            </div>
+            <div class="col-md-3 links-footer">
+                <h4 class="titulo-rodape">Links Úteis</h4>
+                <a href="#">Blog</a><br>
+                <a href="#">+ 234 Recursos</a><br>
+                <a href="#">Planos e Preços</a><br>
+                <a href="#">Central de Ajuda</a><br>
+                <a href="#">Desenvolvedores</a><br>
+                <a href="#">Integre seu ERP</a><br>
+                <a href="#">Guia da Marca</a>
+            </div>
+            <div class="col-md-3 links-footer">
+                <h4 class="titulo-rodape">Sobre Nós</h4>
+                <a href="#">Quem Somos</a><br>
+                <a href="#">Fale conosco</a><br>
+                <a href="#">Termos de uso</a><br>
+                <a href="#">LGPD</a><br>
+                <a href="#">Trabalhe conosco</a>
+            </div>
+            <div class="col-md-3 numeros-fc">
+                <h4 class="titulo-rodape">Fale Conosco</h4>
+                <span>Vendas: <a href="#">(21) 97649-3627</a></span> <br>
+                <span>Suporte: <a href="#">(21) 98132-72990</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+        <div class="mb-20">Internet Media - Todos os direitos reservados | Política de Privacidade - Termos de Uso - Termos e Condições</div>
     </footer>
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -471,41 +471,89 @@ Inputs.forEach((input) => {
   input.addEventListener('input', mostrarFormulario);
 });
 
+
+// MASCARAS PAG CHECKOUT / VALIDACAO CPF/CNPJ
 $(document).ready(function() {
-  var $input = $('#icpf_cnpj');
-
-  function applyMask() {
-      // Remove todas as máscaras
-      $input.unmask();
-
-      // Verifica a quantidade de dígitos
-      var val = $input.val().replace(/\D/g, ''); // Remove caracteres não numéricos
-
-      if (val.length <= 11) {
-          // Aplica a máscara de CPF
-          $input.mask('999.999.999-99');
-      } else {
-          // Aplica a máscara de CNPJ
-          $input.mask('99.999.999/9999-99');
-      }
-
-      // Reaplica o valor do input para evitar que ele suma
-      $input.val(val);
-      // Restaura o cursor no final da entrada
-      setTimeout(function() {
-          var length = $input.val().length;
-          $input[0].setSelectionRange(length, length);
-      }, 0);
+  const telefoneInput = document.getElementById('inumero');
+  var telefoneMask = IMask(telefoneInput, { mask: '(00) 00000-0000' });
+  const cpfCnpjInput = document.getElementById('icpf_cnpj');
+  const hideRsDiv = document.querySelector('.hide-rs');
+  const errorMessage = document.querySelector('.msgcpfcnpj');
+  function isValidCPF(cpf) {
+    cpf = cpf.replace(/[^\d]+/g, '');
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+    let add = 0;
+    for (let i = 0; i < 9; i++) add += parseInt(cpf.charAt(i)) * (10 - i);
+    let rev = 11 - (add % 11);
+    if (rev >= 10) rev = 0;
+    if (rev !== parseInt(cpf.charAt(9))) return false;
+    add = 0;
+    for (let i = 0; i < 10; i++) add += parseInt(cpf.charAt(i)) * (11 - i);
+    rev = 11 - (add % 11);
+    if (rev >= 10) rev = 0;
+    return rev === parseInt(cpf.charAt(10));
   }
-
-  // Aplicar a máscara inicialmente
-  applyMask();
-
-  // Monitora a entrada do usuário
-  $input.on('input', function() {
-      applyMask();
+  function isValidCNPJ(cnpj) {
+    cnpj = cnpj.replace(/[^\d]+/g, '');
+    if (cnpj.length !== 14 || /^(\d)\1+$/.test(cnpj)) return false;
+    let tamanho = cnpj.length - 2;
+    let numeros = cnpj.substring(0, tamanho);
+    let digitos = cnpj.substring(tamanho);
+    let soma = 0, pos = tamanho - 7;
+    for (let i = tamanho; i >= 1; i--) {
+      soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
+      if (pos < 2) pos = 9;
+    }
+    let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+    if (resultado !== parseInt(digitos.charAt(0))) return false;
+    tamanho = tamanho + 1;
+    numeros = cnpj.substring(0, tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (let i = tamanho; i >= 1; i--) {
+      soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
+      if (pos < 2) pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+    return resultado === parseInt(digitos.charAt(1));
+  }
+  const cpfCnpjMask = IMask(cpfCnpjInput, {
+    mask: [
+      { mask: '000.000.000-00', lazy: true },
+      { mask: '00.000.000/0000-00', lazy: true }
+    ],
+    dispatch: function(appended, dynamicMasked) {
+      let number = (dynamicMasked.value + appended).replace(/\D/g, '');
+      return number.length > 11 ? dynamicMasked.compiledMasks[1] : dynamicMasked.compiledMasks[0];
+    }
+  });
+  function validateCpfCnpj() {
+    const rawValue = cpfCnpjMask.unmaskedValue;
+    if (rawValue.length !== 11 && rawValue.length !== 14) {
+      cpfCnpjInput.classList.remove('valid');
+      cpfCnpjInput.classList.remove('invalid');
+      errorMessage.style.display = 'none';
+      errorMessage.innerHTML = '';
+      return;
+    }
+    let isValid = rawValue.length === 11 ? isValidCPF(rawValue) : isValidCNPJ(rawValue);
+    cpfCnpjInput.classList.toggle('valid', isValid);
+    cpfCnpjInput.classList.toggle('invalid', !isValid);
+    if (isValid) {
+      errorMessage.style.display = 'none';
+      errorMessage.innerHTML = '';
+    } else {
+      errorMessage.style.display = 'block';
+      errorMessage.innerHTML = '<span class="form-fade-in invalid-c">CPF/CNPJ inválido</span>';
+    }
+  }
+  cpfCnpjMask.on('accept', () => {
+    const rawValue = cpfCnpjMask.unmaskedValue;
+    hideRsDiv.style.display = rawValue.length > 11 ? 'block' : 'none';
+    validateCpfCnpj();
   });
 });
+
 
 
 const planos = {
@@ -592,5 +640,259 @@ window.onload = function() {
   const select = document.querySelector('.selecao-plano');
   select.addEventListener('change', mudarPlano);
 };
+
+
+function mostrardominios() {
+
+let dominio = document.querySelector('#IDbdominio')
+
+dominio = dominio.value
+
+var blocos_dominios = {
+  encontrado: {
+    bloco: `
+      <section class="c-dominio-encontrado fd-m display-flex col-md-12">
+        <div class="col-md-8 display-flex">
+            <div class="">   
+                <i class="fa-solid fa-check i-dc"></i>
+            </div>
+            <div class="display-flex fd-c justify-content-center">
+                <h3 class="t-dc">Este Domínio está disponível</h3>
+                <span class="s-dc">${dominio}</span>
+            </div>
+        </div>
+        <div class="col-md-4 display-flex justify-content-center align-items-center">
+            <button class="btn-dc">Comprar Domínio</button>
+        </div>
+      </section>
+    `   
+  },
+  nao_encontrado: {
+    bloco: `
+      <section class="c-dominio-encontrado fd-m display-flex col-md-12">
+        <div class="col-md-8 display-flex">
+            <div class="">   
+                <i class="fa-solid fa-x i-dcne"></i>
+            </div>
+            <div class="display-flex fd-c justify-content-center">
+                <h3 class="t-dc">Domínio indisponível</h3>
+                <span class="s-dc">${dominio}</span>
+            </div>
+        </div>
+        <div class="col-md-4 display-flex justify-content-center align-items-center">
+            <button class="btn-dc">Comprar Domínio</button>
+        </div>
+      </section>
+    `   
+  },
+  exemplo: {
+    bloco: `
+      <div class="c-dominio-exemplo">
+        <div class="border-bottom display-flex fd-m">
+          <div class="col-md-8 display-flex">
+            <div class="">
+                <i class="fa-solid fa-check i-dce"></i>
+            </div>
+            <div class="mb-35 pr-25 display-flex fd-c justify-content-center">
+                <h3 class="t-dce">www.exemplo.com.br</h3>
+                <span class="s-dce">Domínio disponível</span>
+            </div>
+          </div>
+          <div class="col-md-4 display-flex justify-content-center align-items-center mb-35">
+              <button class="btn-dce">Comprar Domínio</button>
+          </div>
+        </div>
+    </div>
+  `     
+  },
+};
+
+const Sdominios = document.querySelector('.dominios');
+
+Sdominios.innerHTML = `
+                    <div class="text-align-center mt-25 mb-25">
+                      <h2 class="titulo-d">Domínios encontrados:</h1>
+                    </div>
+                  `
+
+Sdominios.innerHTML += blocos_dominios.encontrado.bloco;
+
+Sdominios.innerHTML += `<div class="text-align-center mt-25 mb-25">
+                          <h2 class="titulo-exemplos-d">Veja também</h1>
+                        </div>
+                      `
+let exemplos = `<div class="c-dominio-exemplos col-md-12">`;
+
+for (let blocos = 0; blocos < 3; blocos++){
+  exemplos += blocos_dominios.exemplo.bloco;
+}
+
+Sdominios.innerHTML += exemplos;
+
+}
+
+
+let touchedSenha = false;
+let touchedSenhac = false;
+
+function verificaSenha() {
+  const senha = document.querySelector('#isenha');
+  const senhac = document.querySelector('#isenhac');
+  const msgsenha = document.querySelector('.msgsenhac');
+
+  if (!touchedSenha && !touchedSenhac) {
+    msgsenha.style.display = 'none';
+    msgsenha.innerHTML = '';
+    return;
+  }
+
+  if (!senha.value || !senhac.value) {
+    msgsenha.style.display = 'none';
+    msgsenha.innerHTML = '';
+    return;
+  }
+
+  if (senha.value.length < 8 || senhac.value.length < 8) {
+    msgsenha.style.display = 'block';
+    msgsenha.innerHTML = '<span class="form-fade-in invalid-c erro">A senha deve ter pelo menos 8 caracteres</span>';
+    return;
+  }
+
+  if (senha.value !== senhac.value) {
+    msgsenha.style.display = 'block';
+    msgsenha.innerHTML = '<span class="form-fade-in invalid-c erro">As senhas devem ser iguais</span>';
+  } else {
+    msgsenha.style.display = 'none';
+    msgsenha.innerHTML = '';
+  }
+}
+
+document.querySelector('#isenha').addEventListener('blur', () => { touchedSenha = true; verificaSenha(); });
+document.querySelector('#isenhac').addEventListener('blur', () => { touchedSenhac = true; verificaSenha(); });
+document.querySelector('#isenha').addEventListener('input', verificaSenha);
+document.querySelector('#isenhac').addEventListener('input', verificaSenha);
+
+document.addEventListener('DOMContentLoaded', function() {
+  function isValidCPF(cpf) {
+    cpf = cpf.replace(/[^\d]+/g, '');
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+    let add = 0;
+    for (let i = 0; i < 9; i++) add += parseInt(cpf.charAt(i)) * (10 - i);
+    let rev = 11 - (add % 11);
+    if (rev >= 10) rev = 0;
+    if (rev !== parseInt(cpf.charAt(9))) return false;
+    add = 0;
+    for (let i = 0; i < 10; i++) add += parseInt(cpf.charAt(i)) * (11 - i);
+    rev = 11 - (add % 11);
+    if (rev >= 10) rev = 0;
+    return rev === parseInt(cpf.charAt(10));
+  }
+  
+  function isValidCNPJ(cnpj) {
+    cnpj = cnpj.replace(/[^\d]+/g, '');
+    if (cnpj.length !== 14 || /^(\d)\1+$/.test(cnpj)) return false;
+    let tamanho = cnpj.length - 2;
+    let numeros = cnpj.substring(0, tamanho);
+    let digitos = cnpj.substring(tamanho);
+    let soma = 0, pos = tamanho - 7;
+    for (let i = tamanho; i >= 1; i--) {
+      soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
+      if (pos < 2) pos = 9;
+    }
+    let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+    if (resultado !== parseInt(digitos.charAt(0))) return false;
+    tamanho = tamanho + 1;
+    numeros = cnpj.substring(0, tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (let i = tamanho; i >= 1; i--) {
+      soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
+      if (pos < 2) pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+    return resultado === parseInt(digitos.charAt(1));
+  }
+  
+  function disableSubmit() {
+    const submitBtn = document.querySelector('.btn-submit-co');
+    submitBtn.disabled = true;
+    submitBtn.classList.add('disabled');
+  }
+  
+  function enableSubmit() {
+    const submitBtn = document.querySelector('.btn-submit-co');
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('disabled');
+  }
+  
+  function checkFormValidity() {
+    const inome = document.querySelector('#inome');
+    const iemail = document.querySelector('#iemail');
+    const inumero = document.querySelector('#inumero');
+    const icpfCnpj = document.querySelector('#icpf_cnpj');
+    const irs = document.querySelector('#irs');
+    const isenha = document.querySelector('#isenha');
+    const isenhac = document.querySelector('#isenhac');
+    const itermos = document.querySelector('#itermos');
+    
+    if (
+      !inome.value.trim() ||
+      !iemail.value.trim() ||
+      !inumero.value.trim() ||
+      !icpfCnpj.value.trim() ||
+      !isenha.value.trim() ||
+      !isenhac.value.trim()
+    ) {
+      disableSubmit();
+      return;
+    }
+    
+    if (!itermos.checked) {
+      disableSubmit();
+      return;
+    }
+    
+    let cpfCnpjDigits = icpfCnpj.value.replace(/\D/g, '');
+    if (cpfCnpjDigits.length !== 11 && cpfCnpjDigits.length !== 14) {
+      disableSubmit();
+      return;
+    }
+    
+    if (cpfCnpjDigits.length === 11) {
+      if (!isValidCPF(cpfCnpjDigits)) {
+        disableSubmit();
+        return;
+      }
+    } else if (cpfCnpjDigits.length === 14) {
+      if (!isValidCNPJ(cpfCnpjDigits)) {
+        disableSubmit();
+        return;
+      }
+      if (!irs.value.trim()) {
+        disableSubmit();
+        return;
+      }
+    }
+    
+    if (isenha.value.length < 8 || isenhac.value.length < 8 || isenha.value !== isenhac.value) {
+      disableSubmit();
+      return;
+    }
+    
+    enableSubmit();
+  }
+  
+  disableSubmit();
+  ['#inome', '#iemail', '#inumero', '#icpf_cnpj', '#irs', '#isenha', '#isenhac', '#itermos'].forEach(selector => {
+    const el = document.querySelector(selector);
+    if (el) {
+      el.addEventListener('input', checkFormValidity);
+      el.addEventListener('change', checkFormValidity);
+    }
+  });
+});
+
+
+
 
 

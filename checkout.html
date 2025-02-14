@@ -40,7 +40,7 @@
             font-family: 'FriendsUl';
             src: url('assets/fonts/Friends-UltraLight.otf');
         }
-        .container{
+        .container-desktop{
             max-width: 75% !important;
         }
         input{
@@ -88,12 +88,21 @@
         }
 
       @media (max-width: 560px){
+        .container-desktop{
+          max-width: 100% !important;
+        }
         .container{
           max-width: 95% !important;
         }
+        
         input{
         width: 100%;
       }
+      }
+      @media (min-width: 2000px) {
+        .nav{
+          width: 80% !important;
+        }
       }
       select{
         background-color: white;
@@ -160,7 +169,7 @@
           </nav>
     </header>
     <main> 
-            <div class="bloco-checkout">
+            <div class="container-desktop bloco-checkout">
                 <div class="w-66 form-container col-esquerda">
                     <div class="d-desktop">
                       <h2>Crie sua conta para testar o <br>Olist Tiny por 30 dias grátis</h2>
@@ -200,7 +209,7 @@
                             </div>
 
                         </div>
-                        <input class="btn-submit-co disabled" type="submit" value="começar teste" onclick="checked()">
+                        <input class="btn-submit-co disabled" type="submit" value="começar teste">
                     </form>
                 </div>
                 <div class="container w-34 ml-40 info-container col-direita co-borderL">

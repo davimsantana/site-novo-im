@@ -2704,6 +2704,8 @@ textarea::placeholder{
 .bloco-checkout{
   margin-top: 120px;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .bloco-checkout ul{
@@ -3808,7 +3810,7 @@ select:focus{
     margin-left: 0px;
     width: 100%;
     border-bottom: 1px #3333331f solid;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
   .form-container{

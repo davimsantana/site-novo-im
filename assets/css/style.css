@@ -5,6 +5,7 @@
 
 
 
+
 html {
   background-attachment: scroll;
 }
@@ -1464,6 +1465,11 @@ h4 {
   gap: 60px;
 }
 
+
+.gap-15{
+  gap: 15px;
+}
+
 .btn-login{
   width: 100%;
   background-color: #001b61;
@@ -1917,18 +1923,6 @@ ul {
   width: 100%;
 }
 
-input, textarea{
-  margin: 0px 15px 15px 0px;
-  background-color: transparent;
-  border: 1px #3333331f solid;
-  height: 40px;
-  border-radius: 5px;
-  padding: 10px;
-  width: 95%;
-  outline: none;
-  position: relative;
-  z-index: 1;
-}
 
 .checkbox-container > input{
   margin-bottom: 0;
@@ -2983,6 +2977,16 @@ select:focus{
   border: 1px solid #D0342C !important;
 }
 
+.msg_gratis{
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 9px 2px 9px;
+  border-radius: 5px;
+  background-color: #01205f;
+  margin-top: 15px;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0; 
@@ -3030,6 +3034,152 @@ select:focus{
   border-color: #01205f;
   color: #01205f;
 }
+
+
+/* PAGÍNA CARTÃO */
+
+.pag-body{
+  display: flex;
+}
+
+.pag-form{
+  height: 100vh;
+  width: 100%;
+  background-color: #202020;
+}
+
+.pag-form p{
+  color: #fff;
+  font-family: 'FriendsBold';
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.pag-form span{
+  color: #315fb1;
+}
+
+.pag-form img{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pag-form form p{
+  font-family: 'FriendsSbold';
+  font-size: 16px;
+}
+
+.pag-form form{
+  margin-top: 30px;
+}
+
+.pag-radio:focus{
+  background-color: #454545;
+}
+
+.pag-radio input{
+  margin-right: 5px;
+}
+
+.pag-radio {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 8px;
+  color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.pag-radio input[type="radio"] {
+  display: none; /* Esconde o radio padrão */
+}
+
+.pag-radio label {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  padding: 13px 15px 13px 15px;
+  border: 1px solid #454545;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pag-radio label::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 3px solid #454545;
+  border-radius: 50%;
+  margin-right: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pag-radio input[type="radio"]:checked + label {
+  background-color: #454545;
+  border-color: #454545;
+}
+
+.pag-radio input[type="radio"]:checked + label::before {
+  /* Cor de fundo da bolinha */
+  background-color: #2f7cee;
+
+  /* Borda principal (a que você já tinha) */
+  border: 3px solid #01205f;
+
+  /* Anel extra em volta (box-shadow) */
+  box-shadow: 0 0 0 2px #2f7cee;
+}
+
+.pag-inputs input{
+  width: 98%;
+  background-color: #181818;
+  border: 1px solid #454545;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: #656668;
+}
+
+.pag-inputs input::placeholder{
+  color: #454545;
+  font-size: 14px;
+  padding-left: 35px;
+}
+
+.pag-inputs label{
+  font-size: 15px;
+  margin-left: 4px;
+  color: #797979;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+
+.input-wrapper i {
+  position: absolute;
+  top: 34%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: #454545;
+  border-radius: 50%;
+  padding: 7px;
+  pointer-events: none; 
+  font-size: 14px; 
+}
+
+.pag-plano{
+  background-color: #333333;
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+/* FIM PAGINA CARTÃO */
 
 
 @media (max-width: 1200px) {
